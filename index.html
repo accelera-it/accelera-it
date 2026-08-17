@@ -165,6 +165,16 @@
       pointer-events: none;
     }
 
+    /* On a phone the copy spans the full width, so the left-to-right veil
+       leaves nothing to read against — flatten it and lift it instead. */
+    @media (max-width: 767px) {
+      #heroBg {
+        background-image:
+          linear-gradient(rgba(247, 248, 250, .9), rgba(247, 248, 250, .82)),
+          url("/assets/hero.jpg");
+      }
+    }
+
     /* same skyline under the footer, veiled dark so the type still reads */
     #footerBg {
       position: absolute;
@@ -367,8 +377,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Book a 30-minute call
             <span class="transition group-hover:translate-x-0.5" aria-hidden="true">→</span>
           </a>
+          <!-- sits over the skyline, so it needs its own ground to read against -->
           <a href="#s3"
-            class="inline-flex items-center rounded-full border border-hair px-7 py-4 text-[0.95rem] font-semibold transition hover:border-ink">
+            class="inline-flex items-center rounded-full border border-ink/15 bg-white/70 px-7 py-4 text-[0.95rem] font-semibold backdrop-blur-sm transition hover:border-ink hover:bg-white">
             How we work
           </a>
         </div>
@@ -459,7 +470,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p id="phaseWeeks" class="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-dim">Week 1</p>
           </div>
 
-          <div class="hidden px-5 pt-5 sm:px-8 md:block" aria-hidden="true">
+          <!-- the proportional 8-week strip only has room from lg up; below
+               that the phases stack and the week ruler would not line up -->
+          <div class="hidden px-5 pt-5 sm:px-8 lg:block" aria-hidden="true">
             <div class="grid grid-cols-8 border-b border-ink-line">
               <span class="pb-2 font-mono text-[0.65rem] text-dim">W1</span>
               <span class="border-l border-ink-line pb-2 pl-2 font-mono text-[0.65rem] text-dim">W2</span>
@@ -472,30 +485,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
 
-          <div role="tablist" aria-label="Project phases" class="grid gap-2 px-5 pt-4 sm:px-8 md:grid-cols-8">
+          <div role="tablist" aria-label="Project phases" class="grid gap-2 px-5 pt-4 sm:grid-cols-2 sm:px-8 lg:grid-cols-8">
             <button role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true" data-label="Discovery"
               data-weeks="Week 1"
-              class="rounded-lg bg-brand px-3 py-3 text-left transition aria-selected:bg-brand md:col-span-1 [&:not([aria-selected=true])]:bg-ink-3 [&:not([aria-selected=true])]:hover:bg-ink-line">
+              class="rounded-lg bg-brand px-3 py-3 text-left lg:px-2.5 transition aria-selected:bg-brand lg:col-span-1 [&:not([aria-selected=true])]:bg-ink-3 [&:not([aria-selected=true])]:hover:bg-ink-line">
               <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W1</span>
-              <span class="block text-[0.89rem] font-semibold leading-tight">Discovery</span>
+              <span class="block text-[0.89rem] font-semibold leading-tight lg:text-[0.82rem]">Discovery</span>
             </button>
             <button role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" data-label="Design"
               data-weeks="Weeks 2 — 3"
-              class="rounded-lg bg-ink-3 px-3 py-3 text-left transition hover:bg-ink-line aria-selected:bg-brand md:col-span-2">
+              class="rounded-lg bg-ink-3 px-3 py-3 text-left lg:px-2.5 transition hover:bg-ink-line aria-selected:bg-brand lg:col-span-2">
               <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W2 — W3</span>
-              <span class="block text-[0.89rem] font-semibold leading-tight">Design</span>
+              <span class="block text-[0.89rem] font-semibold leading-tight lg:text-[0.82rem]">Design</span>
             </button>
             <button role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" data-label="Development"
               data-weeks="Weeks 4 — 7"
-              class="rounded-lg bg-ink-3 px-3 py-3 text-left transition hover:bg-ink-line aria-selected:bg-brand md:col-span-4">
+              class="rounded-lg bg-ink-3 px-3 py-3 text-left lg:px-2.5 transition hover:bg-ink-line aria-selected:bg-brand lg:col-span-4">
               <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W4 — W7</span>
-              <span class="block text-[0.89rem] font-semibold leading-tight">Development</span>
+              <span class="block text-[0.89rem] font-semibold leading-tight lg:text-[0.82rem]">Development</span>
             </button>
             <button role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" data-label="Deployment"
               data-weeks="Week 8"
-              class="rounded-lg bg-ink-3 px-3 py-3 text-left transition hover:bg-ink-line aria-selected:bg-brand md:col-span-1">
+              class="rounded-lg bg-ink-3 px-3 py-3 text-left lg:px-2.5 transition hover:bg-ink-line aria-selected:bg-brand lg:col-span-1">
               <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W8</span>
-              <span class="block text-[0.89rem] font-semibold leading-tight">Deployment</span>
+              <span class="block text-[0.89rem] font-semibold leading-tight lg:text-[0.82rem]">Deployment</span>
             </button>
           </div>
 
@@ -710,7 +723,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <footer class="relative overflow-hidden border-t border-ink-line bg-ink py-16 text-center text-white">
     <div id="footerBg" aria-hidden="true"></div>
-    <p class="relative font-mono text-[0.72rem] text-white/75">
+    <p class="relative px-5 font-mono text-[0.68rem] leading-[1.6] text-white/75 sm:text-[0.72rem]">
       Copyright © <span id="year">2026</span> AcceleraIT LLC. All rights reserved.
     </p>
   </footer>
