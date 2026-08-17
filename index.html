@@ -151,6 +151,51 @@
       transition: clip-path .9s cubic-bezier(.16, 1, .3, 1) var(--d, 0ms);
     }
 
+    /* ── hero backdrop ─────────────────────────────────────────── */
+    #heroBg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(247, 248, 250, .97) 0%, rgba(247, 248, 250, .88) 45%, rgba(247, 248, 250, .74) 100%),
+        url("/assets/hero.jpg");
+      background-size: cover, cover;
+      background-position: center, center bottom;
+      background-repeat: no-repeat;
+      opacity: .8;
+      pointer-events: none;
+    }
+
+    /* same skyline under the footer, veiled dark so the type still reads */
+    #footerBg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(11, 18, 32, .8), rgba(11, 18, 32, .88)),
+        url("/assets/hero.jpg");
+      background-size: cover, cover;
+      background-position: center, center 35%;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+
+    /* ── section numbers ───────────────────────────────────────── */
+    .sec-num {
+      display: block;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: clamp(2.6rem, 6vw, 4.2rem);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      /* alpha lives in the colour, not in `opacity` — `.in .rise` resets
+         opacity to 1 once the section animates in and would wash this out */
+      color: rgba(42, 85, 229, .3);
+      margin-bottom: .5rem;
+    }
+
+    .bg-ink .sec-num {
+      color: rgba(125, 155, 255, .38);
+    }
+
     /* ── scroll progress + slide rail ──────────────────────────── */
     #progress {
       position: fixed;
@@ -168,6 +213,12 @@
       transform: translateY(-50%);
       z-index: 55;
       display: none;
+      transition: color .35s ease;
+    }
+
+    /* dark sections (bg-ink) need a light rail, otherwise the marks vanish */
+    #rail.on-dark {
+      color: #fff;
     }
 
     @media (min-width: 1024px) {
@@ -292,10 +343,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main>
 
     <!-- ══════ 1 · HERO ══════ -->
-    <section id="s1" class="slide">
-      <div class="mx-auto w-full max-w-shell px-5 py-20 sm:px-8">
+    <section id="s1" class="slide overflow-hidden">
+      <!-- Chicago skyline, faded well back so the type stays the subject -->
+      <div id="heroBg" aria-hidden="true"></div>
+      <div class="relative mx-auto w-full max-w-shell px-5 py-20 sm:px-8">
         <p class="rise mb-6 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand" style="--d:0ms">
-          AcceleraIT LLC · United States
+          Headquartered · Chicago, IL
         </p>
 
         <h1
@@ -343,8 +396,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ══════ 2 · WHAT WE DO ══════ -->
     <section id="s2" class="slide border-y border-hair bg-white">
       <div class="mx-auto w-full max-w-shell px-5 py-20 sm:px-8">
-        <p class="rise mb-4 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand" style="--d:0ms">What we do
-        </p>
+        <span class="rise sec-num" style="--d:0ms" aria-hidden="true">01</span>
         <h2
           class="rise balance font-display text-[1.65rem] font-semibold leading-[1.18] tracking-tighter2 sm:text-[2.1rem]"
           style="--d:60ms">
@@ -354,37 +406,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="mt-9 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
           <article class="rise" style="--d:180ms">
-            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">01</p>
             <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Custom software</h3>
             <p class="text-[0.93rem] leading-[1.55] text-muted">Systems shaped around your process, not a template's.
             </p>
           </article>
           <article class="rise" style="--d:240ms">
-            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">02</p>
             <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Web platforms</h3>
             <p class="text-[0.93rem] leading-[1.55] text-muted">Fast, accessible sites and web apps your team can run
               alone.</p>
           </article>
           <article class="rise" style="--d:300ms">
-            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">03</p>
             <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Mobile applications</h3>
             <p class="text-[0.93rem] leading-[1.55] text-muted">Native iOS and Android, cross-platform where it earns
               its place.</p>
           </article>
           <article class="rise" style="--d:360ms">
-            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">04</p>
             <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Artificial intelligence</h3>
             <p class="text-[0.93rem] leading-[1.55] text-muted">Assistants, document automation and models wired into
               real systems.</p>
           </article>
           <article class="rise" style="--d:420ms">
-            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">05</p>
             <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Data and BI</h3>
             <p class="text-[0.93rem] leading-[1.55] text-muted">Warehouses, pipelines and dashboards whose numbers
               agree.</p>
           </article>
           <article class="rise" style="--d:480ms">
-            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">06</p>
             <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Cloud and DevOps</h3>
             <p class="text-[0.93rem] leading-[1.55] text-muted">Infrastructure, CI/CD and monitoring that survive an
               audit.</p>
@@ -396,8 +442,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ══════ 3 · HOW WE WORK ══════ -->
     <section id="s3" class="slide">
       <div class="mx-auto w-full max-w-shell px-5 py-20 sm:px-8">
-        <p class="rise mb-4 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand" style="--d:0ms">How we work
-        </p>
+        <span class="rise sec-num" style="--d:0ms" aria-hidden="true">02</span>
         <h2
           class="rise balance font-display text-[1.65rem] font-semibold leading-[1.18] tracking-tighter2 sm:text-[2.1rem]"
           style="--d:60ms">
@@ -527,8 +572,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ══════ 4 · ENGAGEMENT ══════ -->
     <section id="s4" class="slide bg-ink text-white">
       <div class="mx-auto w-full max-w-shell px-5 py-20 sm:px-8">
-        <p class="rise mb-4 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand-lt" style="--d:0ms">
-          Engagement</p>
+        <span class="rise sec-num" style="--d:0ms" aria-hidden="true">03</span>
         <h2
           class="rise balance font-display text-[1.65rem] font-semibold leading-[1.18] tracking-tighter2 sm:text-[2.1rem]"
           style="--d:60ms">
@@ -538,20 +582,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="mt-9 grid gap-8 md:grid-cols-3 md:gap-10">
           <article class="rise" style="--d:200ms">
-            <p class="mb-2 font-mono text-[0.68rem] uppercase tracking-[0.14em] text-brand-lt">Fixed scope</p>
             <h3 class="mb-2 font-display text-[1.12rem] font-semibold tracking-tighter2">One build, one price</h3>
             <p class="text-[0.93rem] leading-[1.55] text-white/60">Requirements are clear. We scope it, price it, and
               deliver against that.</p>
           </article>
           <article class="rise" style="--d:280ms">
-            <p class="mb-2 font-mono text-[0.68rem] uppercase tracking-[0.14em] text-brand-lt">Dedicated team</p>
             <h3 class="mb-2 font-display text-[1.12rem] font-semibold tracking-tighter2">Engineers on your product only
             </h3>
             <p class="text-[0.93rem] leading-[1.55] text-white/60">Monthly. You set the priorities every sprint, and
               scale the team between them.</p>
           </article>
           <article class="rise" style="--d:360ms">
-            <p class="mb-2 font-mono text-[0.68rem] uppercase tracking-[0.14em] text-brand-lt">Support</p>
             <h3 class="mb-2 font-display text-[1.12rem] font-semibold tracking-tighter2">Someone responsible after
               launch</h3>
             <p class="text-[0.93rem] leading-[1.55] text-white/60">Monitoring, updates and agreed response times —
@@ -572,7 +613,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ══════ 5 · CLIENTS ══════ -->
     <section id="s5" class="slide border-y border-hair bg-white">
       <div class="mx-auto w-full max-w-shell px-5 py-20 sm:px-8">
-        <p class="rise mb-4 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand" style="--d:0ms">Clients</p>
+        <span class="rise sec-num" style="--d:0ms" aria-hidden="true">04</span>
         <h2
           class="rise balance font-display text-[1.65rem] font-semibold leading-[1.18] tracking-tighter2 sm:text-[2.1rem]"
           style="--d:60ms">
@@ -603,8 +644,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="s6" class="slide bg-ink text-white">
       <div class="mx-auto grid w-full max-w-shell gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div>
-          <p class="rise mb-4 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand-lt" style="--d:0ms">Start
-            here</p>
           <h2
             class="rise balance font-display text-[1.65rem] font-semibold leading-[1.18] tracking-tighter2 sm:text-[2.1rem]"
             style="--d:60ms">
@@ -639,9 +678,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="rise self-center rounded-2xl border border-ink-line bg-ink-2 p-7 sm:p-9" style="--d:180ms">
-          <p class="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-brand-lt">Book a call</p>
           <h3
-            class="balance mt-3 font-display text-[1.35rem] font-semibold leading-[1.25] tracking-tighter2 sm:text-[1.55rem]">
+            class="balance font-display text-[1.35rem] font-semibold leading-[1.25] tracking-tighter2 sm:text-[1.55rem]">
             Thirty minutes, and you will know where you stand.
           </h3>
           <p class="mt-4 max-w-[46ch] text-[0.96rem] leading-[1.6] text-white/60">
@@ -664,20 +702,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             class="mt-8 inline-block rounded-full bg-white px-7 py-3.5 text-[0.94rem] font-semibold text-ink transition hover:-translate-y-0.5">
             Book a 30-minute call →
           </a>
-          <p class="mt-5 font-mono text-[0.7rem] text-dim">
-            Rather write first? <a href="mailto:admin@accelerait.us"
-              class="border-b border-ink-line pb-0.5 text-white/70 transition hover:border-brand-lt">admin@accelerait.us</a>
-          </p>
         </div>
       </div>
     </section>
 
   </main>
 
+  <footer class="relative overflow-hidden border-t border-ink-line bg-ink py-16 text-center text-white">
+    <div id="footerBg" aria-hidden="true"></div>
+    <p class="relative font-mono text-[0.72rem] text-white/75">
+      Copyright © <span id="year">2026</span> AcceleraIT LLC. All rights reserved.
+    </p>
+  </footer>
+
   <script>
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const slides = Array.from(document.querySelectorAll('.slide'));
     const dots = Array.from(document.querySelectorAll('#rail button'));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     /* ── section entrance + rail state ─────────────────────────── */
     if ('IntersectionObserver' in window) {
@@ -691,11 +734,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       slides.forEach(s => s.classList.add('in'));   // no observer support: show everything
     }
 
+    const rail = document.getElementById('rail');
+
     const railIO = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (!e.isIntersecting) return;
         const i = slides.indexOf(e.target);
         dots.forEach((d, n) => d.setAttribute('aria-current', n === i ? 'true' : 'false'));
+        rail.classList.toggle('on-dark', e.target.classList.contains('bg-ink'));
       });
     }, { threshold: 0.5 });
     slides.forEach(s => railIO.observe(s));
