@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AcceleraIT — Software, AI and data teams. Twenty years.</title>
+  <meta name="description"
+    content="AcceleraIT LLC has built software, web, mobile, AI and analytics systems for over twenty years. One senior team, two-week sprints, fixed scope, three-month warranty.">
+  <meta name="theme-color" content="#0B1220">
+  <meta name="robots" content="index,follow">
+  <meta name="google-site-verification" content="058x7qpkywTwN-i_bJ4EHaGr5uMGKxFS-bqPVYCPw8I" />
+  <meta property="og:title" content="AcceleraIT — Twenty years. Every layer of the stack.">
+  <meta property="og:description"
+    content="Software, web, mobile, AI and analytics — designed, built and supported by one senior team.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://accelerait.us/">
+  <meta property="og:site_name" content="AcceleraIT">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://accelerait.us/assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AcceleraIT — twenty years across software, AI and data">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AcceleraIT — Twenty years. Every layer of the stack.">
+  <meta name="twitter:description" content="Software, web, mobile, AI and analytics, built by one senior team.">
+  <meta name="twitter:image" content="https://accelerait.us/assets/og-image.png">
+
+  <link rel="canonical" href="https://accelerait.us/">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AcceleraIT LLC",
+  "url": "https://accelerait.us/",
+  "email": "admin@accelerait.us",
+  "telephone": "+1-574-400-5404",
+  "foundingDate": "2005",
+  "description": "Software, web, mobile, AI and data engineering delivered in two-week sprints.",
+  "areaServed": "US",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "30 N Gould St, Ste R",
+    "addressLocality": "Sheridan",
+    "addressRegion": "WY",
+    "postalCode": "82801",
+    "addressCountry": "US"
+  },
+  "knowsAbout": ["Custom software development","Web development","Mobile applications","Artificial intelligence","Business intelligence","Cloud infrastructure"],
+  "sameAs": ["https://www.linkedin.com/company/accelerait-us"]
+}
+</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com/3.4.17?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: { DEFAULT: '#0B1220', 2: '#111C33', 3: '#1B2942', line: '#28374F' },
+            brand: { DEFAULT: '#2A55E5', deep: '#1D3FBF', soft: '#DDE4FA', lt: '#7D9BFF' },
+            paper: '#F7F8FA',
+            hair: '#E4E8EF',
+            muted: '#5B6880',
+            dim: '#93A1BC',
+          },
+          fontFamily: {
+            display: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+          },
+          maxWidth: { shell: '1160px' },
+          letterSpacing: { tighter2: '-0.008em' },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .balance {
+      text-wrap: balance;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid #2A55E5;
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    /* ── slide shell ───────────────────────────────────────────── */
+    .slide {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      scroll-snap-align: start;
+      position: relative;
+    }
+
+    /* Snapping only where the viewport is genuinely tall enough for it —
+     forcing it on short laptops or phones traps the reader mid-section. */
+    @media (min-width: 1024px) and (min-height: 760px) {
+      .snap-root {
+        scroll-snap-type: y proximity;
+      }
+    }
+
+    /* ── entrance animation ────────────────────────────────────── */
+    .rise {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+
+    .in .rise {
+      opacity: 1;
+      transform: none;
+      transition: opacity .75s cubic-bezier(.16, 1, .3, 1), transform .75s cubic-bezier(.16, 1, .3, 1);
+      transition-delay: var(--d, 0ms);
+    }
+
+    .wipe {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    .in .wipe {
+      clip-path: inset(0 0 0 0);
+      transition: clip-path .9s cubic-bezier(.16, 1, .3, 1) var(--d, 0ms);
+    }
+
+    /* ── scroll progress + slide rail ──────────────────────────── */
+    #progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 2px;
+      width: 0;
+      background: #2A55E5;
+      z-index: 60;
+    }
+
+    #rail {
+      position: fixed;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 55;
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      #rail {
+        display: grid;
+      }
+    }
+
+    #rail button {
+      display: block;
+      width: 26px;
+      height: 22px;
+      position: relative;
+    }
+
+    #rail button::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 2px;
+      background: currentColor;
+      opacity: .3;
+      transition: width .3s cubic-bezier(.16, 1, .3, 1), opacity .3s;
+    }
+
+    #rail button[aria-current="true"]::after {
+      width: 26px;
+      opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .snap-root {
+        scroll-snap-type: none;
+      }
+
+      * {
+        animation-duration: .001ms !important;
+        transition-duration: .001ms !important;
+      }
+
+      .rise {
+        opacity: 1;
+        transform: none;
+      }
+
+      .wipe {
+        clip-path: none;
+      }
+    }
+  </style>
+
+  <noscript>
+    <style>
+      .rise {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .wipe {
+        clip-path: none !important;
+      }
+
+      [role="tabpanel"][hidden] {
+        display: grid !important;
+      }
+
+      [role="tabpanel"] {
+        border-top: 1px solid #28374F;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+      }
+
+      [role="tablist"],
+      #phaseHead,
+      #rail,
+      #progress {
+        display: none !important;
+      }
+
+      .slide {
+        min-height: 0 !important;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body class="snap-root bg-paper font-sans text-[16px] leading-[1.6] text-ink antialiased">
+  <a href="#s1"
+    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[70] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:shadow">Skip
+    to content</a>
+
+  <div id="progress" aria-hidden="true"></div>
+
+  <nav id="rail" class="text-ink" aria-label="Sections">
+    <button data-go="s1" aria-current="true" aria-label="Introduction"></button>
+    <button data-go="s2" aria-label="What we do"></button>
+    <button data-go="s3" aria-label="How we work"></button>
+    <button data-go="s4" aria-label="Engagement"></button>
+    <button data-go="s5" aria-label="Clients"></button>
+    <button data-go="s6" aria-label="Contact"></button>
+  </nav>
+
+  <main>
+
+    <!-- ══════ 1 · HERO ══════ -->
+    <section id="s1" class="slide">
+      <div class="mx-auto w-full max-w-shell px-5 py-20 sm:px-8">
+        <p class="rise mb-6 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand" style="--d:0ms">
+          AcceleraIT LLC · United States
+        </p>
+
+        <h1
+          class="balance font-display text-[2.1rem] font-semibold leading-[1.12] tracking-tighter2 sm:text-[2.9rem] lg:text-[3.6rem]">
+          <span class="rise block" style="--d:80ms">Twenty years.</span>
+          <span class="rise block" style="--d:180ms">Every layer of the stack.</span>
+        </h1>
+
+        <p class="rise mt-6 max-w-[50ch] text-[1.05rem] leading-[1.6] text-muted sm:text-[1.14rem]" style="--d:280ms">
+          Software, web, mobile, AI and analytics — designed, built and supported by one senior team.
+        </p>
+
+        <div class="rise mt-9 flex flex-wrap gap-3" style="--d:380ms">
+          <a href="#s6"
+            class="group inline-flex items-center gap-2.5 rounded-full bg-brand px-7 py-4 text-[0.95rem] font-semibold text-white transition hover:bg-brand-deep">
+            Book a 30-minute call
+            <span class="transition group-hover:translate-x-0.5" aria-hidden="true">→</span>
+          </a>
+          <a href="#s3"
+            class="inline-flex items-center rounded-full border border-hair px-7 py-4 text-[0.95rem] font-semibold transition hover:border-ink">
+            How we work
+          </a>
+        </div>
+
+        <dl class="rise mt-14 grid max-w-3xl grid-cols-3 gap-6 border-t border-hair pt-7" style="--d:480ms">
+          <div>
+            <dt class="font-display text-[1.7rem] font-semibold leading-none tracking-tighter2 sm:text-[2.1rem]"><span
+                data-count="20">0</span>+</dt>
+            <dd class="mt-2 text-[0.84rem] leading-[1.45] text-muted">years shipping production systems</dd>
+          </div>
+          <div>
+            <dt class="font-display text-[1.7rem] font-semibold leading-none tracking-tighter2 sm:text-[2.1rem]"><span
+                data-count="6">0</span></dt>
+            <dd class="mt-2 text-[0.84rem] leading-[1.45] text-muted">disciplines under one roof</dd>
+          </div>
+          <div>
+            <dt class="font-display text-[1.7rem] font-semibold leading-none tracking-tighter2 sm:text-[2.1rem]"><span
+                data-count="2">0</span> wk</dt>
+            <dd class="mt-2 text-[0.84rem] leading-[1.45] text-muted">between working builds</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ══════ 2 · WHAT WE DO ══════ -->
+    <section id="s2" class="slide border-y border-hair bg-white">
+      <div class="mx-auto w-full max-w-shell px-5 py-20 sm:px-8">
+        <p class="rise mb-4 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand" style="--d:0ms">What we do
+        </p>
+        <h2
+          class="rise balance font-display text-[1.65rem] font-semibold leading-[1.18] tracking-tighter2 sm:text-[2.1rem]"
+          style="--d:60ms">
+          Six disciplines. One team.
+        </h2>
+        <div class="rise mt-7 h-px w-full bg-hair wipe" style="--d:140ms"></div>
+
+        <div class="mt-9 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="rise" style="--d:180ms">
+            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">01</p>
+            <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Custom software</h3>
+            <p class="text-[0.93rem] leading-[1.55] text-muted">Systems shaped around your process, not a template's.
+            </p>
+          </article>
+          <article class="rise" style="--d:240ms">
+            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">02</p>
+            <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Web platforms</h3>
+            <p class="text-[0.93rem] leading-[1.55] text-muted">Fast, accessible sites and web apps your team can run
+              alone.</p>
+          </article>
+          <article class="rise" style="--d:300ms">
+            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">03</p>
+            <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Mobile applications</h3>
+            <p class="text-[0.93rem] leading-[1.55] text-muted">Native iOS and Android, cross-platform where it earns
+              its place.</p>
+          </article>
+          <article class="rise" style="--d:360ms">
+            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">04</p>
+            <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Artificial intelligence</h3>
+            <p class="text-[0.93rem] leading-[1.55] text-muted">Assistants, document automation and models wired into
+              real systems.</p>
+          </article>
+          <article class="rise" style="--d:420ms">
+            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">05</p>
+            <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Data and BI</h3>
+            <p class="text-[0.93rem] leading-[1.55] text-muted">Warehouses, pipelines and dashboards whose numbers
+              agree.</p>
+          </article>
+          <article class="rise" style="--d:480ms">
+            <p class="mb-2 font-mono text-[0.68rem] tracking-[0.14em] text-brand">06</p>
+            <h3 class="mb-1.5 font-display text-[1.12rem] font-semibold tracking-tighter2">Cloud and DevOps</h3>
+            <p class="text-[0.93rem] leading-[1.55] text-muted">Infrastructure, CI/CD and monitoring that survive an
+              audit.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ 3 · HOW WE WORK ══════ -->
+    <section id="s3" class="slide">
+      <div class="mx-auto w-full max-w-shell px-5 py-20 sm:px-8">
+        <p class="rise mb-4 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand" style="--d:0ms">How we work
+        </p>
+        <h2
+          class="rise balance font-display text-[1.65rem] font-semibold leading-[1.18] tracking-tighter2 sm:text-[2.1rem]"
+          style="--d:60ms">
+          Four phases. Eight weeks. Nothing hidden.
+        </h2>
+
+        <div class="rise mt-8 overflow-hidden rounded-2xl bg-ink text-white" style="--d:140ms">
+          <div id="phaseHead" class="flex flex-wrap items-baseline justify-between gap-3 px-5 pt-6 sm:px-8">
+            <h3 class="font-display text-[1.05rem] font-semibold tracking-tighter2">
+              <span class="font-mono text-[0.7rem] font-normal uppercase tracking-[0.14em] text-dim">Phase <span
+                  id="phaseIndex">1</span>/4</span>
+              <span class="mx-1.5 text-dim">·</span><span id="phaseTitle">Discovery</span>
+            </h3>
+            <p id="phaseWeeks" class="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-dim">Week 1</p>
+          </div>
+
+          <div class="hidden px-5 pt-5 sm:px-8 md:block" aria-hidden="true">
+            <div class="grid grid-cols-8 border-b border-ink-line">
+              <span class="pb-2 font-mono text-[0.65rem] text-dim">W1</span>
+              <span class="border-l border-ink-line pb-2 pl-2 font-mono text-[0.65rem] text-dim">W2</span>
+              <span class="border-l border-ink-line pb-2 pl-2 font-mono text-[0.65rem] text-dim">W3</span>
+              <span class="border-l border-ink-line pb-2 pl-2 font-mono text-[0.65rem] text-dim">W4</span>
+              <span class="border-l border-ink-line pb-2 pl-2 font-mono text-[0.65rem] text-dim">W5</span>
+              <span class="border-l border-ink-line pb-2 pl-2 font-mono text-[0.65rem] text-dim">W6</span>
+              <span class="border-l border-ink-line pb-2 pl-2 font-mono text-[0.65rem] text-dim">W7</span>
+              <span class="border-l border-ink-line pb-2 pl-2 font-mono text-[0.65rem] text-dim">W8</span>
+            </div>
+          </div>
+
+          <div role="tablist" aria-label="Project phases" class="grid gap-2 px-5 pt-4 sm:px-8 md:grid-cols-8">
+            <button role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true" data-label="Discovery"
+              data-weeks="Week 1"
+              class="rounded-lg bg-brand px-3 py-3 text-left transition aria-selected:bg-brand md:col-span-1 [&:not([aria-selected=true])]:bg-ink-3 [&:not([aria-selected=true])]:hover:bg-ink-line">
+              <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W1</span>
+              <span class="block text-[0.89rem] font-semibold leading-tight">Discovery</span>
+            </button>
+            <button role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" data-label="Design"
+              data-weeks="Weeks 2 — 3"
+              class="rounded-lg bg-ink-3 px-3 py-3 text-left transition hover:bg-ink-line aria-selected:bg-brand md:col-span-2">
+              <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W2 — W3</span>
+              <span class="block text-[0.89rem] font-semibold leading-tight">Design</span>
+            </button>
+            <button role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" data-label="Development"
+              data-weeks="Weeks 4 — 7"
+              class="rounded-lg bg-ink-3 px-3 py-3 text-left transition hover:bg-ink-line aria-selected:bg-brand md:col-span-4">
+              <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W4 — W7</span>
+              <span class="block text-[0.89rem] font-semibold leading-tight">Development</span>
+            </button>
+            <button role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" data-label="Deployment"
+              data-weeks="Week 8"
+              class="rounded-lg bg-ink-3 px-3 py-3 text-left transition hover:bg-ink-line aria-selected:bg-brand md:col-span-1">
+              <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W8</span>
+              <span class="block text-[0.89rem] font-semibold leading-tight">Deployment</span>
+            </button>
+          </div>
+
+          <div id="panelWrap"
+            class="mt-4 border-t border-ink-line px-5 pb-8 pt-6 transition-opacity duration-200 sm:px-8">
+            <div role="tabpanel" id="panel-1" aria-labelledby="tab-1" class="grid gap-6 md:grid-cols-2 md:gap-10">
+              <p class="text-[0.98rem] leading-[1.6] text-white/75">We scope the work with the people who will use it,
+                then price it.</p>
+              <ul class="grid gap-2 text-[0.93rem] text-white/90">
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  Written scope, in and out</li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  Fixed timeline and price</li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  The engineers assigned, by name</li>
+              </ul>
+            </div>
+            <div role="tabpanel" id="panel-2" aria-labelledby="tab-2" class="grid gap-6 md:grid-cols-2 md:gap-10"
+              hidden>
+              <p class="text-[0.98rem] leading-[1.6] text-white/75">Structure first, visual layer second. Changing
+                direction here costs a day.</p>
+              <ul class="grid gap-2 text-[0.93rem] text-white/90">
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  Wireframes and a clickable prototype</li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  Architecture documentation</li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  Finished interface design</li>
+              </ul>
+            </div>
+            <div role="tabpanel" id="panel-3" aria-labelledby="tab-3" class="grid gap-6 md:grid-cols-2 md:gap-10"
+              hidden>
+              <p class="text-[0.98rem] leading-[1.6] text-white/75">Two-week sprints. You review real software every
+                fortnight, not a status report.</p>
+              <ul class="grid gap-2 text-[0.93rem] text-white/90">
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  A deployed build on staging</li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  QA pass and fixes each sprint</li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  A backlog you reprioritize</li>
+              </ul>
+            </div>
+            <div role="tabpanel" id="panel-4" aria-labelledby="tab-4" class="grid gap-6 md:grid-cols-2 md:gap-10"
+              hidden>
+              <p class="text-[0.98rem] leading-[1.6] text-white/75">We hand over the keys and train your team to use
+                them.</p>
+              <ul class="grid gap-2 text-[0.93rem] text-white/90">
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  Production launch and training</li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  Analytics and monitoring connected</li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
+                  Three-month warranty</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ 4 · ENGAGEMENT ══════ -->
+    <section id="s4" class="slide bg-ink text-white">
+      <div class="mx-auto w-full max-w-shell px-5 py-20 sm:px-8">
+        <p class="rise mb-4 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand-lt" style="--d:0ms">
+          Engagement</p>
+        <h2
+          class="rise balance font-display text-[1.65rem] font-semibold leading-[1.18] tracking-tighter2 sm:text-[2.1rem]"
+          style="--d:60ms">
+          Three ways to work with us.
+        </h2>
+        <div class="rise mt-7 h-px w-full bg-ink-line wipe" style="--d:140ms"></div>
+
+        <div class="mt-9 grid gap-8 md:grid-cols-3 md:gap-10">
+          <article class="rise" style="--d:200ms">
+            <p class="mb-2 font-mono text-[0.68rem] uppercase tracking-[0.14em] text-brand-lt">Fixed scope</p>
+            <h3 class="mb-2 font-display text-[1.12rem] font-semibold tracking-tighter2">One build, one price</h3>
+            <p class="text-[0.93rem] leading-[1.55] text-white/60">Requirements are clear. We scope it, price it, and
+              deliver against that.</p>
+          </article>
+          <article class="rise" style="--d:280ms">
+            <p class="mb-2 font-mono text-[0.68rem] uppercase tracking-[0.14em] text-brand-lt">Dedicated team</p>
+            <h3 class="mb-2 font-display text-[1.12rem] font-semibold tracking-tighter2">Engineers on your product only
+            </h3>
+            <p class="text-[0.93rem] leading-[1.55] text-white/60">Monthly. You set the priorities every sprint, and
+              scale the team between them.</p>
+          </article>
+          <article class="rise" style="--d:360ms">
+            <p class="mb-2 font-mono text-[0.68rem] uppercase tracking-[0.14em] text-brand-lt">Support</p>
+            <h3 class="mb-2 font-display text-[1.12rem] font-semibold tracking-tighter2">Someone responsible after
+              launch</h3>
+            <p class="text-[0.93rem] leading-[1.55] text-white/60">Monitoring, updates and agreed response times —
+              whether or not we built it.</p>
+          </article>
+        </div>
+
+        <p class="rise mt-10 text-[0.95rem] text-white/60" style="--d:440ms">
+          Pricing follows scope, so we quote after the call rather than before it.
+          <a href="#s6"
+            class="group ml-1 inline-flex items-center gap-1.5 font-semibold text-white underline decoration-brand-lt decoration-2 underline-offset-4 transition hover:text-brand-lt">
+            Ask for a quote<span class="transition group-hover:translate-x-0.5" aria-hidden="true">→</span>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════ 5 · CLIENTS ══════ -->
+    <section id="s5" class="slide border-y border-hair bg-white">
+      <div class="mx-auto w-full max-w-shell px-5 py-20 sm:px-8">
+        <p class="rise mb-4 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand" style="--d:0ms">Clients</p>
+        <h2
+          class="rise balance font-display text-[1.65rem] font-semibold leading-[1.18] tracking-tighter2 sm:text-[2.1rem]"
+          style="--d:60ms">
+          Relationships measured in years, not sprints.
+        </h2>
+        <div class="rise mt-7 h-px w-full bg-hair wipe" style="--d:140ms"></div>
+
+        <div class="mt-9 grid gap-10 md:grid-cols-2">
+          <figure class="rise" style="--d:200ms">
+            <blockquote class="font-display text-[1.18rem] leading-[1.5] tracking-tighter2 sm:text-[1.3rem]">
+              Strong across Java, .NET, PHP and Node. On time, every project.
+            </blockquote>
+            <figcaption class="mt-4 font-mono text-[0.74rem] text-muted">Haikel Battikh · Co-founder, SmaRHt Lab
+            </figcaption>
+          </figure>
+          <figure class="rise" style="--d:280ms">
+            <blockquote class="font-display text-[1.18rem] leading-[1.5] tracking-tighter2 sm:text-[1.3rem]">
+              Five years with us, consistently going past the brief.
+            </blockquote>
+            <figcaption class="mt-4 font-mono text-[0.74rem] text-muted">Fabrice Lorill · Co-founder, DSN-Tools
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ 6 · CONTACT ══════ -->
+    <section id="s6" class="slide bg-ink text-white">
+      <div class="mx-auto grid w-full max-w-shell gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+        <div>
+          <p class="rise mb-4 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-brand-lt" style="--d:0ms">Start
+            here</p>
+          <h2
+            class="rise balance font-display text-[1.65rem] font-semibold leading-[1.18] tracking-tighter2 sm:text-[2.1rem]"
+            style="--d:60ms">
+            Tell us what you need built.
+          </h2>
+          <p class="rise mt-4 max-w-[46ch] text-[1rem] leading-[1.6] text-white/60" style="--d:140ms">
+            We reply within one business day — with a call time, or an honest note that we are not the right team.
+          </p>
+
+          <dl class="rise mt-8 grid gap-4" style="--d:220ms">
+            <div>
+              <dt class="mb-1 font-mono text-[0.66rem] uppercase tracking-[0.14em] text-dim">Company</dt>
+              <dd class="text-[0.96rem]">AcceleraIT LLC</dd>
+            </div>
+            <div>
+              <dt class="mb-1 font-mono text-[0.66rem] uppercase tracking-[0.14em] text-dim">Email</dt>
+              <dd><a href="mailto:admin@accelerait.us"
+                  class="border-b border-ink-line pb-0.5 transition hover:border-brand-lt">admin@accelerait.us</a></dd>
+            </div>
+            <div>
+              <dt class="mb-1 font-mono text-[0.66rem] uppercase tracking-[0.14em] text-dim">Phone</dt>
+              <dd><a href="tel:+15744005404" class="border-b border-ink-line pb-0.5 transition hover:border-brand-lt">+1
+                  (574) 400-5404</a></dd>
+            </div>
+            <div>
+              <dt class="mb-1 font-mono text-[0.66rem] uppercase tracking-[0.14em] text-dim">Address</dt>
+              <dd class="text-[0.96rem] text-white/80">30 N Gould St, Ste R<br>Sheridan, WY 82801</dd>
+            </div>
+            <div>
+              <dt class="mb-1 font-mono text-[0.66rem] uppercase tracking-[0.14em] text-dim">LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/company/accelerait-us" target="_blank" rel="noopener"
+                  class="border-b border-ink-line pb-0.5 transition hover:border-brand-lt">linkedin.com/company/accelerait-us</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <form id="contactForm" class="rise grid gap-4 self-center" style="--d:180ms">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="grid gap-2">
+              <label for="f-name" class="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-dim">Your
+                name</label>
+              <input id="f-name" name="name" type="text" required placeholder="Jane Miller"
+                class="rounded-lg border border-ink-line bg-ink-2 px-4 py-3 text-white placeholder:text-dim/70 focus:border-brand focus:ring-0">
+            </div>
+            <div class="grid gap-2">
+              <label for="f-company"
+                class="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-dim">Company</label>
+              <input id="f-company" name="company" type="text" placeholder="Northwind Inc."
+                class="rounded-lg border border-ink-line bg-ink-2 px-4 py-3 text-white placeholder:text-dim/70 focus:border-brand focus:ring-0">
+            </div>
+          </div>
+          <div class="grid gap-2">
+            <label for="f-email" class="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-dim">Email</label>
+            <input id="f-email" name="email" type="email" required placeholder="jane@company.com"
+              class="rounded-lg border border-ink-line bg-ink-2 px-4 py-3 text-white placeholder:text-dim/70 focus:border-brand focus:ring-0">
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="grid gap-2">
+              <label for="f-type"
+                class="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-dim">Discipline</label>
+              <select id="f-type" name="type"
+                class="rounded-lg border border-ink-line bg-ink-2 px-4 py-3 text-white focus:border-brand focus:ring-0">
+                <option>Custom software</option>
+                <option>Web platform</option>
+                <option>Mobile application</option>
+                <option>Artificial intelligence</option>
+                <option>Data and BI</option>
+                <option>Cloud and DevOps</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="grid gap-2">
+              <label for="f-when" class="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-dim">Timing</label>
+              <select id="f-when" name="when"
+                class="rounded-lg border border-ink-line bg-ink-2 px-4 py-3 text-white focus:border-brand focus:ring-0">
+                <option>As soon as possible</option>
+                <option>Within 1–3 months</option>
+                <option>Within 3–6 months</option>
+                <option>Just planning</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid gap-2">
+            <label for="f-msg" class="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-dim">What are you
+              solving</label>
+            <textarea id="f-msg" name="message" rows="3" placeholder="A few sentences is enough."
+              class="rounded-lg border border-ink-line bg-ink-2 px-4 py-3 text-white placeholder:text-dim/70 focus:border-brand focus:ring-0"></textarea>
+          </div>
+          <button type="submit"
+            class="justify-self-start rounded-full bg-white px-7 py-3.5 text-[0.94rem] font-semibold text-ink transition hover:-translate-y-0.5">
+            Send
+          </button>
+          <p id="formNote" class="font-mono text-[0.7rem] text-dim">Straight to our inbox. No mailing list.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const dots = Array.from(document.querySelectorAll('#rail button'));
+
+    /* ── section entrance + rail state ─────────────────────────── */
+    if ('IntersectionObserver' in window) {
+      const enterIO = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('in'); enterIO.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.06 });
+      slides.forEach(s => enterIO.observe(s));
+    } else {
+      slides.forEach(s => s.classList.add('in'));   // no observer support: show everything
+    }
+
+    const railIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const i = slides.indexOf(e.target);
+        dots.forEach((d, n) => d.setAttribute('aria-current', n === i ? 'true' : 'false'));
+      });
+    }, { threshold: 0.5 });
+    slides.forEach(s => railIO.observe(s));
+
+    dots.forEach(d => d.addEventListener('click', () => {
+      document.getElementById(d.dataset.go)
+        .scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    }));
+
+    /* ── scroll progress ───────────────────────────────────────── */
+    const bar = document.getElementById('progress');
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      bar.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
+    };
+    onScroll(); addEventListener('scroll', onScroll, { passive: true });
+    addEventListener('resize', onScroll);
+
+    /* ── stat counters ─────────────────────────────────────────── */
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const target = +el.dataset.count;
+      if (reduced) { el.textContent = target; return; }
+      const io = new IntersectionObserver(entries => {
+        if (!entries[0].isIntersecting) return;
+        io.disconnect();
+        const dur = 900, t0 = performance.now();
+        const step = now => {
+          const p = Math.min((now - t0) / dur, 1);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      }, { threshold: 0.5 });
+      io.observe(el);
+    });
+
+    /* ── phase tabs ────────────────────────────────────────────── */
+    const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+    const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+    const wrap = document.getElementById('panelWrap');
+    const pIndex = document.getElementById('phaseIndex');
+    const pTitle = document.getElementById('phaseTitle');
+    const pWeeks = document.getElementById('phaseWeeks');
+    let current = 0;
+
+    function select(i) {
+      if (i === current) return;
+      current = i;
+      tabs.forEach((t, n) => t.setAttribute('aria-selected', n === i ? 'true' : 'false'));
+      const swap = () => {
+        panels.forEach((p, n) => { p.hidden = n !== i; });
+        pIndex.textContent = i + 1;
+        pTitle.textContent = tabs[i].dataset.label;
+        pWeeks.textContent = tabs[i].dataset.weeks;
+        wrap.classList.remove('opacity-0');
+      };
+      if (reduced) { swap(); return; }
+      wrap.classList.add('opacity-0');
+      setTimeout(swap, 160);
+    }
+
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(i));
+      t.addEventListener('keydown', e => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        const next = (i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length;
+        tabs[next].focus(); select(next);
+      });
+    });
+
+    /* ── contact form → prefilled email.
+          Swap for your own endpoint (Formspree, HubSpot, your API). ── */
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const f = e.target;
+      const body = [
+        'Name: ' + f.name.value,
+        'Company: ' + f.company.value,
+        'Email: ' + f.email.value,
+        'Discipline: ' + f.type.value,
+        'Timing: ' + f.when.value,
+        '', f.message.value
+      ].join('\n');
+      location.href = 'mailto:admin@accelerait.us'
+        + '?subject=' + encodeURIComponent('New enquiry — ' + (f.company.value || f.name.value))
+        + '&body=' + encodeURIComponent(body);
+      document.getElementById('formNote').textContent = 'Opening your email app — press send there.';
+    });
+  </script>
+</body>
+
+</html>
