@@ -1,5 +1,11 @@
+Name: AcceleraIT LLC
+Phone: +15744005404
+Email: admin@accelerait.us
+Address: 30 N Gould St Ste R, Sheridan, WY 82801
 
- AcceleraIT LLC — custom software, web, mobile, AI and data engineering.
+------------
+
+AcceleraIT LLC — custom software, web, mobile, AI and data engineering.
 
 Twenty years, one senior team. Two-week sprints, fixed scope, three-month warranty on everything we ship.
 On this call: what you're building, what it realistically takes, and what it costs. No slides, no discovery phase you pay for. If we're not the right fit, we'll say so on the call.
