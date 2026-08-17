@@ -87,7 +87,7 @@ scrolling normally on laptops, tablets and phones:
 3. **How we work** — the interactive four-phase, eight-week timeline
 4. **Engagement** — fixed scope, dedicated team, support
 5. **Clients** — two references
-6. **Contact** — details and form
+6. **Contact** — details and a Cal.com booking link
 
 A progress bar tracks scroll position; a dot rail on the right (desktop only)
 jumps between slides.
