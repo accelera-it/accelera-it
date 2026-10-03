@@ -26,4 +26,5 @@ docker-compose.override.yml
 node_modules/
 
 # Apache logs from the Docker container
-logs/
+logs/*
+!logs/.gitkeep
