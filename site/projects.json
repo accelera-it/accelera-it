@@ -124,7 +124,7 @@
     ],
     "year": 2006,
     "thumbnail": "/assets/projects/gov-uz.png",
-    "description": "For nearly five years we worked as consultants, engineers and team leads alongside the technical teams of Uzbekistan's ministries of Tax, Transport, Health, Water, Finance, Higher Education, Foreign Affairs and Internal Affairs."
+    "description": "For nearly five years we worked as consultants, engineers and team leads alongside the technical teams of Uzbekistan's ministries and agencies of Tax, Customs, Transport, Health, Water, Finance, Higher Education, Foreign Affairs and Internal Affairs."
   },
   {
     "name": "Pivot Table",
@@ -135,7 +135,7 @@
     ],
     "year": 2006,
     "thumbnail": "/assets/projects/seektable.png",
-    "description": "With a senior team, we built petabyte-scale big data analysis with a live-chart system on top of it, then reworked the OLAP cube on in-memory key/value storage to deliver a CMS reporting system for French foreign-affairs and closed audit organizations."
+    "description": "Together with the NReco team behind SeekTable, we built petabyte-scale big data analysis with a live-chart system, then reworked the OLAP cube on in-memory key/value storage to deliver CMS reporting for French foreign-affairs and closed audit organizations."
   },
   {
     "name": "National Library",
@@ -220,6 +220,29 @@
     "description": "Loglig is an integrated social app for sports management, built for federations, associations and leagues — basketball first among them. Its goal is a more participatory experience for every member, with features, plans and registration in Hebrew and English."
   },
   {
+    "name": "Property Management",
+    "link": "https://www.trumptowerny.com/",
+    "category": [
+      "Clients",
+      "Hospitality"
+    ],
+    "year": 2012,
+    "thumbnail": "/assets/projects/trump-tower.png",
+    "icon": "https://www.trumptowerny.com/images/site/apple-touch-icon.png",
+    "description": "In partnership with BirchStreet, we studied the property and inventory systems of Trump Tower New York and about ten hotels around it, then launched a large project that resolved their gaps with one connected platform for property and inventory management."
+  },
+  {
+    "name": "Data Extraction",
+    "link": "https://www.easydatafeed.com/",
+    "category": [
+      "Clients",
+      "E-commerce"
+    ],
+    "year": 2013,
+    "thumbnail": "/assets/projects/easydatafeed.png",
+    "description": "For Easy Data Feed, we pulled product and order data from 50+ leading e-commerce platforms onto a single server, sorted and normalized it through SFTP and CSV feeds, and loaded it into one central system — giving the business a working foundation for its sales."
+  },
+  {
     "name": "DSN Tools",
     "link": "https://www.dsn-tools.fr/",
     "category": [
@@ -252,7 +275,7 @@
     "year": 2018,
     "thumbnail": "/assets/projects/tadi.png",
     "icon": "https://tadi.uz/wp-content/uploads/2021/12/%D0%BB%D0%BE%D0%B3%D0%BE.png",
-    "description": "TADI (TAD Industries) builds biometric and AI solutions in Uzbekistan. Its FacePay service lets shoppers pay at the till with their face instead of a card or phone — fast, secure checkout that shortens queues and makes retailers more efficient, with no passwords to lose."
+    "description": "TADI (TAD Industries) builds biometric and AI solutions in Uzbekistan. Alongside FacePay, which lets shoppers pay at the till with their face, we rolled out face-ID systems for C/B, airports, stations, the traffic police (GAI) and GSI/GSP."
   },
   {
     "name": "Energy Trucking",
@@ -292,7 +315,7 @@
     "description": "CSMarketCap tracks CS2 skin prices across 20+ marketplaces in real time, so traders can compare offers and see market capitalization, trending and falling skins. It adds a trade-up calculator, an inventory checker and live analytics for the whole in-game economy."
   },
   {
-    "name": "Züs Storage",
+    "name": "0Chain Storage",
     "link": "https://zus.network/",
     "category": [
       "Clients",
@@ -301,10 +324,22 @@
     "year": 2021,
     "thumbnail": "/assets/projects/zus.png",
     "icon": "https://zus.network/favicons/apple-touch-icon.png",
-    "description": "Züs is a high-performance datahub on a zero-knowledge network: breach-proof, S3-compatible storage with ACID integrity for backups, data lakes and AI workloads. It is built to cut database, security, API and egress costs compared with traditional cloud storage."
+    "description": "0Chain is a high-performance datahub on a zero-knowledge network: breach-proof, S3-compatible storage with ACID integrity for backups, data lakes and AI workloads. It is built to cut database, security, API and egress costs compared with traditional cloud storage."
   },
   {
-    "name": "Rent Local",
+    "name": "Trading Platform",
+    "link": "https://truedex.io/",
+    "category": [
+      "Clients",
+      "Fintech",
+      "Blockchain"
+    ],
+    "year": 2023,
+    "thumbnail": "/assets/projects/truedex.png",
+    "description": "TrueDEX is a private, order-book trading platform with its data center in New York and its traders in Moscow, built natively on newer protocols such as MProto and gRPC. We delivered the trading dashboard and an open API for private spot-market trading."
+  },
+  {
+    "name": "RickSocial Rental",
     "link": "https://ricksocial.com",
     "category": [
       "Startups",

@@ -329,7 +329,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const tags = el('div', 'mt-4 flex flex-wrap items-center gap-1.5');
       categoriesOf(p).forEach(c =>
         tags.append(el('span', 'rounded-full bg-brand-soft px-2.5 py-0.5 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-brand-deep', c)));
-      if (p.year) tags.append(el('span', 'ml-auto font-mono text-[0.72rem] text-dim', String(p.year)));
 
       const body = el('div', 'flex flex-1 flex-col p-6');
       body.append(head,
