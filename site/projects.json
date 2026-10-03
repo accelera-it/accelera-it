@@ -3,7 +3,7 @@
     "name": "Rent Local",
     "link": "https://ricksocial.com",
     "category": [
-      "Our startups",
+      "Startups",
       "Marketplace"
     ],
     "thumbnail": "/assets/projects/rent-local.webp",
@@ -14,8 +14,8 @@
     "name": "Terminal API",
     "link": "https://tapi.uz",
     "category": [
-      "Our startups",
-      "HR & Workforce"
+      "Startups",
+      "HR"
     ],
     "thumbnail": "/assets/projects/terminal-api.webp",
     "icon": "https://tapi.uz/images/apple-touch-icon.png",
@@ -25,8 +25,8 @@
     "name": "PC Monitoring",
     "link": "https://pcmonitor.app",
     "category": [
-      "Our startups",
-      "HR & Workforce"
+      "Startups",
+      "HR"
     ],
     "thumbnail": "/assets/projects/pc-monitoring.webp",
     "icon": "https://pcmonitor.app/images/apple-touch-icon.png",
@@ -36,8 +36,8 @@
     "name": "VPN Tool",
     "link": "https://darkzone.uz",
     "category": [
-      "Our startups",
-      "Privacy & Security"
+      "Startups",
+      "Security"
     ],
     "thumbnail": "/assets/projects/vpn-tool.webp",
     "icon": "https://darkzone.uz/logo.png",
@@ -47,7 +47,7 @@
     "name": "CSMarketCap Skins",
     "link": "https://csmarketcap.com/",
     "category": [
-      "Client work",
+      "Clients",
       "Gaming"
     ],
     "thumbnail": "/assets/projects/csmarketcap.webp",
@@ -58,7 +58,7 @@
     "name": "Freecash Blockchain",
     "link": "https://freecash.com/en",
     "category": [
-      "Client work",
+      "Clients",
       "Gaming",
       "Blockchain"
     ],
@@ -70,8 +70,8 @@
     "name": "Züs Storage",
     "link": "https://zus.network/",
     "category": [
-      "Client work",
-      "Cloud & Data"
+      "Clients",
+      "Cloud"
     ],
     "thumbnail": "/assets/projects/zus.webp",
     "icon": "https://zus.network/favicons/apple-touch-icon.png",
@@ -81,7 +81,7 @@
     "name": "PAYONE Clearing",
     "link": "https://www.payone.com/DE-en",
     "category": [
-      "Client work",
+      "Clients",
       "Fintech"
     ],
     "thumbnail": "/assets/projects/payone.webp",
@@ -92,9 +92,9 @@
     "name": "Reaxys Analyst",
     "link": "https://www.reaxys.com",
     "category": [
-      "Client work",
-      "Research & Science",
-      "BI & Analytics"
+      "Clients",
+      "Science",
+      "Analytics"
     ],
     "thumbnail": "/assets/projects/reaxys.webp",
     "description": "Clinical analysis across Elsevier's research network: we built analytics on top of ScienceDirect and Scopus data for Reaxys, Elsevier's chemistry intelligence platform."
@@ -103,7 +103,7 @@
     "name": "mobile.de",
     "link": "https://www.mobile.de/en",
     "category": [
-      "Client work",
+      "Clients",
       "Marketplace"
     ],
     "icon": "https://static.classistatic.de/static/favicons/favicon-180x180.png",
@@ -113,7 +113,7 @@
     "name": "Ping Exchange",
     "link": "https://ping.exchange/",
     "category": [
-      "Client work",
+      "Clients",
       "Fintech"
     ],
     "thumbnail": "/assets/projects/ping-exchange.webp",
@@ -123,8 +123,8 @@
     "name": "DSN Tools",
     "link": "https://www.dsn-tools.fr/",
     "category": [
-      "Client work",
-      "HR & Workforce"
+      "Clients",
+      "HR"
     ],
     "thumbnail": "/assets/projects/dsn-tools.webp",
     "icon": "https://www.dsn-tools.fr/wp-content/uploads/2018/11/cropped-dsntools-180x180.jpg",
@@ -134,7 +134,7 @@
     "name": "Loglig Basketball",
     "link": "https://loglig.com/logineng",
     "category": [
-      "Client work",
+      "Clients",
       "Sports"
     ],
     "thumbnail": "/assets/projects/loglig.webp",
@@ -144,7 +144,7 @@
     "name": "Eppli Auction/Jewelry",
     "link": "https://www.eppli.com/en/",
     "category": [
-      "Client work",
+      "Clients",
       "E-commerce"
     ],
     "thumbnail": "/assets/projects/eppli.webp",
@@ -155,9 +155,9 @@
     "name": "Smart-HRM Axiata",
     "link": "https://www.smart.com.kh/",
     "category": [
-      "Client work",
+      "Clients",
       "Telecom",
-      "HR & Workforce"
+      "HR"
     ],
     "thumbnail": "/assets/projects/smart-axiata.webp",
     "icon": "https://www.smart.com.kh/apple-touch-icon.png",
@@ -167,7 +167,7 @@
     "name": "UzEx Platforms",
     "link": "https://uzex.uz/",
     "category": [
-      "Client work",
+      "Clients",
       "Fintech"
     ],
     "thumbnail": "/assets/projects/uzex.webp",
@@ -178,7 +178,7 @@
     "name": "TADI FacePay",
     "link": "https://tadi.uz/en/",
     "category": [
-      "Client work",
+      "Clients",
       "AI"
     ],
     "thumbnail": "/assets/projects/tadi.webp",
@@ -189,7 +189,7 @@
     "name": "QuickManage Modules",
     "link": "https://www.quickmanage.ai/",
     "category": [
-      "Client work",
+      "Clients",
       "Logistics",
       "Mobile"
     ],
@@ -201,8 +201,8 @@
     "name": "Azure Virtual Machines",
     "link": "https://azure.microsoft.com/en-us/products/virtual-machines/windows/",
     "category": [
-      "Client work",
-      "Cloud & Data"
+      "Clients",
+      "Cloud"
     ],
     "thumbnail": "/assets/projects/azure-vms.webp",
     "description": "Implemented an NVIDIA CUDA module for B-family virtual machines on Microsoft Azure."
@@ -211,8 +211,8 @@
     "name": "1C Uzbekistan",
     "link": "https://1c.uz/",
     "category": [
-      "Client work",
-      "BI & Analytics"
+      "Clients",
+      "Analytics"
     ],
     "thumbnail": "/assets/projects/1c.webp",
     "description": "BI and reporting on 1C:Enterprise, covering more than 50,000 brands."
@@ -221,7 +221,7 @@
     "name": "Energy Trucking",
     "link": "https://energytrucking.com/",
     "category": [
-      "Client work",
+      "Clients",
       "Logistics"
     ],
     "thumbnail": "/assets/projects/energy-trucking.webp",
@@ -232,7 +232,7 @@
     "name": "USPS Gateway",
     "link": "https://gateway.usps.com/",
     "category": [
-      "Client work",
+      "Clients",
       "Logistics"
     ],
     "thumbnail": "/assets/projects/usps-gateway.webp",
@@ -242,7 +242,7 @@
     "name": "CME Risk Management",
     "link": "https://www.cmegroup.com/solutions/risk-management.html",
     "category": [
-      "Client work",
+      "Clients",
       "Fintech"
     ],
     "thumbnail": "/assets/projects/cme-risk.webp",
