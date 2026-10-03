@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Static, single-page marketing site for AcceleraIT LLC, deployed to `https://accelerait.us` (LiteSpeed/Apache host). **No build step, no dependencies, no tests, no linter.** Everything served lives in `site/`; deployment means uploading the contents of `site/` to the web root as-is (including the hidden `.htaccess`). `README.md`, `meet.txt`, `docker-compose.yml` and this file stay at the repo root and are not served.
+Static, single-page marketing site for AcceleraIT LLC, deployed to `https://accelerait.us` (LiteSpeed/Apache host). **No build step, no dependencies, no tests, no linter.** Everything served lives in `site/`; deployment means uploading the contents of `site/` to the web root as-is (including the hidden `.htaccess`). `README.md`, `docker-compose.yml`, `upload.sh` and this file stay at the repo root (`docs/meet.txt` alongside them) and are not served.
 
 Run locally (Apache with `.htaccess` active, so redirects/headers/file blocks match production):
 
@@ -16,8 +16,6 @@ docker compose up -d --build   # from repo root → http://localhost:8081
 
 ## Architecture
 
-The landing page is `site/index.html`: `<head>` metadata, inline Tailwind config, a `<style>` block, the markup, and one inline `<script>` at the end.
-
 - **Styling:** Tailwind v3 loaded from `cdn.tailwindcss.com` (compiled in-browser). Custom design tokens (`ink`, `brand`, `paper`, `hair`, `muted`, `dim`; fonts `display`/`sans`/`mono`; `max-w-shell`) are defined in the inline `tailwind.config` object — use those rather than raw hex values. Non-utility CSS (slide shell, entrance animation, hero/footer backdrops, progress bar, dot rail, reduced-motion overrides) is in the `<style>` block.
 - **Slides:** six `<section class="slide">` elements with ids `s1`–`s6` (Hero, What we do, How we work, Engagement, Clients, Contact). Scroll-snap is enabled only at `min-width:1024px and min-height:760px`; smaller viewports scroll normally. Sections with `bg-ink` are dark — the rail script toggles `.on-dark` based on that class, so keep it on dark sections.
 - **Script behaviours** (all keyed off DOM ids/attributes, so renaming markup breaks them):
@@ -26,13 +24,14 @@ The landing page is `site/index.html`: `<head>` metadata, inline Tailwind config
   - `[data-count]` elements animate to their number (e.g. the "6 disciplines" counter must match the number of discipline cards in `#s2`).
   - Phase tabs in `#s3`: `[role=tab]` buttons with `data-label`/`data-weeks` drive `#phaseIndex`, `#phaseTitle`, `#phaseWeeks` and show/hide `#panel-N`; arrow-key navigation included.
   - All motion respects `prefers-reduced-motion`.
-- **Startups page:** `site/projects.html` is a second, standalone page (the hero's "Our Project Journey" button links to it). It copies the `<head>` metadata, Tailwind config and footer from `index.html` — keep the two configs identical. It fetches `/projects.json` (array of `{name, link?, category?, year?, thumbnail?, description}`; `category` is a string or a list; `year` is the year the product's domain was registered (RDAP), not shown on the cards — keep the file sorted by it, oldest first, since the page renders in file order; the name links to `link` in a new tab) and renders cards via `textContent`. Category filter chips are built from the data with counts — Startups, Clients, Open-source first, then the rest A–Z; on phones they form one swipeable row; the selection is kept in `?category=<slug>` so filtered views can be shared. `thumbnail` is a local 1200×630 PNG homepage screenshot in `site/assets/projects/<slug>.png`, compressed with `pngquant --quality=90-100` then `oxipng -o max` (taken with headless Chromium; where a site blocks that, its og-image is downloaded instead). Thumbnails are shown whole (`bg-contain`) at full opacity. A missing or broken thumbnail falls back to an initials panel. No product icons are shown, so every image is local. It needs an HTTP server; `file://` won't load the JSON.
-- **Contact:** no form — the Contact slide links to a Cal.com booking page. `meet.txt` holds the company details and copy used for the Cal.com event.
+- **Projects page:** `site/projects.html` is a second, standalone page (the hero's "Our Project Journey" button links to it). It copies the `<head>` metadata, Tailwind config and footer from `index.html` — keep the two configs identical. It fetches `/projects.json` (array of `{name, link?, category?, year?, thumbnail?, description}`; `category` is a string or a list; `year` is the year the product's domain was registered (RDAP), not shown on the cards — keep the file sorted by it, oldest first, since the page renders in file order; the name links to `link` in a new tab) and renders cards via `textContent`. Category filter chips are built from the data with counts — Startups, Clients, Open-source first, then the rest A–Z; on phones they form one swipeable row; the selection is kept in `?category=<slug>` so filtered views can be shared. `thumbnail` is a local 1200×630 PNG homepage screenshot in `site/assets/projects/<slug>.png`, compressed with `pngquant --quality=90-100` then `oxipng -o max` — if pngquant exits 99 (quality unreachable, typical for photo-heavy pages) use `oxipng` alone (taken with headless Chromium; where a site blocks that, its og-image is downloaded instead). Thumbnails are shown whole (`bg-contain`) at full opacity. A missing or broken thumbnail falls back to an initials panel. No product icons are shown, so every image is local; delete a thumbnail when its entry is removed or repointed. It needs an HTTP server; `file://` won't load the JSON.
+- **Contact:** no form — the Contact slide links to a Cal.com booking page. `docs/meet.txt` holds the company details and copy used for the Cal.com event.
+- **Deploy:** `./upload.sh` mirrors `site/` to the host over FTPS with `lftp` (`--dry-run` to preview, `--delete` to prune removed files); credentials come from `docs/ftp.txt` or env vars. See README.
 - **Analytics:** Google Tag Manager container `GTM-MSNM2N35` (head script + `<noscript>` iframe).
 
 ## Things that must stay in sync
 
-- Company facts appear in several places: JSON-LD (`ProfessionalService`) in `<head>`, visible Contact copy, and `meet.txt`.
+- Company facts appear in several places: JSON-LD (`ProfessionalService`) in `<head>`, visible Contact copy, and `docs/meet.txt`.
 - Canonical URL is the non-www `https://accelerait.us/`. It's referenced by `<link rel="canonical">`, `og:url`, `sitemap.xml`, `robots.txt`, and the www→non-www redirect in `.htaccess` section 5. Changing domain form means updating all of them.
 - Update `<lastmod>` in `sitemap.xml` when the page content changes.
 - `robots.txt` deliberately allows AI crawlers and blocks SEO crawlers (Semrush, Ahrefs, etc.) — see README for rationale.

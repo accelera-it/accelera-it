@@ -24,7 +24,7 @@ image and denied by `.htaccess` if uploaded.
 site/
 ├── index.html                     the landing page
 ├── projects.html                  "Our Project Journey" page, filterable by category
-├── projects.json                  startups (with categories) listed on projects.html
+├── projects.json                  projects (startups, clients, open-source…) listed on projects.html
 ├── .htaccess                      server rules (see notes below)
 ├── robots.txt                     crawler policy
 ├── sitemap.xml                    edit <lastmod> when you change the page
@@ -32,18 +32,28 @@ site/
 ├── favicon.ico                    16 / 32 / 48 / 64 px, multi-resolution
 └── assets/
     ├── og-image.png               1200 × 630, social + AI link previews
-    ├── og-image-preview.png       600 × 315, reference only — not linked
     ├── favicon.svg                modern browsers prefer this over .ico
     ├── apple-touch-icon.png       180 × 180, iOS home screen
     ├── icon-192.png               Android / PWA
     ├── icon-512.png               Android / PWA
     ├── icon-512-maskable.png      Android adaptive icon, 18% safe padding
-    ├── logo-mark.svg              square mark on navy
-    ├── logo-mark-transparent.svg  mark alone, for dark backgrounds
     ├── logo-wordmark.svg          "AcceleraIT" — outlines, no font needed
-    ├── logo-wordmark-white.svg    same, for dark backgrounds
     └── projects/                  1200 × 630 PNG site screenshots, thumbnails on projects.html
 ```
+
+## Deploy
+
+```bash
+./upload.sh --dry-run   # show what would change on the server
+./upload.sh             # upload new/changed files from site/ over FTPS (lftp)
+./upload.sh --delete    # also remove remote files no longer in site/
+```
+
+Needs `lftp` (`brew install lftp`). Host and user are set in the script; the
+password and web root are read from `docs/ftp.txt`, and env vars `FTP_USER`,
+`FTP_HOST`, `FTP_PORT`, `FTP_PASS` and `REMOTE_DIR` override them. The
+`Dockerfile`, `.dockerignore` and `.DS_Store` files are never uploaded. Use
+`--delete` after removing a thumbnail or page so the old file goes too.
 
 ## Upload checklist
 
@@ -111,6 +121,35 @@ scrolling normally on laptops, tablets and phones:
 
 A progress bar tracks scroll position; a dot rail on the right (desktop only)
 jumps between slides.
+
+## Projects page
+
+`projects.html` renders the cards from `projects.json` in file order. Each
+entry is `{name, link?, category?, year?, thumbnail?, description}`:
+
+- **`year`** — the year the linked domain was registered (look it up via
+  RDAP / `whois`). It isn't shown on the cards, but keep the file sorted by it,
+  oldest first.
+- **`category`** — a string or a list. Filter chips are built from the data,
+  with Startups, Clients and Open-source first.
+- **`thumbnail`** — `/assets/projects/<slug>.png`, a 1200 × 630 homepage
+  screenshot taken with headless Chrome:
+
+  ```bash
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
+    --hide-scrollbars --window-size=1200,630 --virtual-time-budget=8000 \
+    --screenshot=shot.png https://example.com/
+  pngquant --quality=90-100 --output site/assets/projects/<slug>.png shot.png
+  oxipng -o max site/assets/projects/<slug>.png
+  ```
+
+  If `pngquant` can't reach that quality (exit code 99, common with photo-heavy
+  pages), copy the original and run only `oxipng`. When a site blocks headless
+  browsers, download its og-image instead. Delete the PNG when you remove or
+  repoint an entry.
+
+The page fetches the JSON, so open it through a server (Docker above), not
+`file://`. `.htaccess` blocks every other `.json` file.
 
 ## Content still to confirm
 
