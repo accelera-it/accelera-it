@@ -128,6 +128,14 @@
       color: rgba(255, 255, 255, .6);
     }
 
+    .no-scrollbar {
+      scrollbar-width: none;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
     /* ── cards ─────────────────────────────────────────────────── */
     .project-cover {
       border-bottom: 1px solid #E4E8EF;
@@ -209,7 +217,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <main id="projects" class="mx-auto w-full max-w-shell flex-1 px-5 py-10 sm:px-8 sm:py-14">
     <!-- chips are built from the categories in /projects.json -->
-    <div id="filters" role="group" aria-label="Filter by category" class="flex w-full flex-wrap gap-2"></div>
+    <!-- phones: one swipeable row so the tabs don't push the projects off screen; sm+: wrap -->
+    <div id="filters" role="group" aria-label="Filter by category"
+      class="no-scrollbar -mx-5 flex gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0"></div>
 
     <ul id="projectList" class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       <li class="text-[0.93rem] text-muted">Loading…</li>
@@ -331,7 +341,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     function chip(key, label, count) {
-      const b = el('button', 'chip inline-flex items-center gap-2 rounded-full border border-hair bg-white px-4 py-2 text-[0.88rem] font-medium transition hover:border-ink');
+      const b = el('button', 'chip inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-hair bg-white px-4 py-2 text-[0.88rem] font-medium transition hover:border-ink');
       b.type = 'button';
       b.dataset.cat = key;
       b.append(label, el('span', 'chip-count font-mono text-[0.72rem] text-dim', String(count)));
@@ -340,11 +350,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     function buildFilters() {
-      // categories in order of first appearance, with how many projects each has
+      // how many projects each category has; the kind of work (LEAD) first, then fields A–Z
+      const LEAD = ['Startups', 'Clients', 'Open-source'];
       const counts = new Map();
       projects.forEach(p => categoriesOf(p).forEach(c => counts.set(c, (counts.get(c) || 0) + 1)));
+      const rank = c => (LEAD.includes(c) ? LEAD.indexOf(c) : LEAD.length);
+      const cats = Array.from(counts.keys()).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
       filters.replaceChildren(chip(ALL, 'All', projects.length),
-        ...Array.from(counts, ([c, n]) => chip(slug(c), c, n)));
+        ...cats.map(c => chip(slug(c), c, counts.get(c))));
       filters.hidden = counts.size === 0;
     }
 
