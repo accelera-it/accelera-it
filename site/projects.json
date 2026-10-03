@@ -172,15 +172,15 @@
     "description": "Uzbekistan's Republican Commodity Exchange: electronic commodity trading, public procurement and a logistics portal."
   },
   {
-    "name": "TADI",
-    "link": "https://tadi.uz/",
+    "name": "TADI FacePay",
+    "link": "https://tadi.uz/en/",
     "category": [
       "Client work",
       "AI"
     ],
     "thumbnail": "/assets/projects/tadi.webp",
     "icon": "https://tadi.uz/wp-content/uploads/2021/12/%D0%BB%D0%BE%D0%B3%D0%BE.png",
-    "description": "TAD Industries: biometric identity verification and AI solutions for secure, password-free access."
+    "description": "Face-recognition payments for retail in Uzbekistan: shoppers pay at the till with their face — fast, secure checkout with shorter queues."
   },
   {
     "name": "QuickManage",
