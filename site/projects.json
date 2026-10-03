@@ -226,6 +226,17 @@
     "description": "After studying BTCPay Server, our team members fluent in Ripple (XRP) helped bring Stellar (XLM) into the Open Bank Project. Following negotiations with its tech team in Frankfurt, Germany, we rolled out our own crypto module for banks on the platform."
   },
   {
+    "name": "Property Management",
+    "link": "https://kwpmc.com/",
+    "category": [
+      "Clients",
+      "Hospitality"
+    ],
+    "year": 2010,
+    "thumbnail": "/assets/projects/kwpmc.png",
+    "description": "Through VirtuWorks, we studied the capabilities of BirchStreet Systems at Trump Tower New York and developed an improved platform for KW Property Management & Consulting, relaunched at Trump Tower and about ten top-rated hotels around it with a full inventory system."
+  },
+  {
     "name": "Screenshot Monitor",
     "link": "https://screenshotmonitor.com/",
     "category": [
@@ -246,17 +257,6 @@
     "year": 2012,
     "thumbnail": "/assets/projects/loglig.png",
     "description": "Loglig is an integrated social app for sports management, built for federations, associations and leagues — basketball first among them. Its goal is a more participatory experience for every member, with features, plans and registration in Hebrew and English."
-  },
-  {
-    "name": "Property Management",
-    "link": "https://www.trumptowerny.com/",
-    "category": [
-      "Clients",
-      "Hospitality"
-    ],
-    "year": 2012,
-    "thumbnail": "/assets/projects/trump-tower.png",
-    "description": "In partnership with BirchStreet, we studied the property and inventory systems of Trump Tower New York and about ten hotels around it, then launched a large project that resolved their gaps with one connected platform for property and inventory management."
   },
   {
     "name": "Data Extraction",
