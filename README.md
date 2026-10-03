@@ -50,9 +50,8 @@ site/
 ```
 
 Needs `lftp` (`brew install lftp`). Host, user, port, password and web root
-are read from `docs/ftp.txt`, which is git-ignored — create it locally, never
-commit it. Env vars `FTP_USER`, `FTP_HOST`, `FTP_PORT`, `FTP_PASS` and
-`REMOTE_DIR` override it. The
+are read from `docs/ftp.txt`; env vars `FTP_USER`, `FTP_HOST`, `FTP_PORT`,
+`FTP_PASS` and `REMOTE_DIR` override them. The
 `Dockerfile`, `.dockerignore` and `.DS_Store` files are never uploaded. Use
 `--delete` after removing a thumbnail or page so the old file goes too.
 
