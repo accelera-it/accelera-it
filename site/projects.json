@@ -31,7 +31,6 @@
     ],
     "year": 1996,
     "thumbnail": "/assets/projects/mobile-de.png",
-    "icon": "https://static.classistatic.de/static/favicons/favicon-180x180.png",
     "description": "For mobile.de, Germany's largest vehicle marketplace, we set up the full back office: online APIs and scrapers collect listings from around 100 systems into one platform, which feeds live data to both the web portal and the mobile apps."
   },
   {
@@ -65,8 +64,18 @@
     ],
     "year": 1998,
     "thumbnail": "/assets/projects/payone.png",
-    "icon": "https://www.payone.com/apple-touch-icon-57x57.png",
     "description": "PAYONE is a European payment provider for online, in-store and omnichannel payments. Thanks to bs-payone, our open-source .NET client for its merchant interface, Microsoft quickly signed a contract and integrated PAYONE for all of its payments across the EU."
+  },
+  {
+    "name": "Salesforce Maps",
+    "link": "https://www.salesforce.com/sales/mapping-software/",
+    "category": [
+      "Clients",
+      "Cloud"
+    ],
+    "year": 1998,
+    "thumbnail": "/assets/projects/salesforce-maps.png",
+    "description": "Salesforce Maps brings CRM-based mapping to field sales: customer visualization, route planning and territories. With full SOAP API access granted to our team, we built the map tier on Google Maps that serves the complete CRM for every customer account."
   },
   {
     "name": "Freecash Platform",
@@ -78,7 +87,6 @@
     ],
     "year": 1999,
     "thumbnail": "/assets/projects/freecash.png",
-    "icon": "https://freecash.com/apple-icon.png",
     "description": "Freecash is a rewards platform trusted by 80M+ users. We implemented its full blockchain layer, from the wallet system to payments in around ten crypto tokens, and handed everything over running behind a VPN with strict, transparent traffic controls."
   },
   {
@@ -101,7 +109,6 @@
     ],
     "year": 2000,
     "thumbnail": "/assets/projects/monetdb.png",
-    "icon": "https://www.monetdb.org/images/Favicon.svg",
     "description": "We are official GitHub contributors to MonetDB, the open-source column-store database built for high-performance analytics with standard SQL. Around 2015 we created a database management tool for administering MonetDB servers, and have maintained it ever since."
   },
   {
@@ -113,7 +120,6 @@
     ],
     "year": 2005,
     "thumbnail": "/assets/projects/eppli.png",
-    "icon": "https://www.eppli.com/out/EPP/img/favicons/apple-touch-icon-180x180.png",
     "description": "Eppli is a sworn auction house, jeweler and pawnbroker in Germany with over 40 years of experience. Its platform covers online and judicial auctions, an online shop for jewelry, watches, art and coins, and certificates of authenticity from its own expert center."
   },
   {
@@ -171,7 +177,6 @@
     ],
     "year": 2008,
     "thumbnail": "/assets/projects/smart-axiata.png",
-    "icon": "https://www.smart.com.kh/apple-touch-icon.png",
     "description": "Smart Axiata is Cambodia's leading mobile operator, serving millions of subscribers with mobile plans, 5G data, home internet and digital services. We built Smart-HRM, its human resources management system for running employee records and HR processes across the company."
   },
   {
@@ -183,7 +188,6 @@
     ],
     "year": 2009,
     "thumbnail": "/assets/projects/uzex.png",
-    "icon": "https://uzex.uz/images/assets/favicon.png",
     "description": "UzEx is Uzbekistan's Republican Commodity Exchange, running electronic commodity trading, public procurement and a national logistics portal. We built parts of its platforms and published .NET libraries from that work, including Oracle data access via Dapper and MinIO storage clients."
   },
   {
@@ -222,6 +226,17 @@
     "description": "After studying BTCPay Server, our team members fluent in Ripple (XRP) helped bring Stellar (XLM) into the Open Bank Project. Following negotiations with its tech team in Frankfurt, Germany, we rolled out our own crypto module for banks on the platform."
   },
   {
+    "name": "Screenshot Monitor",
+    "link": "https://screenshotmonitor.com/",
+    "category": [
+      "Clients",
+      "HR"
+    ],
+    "year": 2011,
+    "thumbnail": "/assets/projects/screenshotmonitor.png",
+    "description": "Screenshot Monitor tracks employee activity and time against tasks, much like the desktop apps of Upwork, Toptal, Crossover and Hubstaff, but as a standalone service. It was a top platform during the pandemic lockdowns; we built version 1, later expanded as scrin.io."
+  },
+  {
     "name": "Loglig Basketball",
     "link": "https://loglig.com/logineng",
     "category": [
@@ -241,7 +256,6 @@
     ],
     "year": 2012,
     "thumbnail": "/assets/projects/trump-tower.png",
-    "icon": "https://www.trumptowerny.com/images/site/apple-touch-icon.png",
     "description": "In partnership with BirchStreet, we studied the property and inventory systems of Trump Tower New York and about ten hotels around it, then launched a large project that resolved their gaps with one connected platform for property and inventory management."
   },
   {
@@ -256,6 +270,17 @@
     "description": "For Easy Data Feed, we pulled product and order data from 50+ leading e-commerce platforms onto a single server, sorted and normalized it through SFTP and CSV feeds, and loaded it into one central system — giving the business a working foundation for its sales."
   },
   {
+    "name": "MixERP Software",
+    "link": "https://mixerp.net/",
+    "category": [
+      "Open-source",
+      "Clients"
+    ],
+    "year": 2015,
+    "thumbnail": "/assets/projects/mixerp.png",
+    "description": "As GitHub contributors to MixERP, we set it up for desktop and offline use with full localization and deployed it at 10+ organizations in Uzbekistan, back in 2015 when SAP and 1C were still closed systems. Today we carry this work forward on the commercial ERPNext."
+  },
+  {
     "name": "DSN Tools",
     "link": "https://www.dsn-tools.fr/",
     "category": [
@@ -264,7 +289,6 @@
     ],
     "year": 2017,
     "thumbnail": "/assets/projects/dsn-tools.png",
-    "icon": "https://www.dsn-tools.fr/wp-content/uploads/2018/11/cropped-dsntools-180x180.jpg",
     "description": "DSN Tools helps French companies explore, check and aggregate their DSN payroll declarations across multiple periods, with custom extracts, data validation and ready-made HR reports. A five-year partnership: its co-founder says we consistently went past the brief."
   },
   {
@@ -299,7 +323,6 @@
     ],
     "year": 2018,
     "thumbnail": "/assets/projects/tadi.png",
-    "icon": "https://tadi.uz/wp-content/uploads/2021/12/%D0%BB%D0%BE%D0%B3%D0%BE.png",
     "description": "TADI (TAD Industries) builds biometric and AI solutions in Uzbekistan. Alongside FacePay, which lets shoppers pay at the till with their face, we rolled out face-ID systems for C/B, airports, stations, the traffic police (GAI) and GSI/GSP."
   },
   {
@@ -311,7 +334,6 @@
     ],
     "year": 2019,
     "thumbnail": "/assets/projects/energy-trucking.png",
-    "icon": "https://static.tildacdn.net/tild3230-3366-4662-a535-343162363338/EN_Favicon.png",
     "description": "Energy Trucking is a US carrier running routes across all 48 states. We connected its operations to the services a fleet depends on: fuel cards, City Fuel, Samsara telematics and EFS payments, plus FMCSA (U.S. DOT) carrier data for compliance and safety checks."
   },
   {
@@ -324,7 +346,6 @@
     ],
     "year": 2020,
     "thumbnail": "/assets/projects/quickmanage.png",
-    "icon": "https://framerusercontent.com/images/aIZUooTe9hLknKv7g3OwYKIoCW8.png",
     "description": "QuickManage is an all-in-one transport management system for fleet, document and expense management. We helped build the first version of its customer cabinet and mobile app, and moved the project forward on the infrastructure side."
   },
   {
@@ -336,7 +357,6 @@
     ],
     "year": 2020,
     "thumbnail": "/assets/projects/csmarketcap.png",
-    "icon": "https://csmarketcap.com/apple-touch-icon.png",
     "description": "CSMarketCap tracks CS2 skin prices across 20+ marketplaces in real time, so traders can compare offers and see market capitalization, trending and falling skins. It adds a trade-up calculator, an inventory checker and live analytics for the whole in-game economy."
   },
   {
@@ -344,12 +364,12 @@
     "link": "https://zus.network/",
     "category": [
       "Clients",
-      "Cloud"
+      "Cloud",
+      "Blockchain"
     ],
     "year": 2021,
     "thumbnail": "/assets/projects/zus.png",
-    "icon": "https://zus.network/favicons/apple-touch-icon.png",
-    "description": "0Chain is a high-performance datahub on a zero-knowledge network: breach-proof, S3-compatible storage with ACID integrity for backups, data lakes and AI workloads. It is built to cut database, security, API and egress costs compared with traditional cloud storage."
+    "description": "As part of 0Chain's updated Web3 strategy, we reworked its full MinIO-based storage core in Go, extended its compression levels and split data into terabyte-scale rather than gigabyte-scale blocks, delivering a complete, transparent backup and restore system."
   },
   {
     "name": "Trading Platform",
@@ -372,7 +392,7 @@
     ],
     "year": 2023,
     "thumbnail": "/assets/projects/moodswings.png",
-    "description": "For the Mood Swings fashion label, with its factory in Dubai and its shop in the EU, we built the B2B e-commerce store. Every payment runs as a transaction through a bank gateway opened in Dubai, and the whole system passed a full audit by EmiratTech."
+    "description": "For the Mood Swings fashion label, with its factory in Dubai and its shop in the EU, we built the B2B store on OpenCart CMS with our own UI/UX design and technical improvements. Every payment runs through a Dubai bank gateway, and the system passed a full EmiratTech audit."
   },
   {
     "name": "RickSocial Rental",
@@ -383,7 +403,6 @@
     ],
     "year": 2024,
     "thumbnail": "/assets/projects/rent-local.png",
-    "icon": "https://ricksocial.com/apple-touch-icon.png",
     "description": "A peer-to-peer rental platform for tools and equipment: owners earn from items that would otherwise sit idle, and renters pay a fraction of the purchase price. Payments run through Stripe, every booking includes damage coverage, and rentals are managed in iOS and Android apps."
   },
   {
@@ -395,7 +414,6 @@
     ],
     "year": 2025,
     "thumbnail": "/assets/projects/terminal-api.png",
-    "icon": "https://tapi.uz/images/apple-touch-icon.png",
     "description": "A cloud HRMS where face-recognition terminals (Hikvision SDK) track working time and calculate payroll automatically, while two AI assistants answer 30+ kinds of HR and accounting questions in Uzbek, Russian or English. Used by 20+ organizations and 5,000+ employees."
   },
   {
@@ -407,7 +425,6 @@
     ],
     "year": 2026,
     "thumbnail": "/assets/projects/pc-monitoring.png",
-    "icon": "https://pcmonitor.app/images/apple-touch-icon.png",
     "description": "Attendance and work-time tracking for Windows PCs, built on Windows events instead of manual check-ins: daily app-usage reports with Excel export, screenshots every 15 seconds and remote control from the dashboard. Scales to 100,000 PCs, from $3 per computer a month."
   },
   {
@@ -419,7 +436,6 @@
     ],
     "year": 2026,
     "thumbnail": "/assets/projects/vpn-tool.png",
-    "icon": "https://darkzone.uz/logo.png",
     "description": "A private VPN for Windows, macOS and Android. Traffic is encrypted end to end through a private relay, every session is verified so only approved accounts stay connected, and there is nothing to configure and no admin rights needed — just sign in and press Start."
   }
 ]

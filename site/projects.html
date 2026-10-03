@@ -316,14 +316,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         emptyCover(cover, p.name);
       }
 
-      const head = el('div', 'flex items-center gap-3');
-      if (p.icon) {
-        const icon = el('img', 'h-9 w-9 shrink-0 rounded-lg border border-hair bg-white object-cover');
-        icon.src = p.icon; icon.alt = ''; icon.loading = 'lazy';
-        icon.referrerPolicy = 'no-referrer';
-        icon.onerror = () => icon.remove();
-        head.append(icon);
-      }
       const title = el('h2', 'font-display text-[1.2rem] font-semibold tracking-tighter2');
       if (p.link) {
         const a = el('a', 'underline-offset-4 transition-colors hover:text-brand hover:underline', p.name);
@@ -332,14 +324,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       } else {
         title.textContent = p.name;
       }
-      head.append(title);
 
       const tags = el('div', 'mt-4 flex flex-wrap items-center gap-1.5');
       categoriesOf(p).forEach(c =>
         tags.append(el('span', 'rounded-full bg-brand-soft px-2.5 py-0.5 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-brand-deep', c)));
 
       const body = el('div', 'flex flex-1 flex-col p-6');
-      body.append(head,
+      body.append(title,
         el('p', 'mt-3 flex-1 text-[0.92rem] leading-[1.55] text-muted', p.description),
         tags);
 
