@@ -8,10 +8,10 @@
     ],
     "year": 1991,
     "thumbnail": "/assets/projects/azure-vms.png",
-    "description": "Microsoft Azure's B-series are burstable, cost-efficient virtual machines for workloads that don't need full CPU power all the time. We implemented an NVIDIA CUDA module for the B-family Windows machines, so CUDA-based workloads can run on this lower-cost tier."
+    "description": "Microsoft Azure's B-series are burstable, cost-efficient virtual machines for workloads that don't need full CPU power all the time. We implemented an NVIDIA CUDA module for B-series Windows machines, so CUDA-based workloads can run on this lower-cost tier."
   },
   {
-    "name": "Office365 Administration",
+    "name": "Office 365 Administration",
     "link": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-administration",
     "category": [
       "Clients",
@@ -26,12 +26,13 @@
     "link": "https://www.mobile.de/en",
     "category": [
       "Clients",
-      "Marketplace"
+      "Marketplace",
+      "Mobile"
     ],
     "year": 1996,
     "thumbnail": "/assets/projects/mobile-de.png",
     "icon": "https://static.classistatic.de/static/favicons/favicon-180x180.png",
-    "description": "mobile.de is Germany's largest vehicle marketplace for new and used cars, motorhomes, motorcycles and commercial vehicles. Buyers search millions of listings by make, model, price, mileage and location, and dealers and private sellers reach them from a single platform."
+    "description": "For mobile.de, Germany's largest vehicle marketplace, we set up the full back office: online APIs and scrapers collect listings from around 100 systems into one platform, which feeds live data to both the web portal and the mobile apps."
   },
   {
     "name": "ETL Plugin",
@@ -53,7 +54,7 @@
     ],
     "year": 1997,
     "thumbnail": "/assets/projects/usps-gateway.png",
-    "description": "Integration with the USPS Business Customer Gateway, the Postal Service's single portal for business mailers and shippers. It covers access to USPS mailing and shipping services, returns and Informed Visibility tracking for letters, flats, bundles and containers."
+    "description": "Connected to the USPS Business Customer Gateway, we launched a private system for carriers across about 45 US states. It manages every fuel card assigned to each truck and company, and all USPS loads are flushed into it automatically."
   },
   {
     "name": "PAYONE Clearing",
@@ -65,10 +66,10 @@
     "year": 1998,
     "thumbnail": "/assets/projects/payone.png",
     "icon": "https://www.payone.com/apple-touch-icon-57x57.png",
-    "description": "PAYONE is a European payment provider for online, in-store and omnichannel payments. Building on bs-payone, our open-source .NET client for its merchant interface, Microsoft quickly signed a contract and integrated PAYONE for all of its payments across the EU."
+    "description": "PAYONE is a European payment provider for online, in-store and omnichannel payments. Thanks to bs-payone, our open-source .NET client for its merchant interface, Microsoft quickly signed a contract and integrated PAYONE for all of its payments across the EU."
   },
   {
-    "name": "Freecash Blockchain",
+    "name": "Freecash Platform",
     "link": "https://freecash.com/en",
     "category": [
       "Clients",
@@ -78,10 +79,10 @@
     "year": 1999,
     "thumbnail": "/assets/projects/freecash.png",
     "icon": "https://freecash.com/apple-icon.png",
-    "description": "Freecash is a rewards platform trusted by more than 80 million users, who earn real cash for playing games, completing surveys, trying apps and finishing small tasks. Earnings are withdrawn through PayPal, gift cards such as Amazon, and cryptocurrency payouts."
+    "description": "Freecash is a rewards platform trusted by 80M+ users. We implemented its full blockchain layer, from the wallet system to payments in around ten crypto tokens, and handed everything over running behind a VPN with strict, transparent traffic controls."
   },
   {
-    "name": "CME Risk-Management",
+    "name": "Risk Management",
     "link": "https://www.cmegroup.com/solutions/risk-management.html",
     "category": [
       "Clients",
@@ -101,7 +102,7 @@
     "year": 2000,
     "thumbnail": "/assets/projects/monetdb.png",
     "icon": "https://www.monetdb.org/images/Favicon.svg",
-    "description": "Official GitHub contributors to MonetDB, the open-source column-store database built for high-performance analytics with standard SQL. Around 2015 we created a database management tool for administering MonetDB servers, and we have kept maintaining it ever since."
+    "description": "We are official GitHub contributors to MonetDB, the open-source column-store database built for high-performance analytics with standard SQL. Around 2015 we created a database management tool for administering MonetDB servers, and have maintained it ever since."
   },
   {
     "name": "Eppli Auction/Jewelry",
@@ -113,7 +114,7 @@
     "year": 2005,
     "thumbnail": "/assets/projects/eppli.png",
     "icon": "https://www.eppli.com/out/EPP/img/favicons/apple-touch-icon-180x180.png",
-    "description": "Eppli is a sworn auction house, jeweller and pawnbroker in Germany with over 40 years of experience. Its platform covers online and judicial auctions, an online shop for jewelry, watches, art and coins, and certificates of authenticity from its own expert center."
+    "description": "Eppli is a sworn auction house, jeweler and pawnbroker in Germany with over 40 years of experience. Its platform covers online and judicial auctions, an online shop for jewelry, watches, art and coins, and certificates of authenticity from its own expert center."
   },
   {
     "name": "Ministries of Uzbekistan",
@@ -135,7 +136,7 @@
     ],
     "year": 2006,
     "thumbnail": "/assets/projects/seektable.png",
-    "description": "Together with the NReco team behind SeekTable, we built petabyte-scale big data analysis with a live-chart system, then reworked the OLAP cube on in-memory key/value storage to deliver CMS reporting for French foreign-affairs and closed audit organizations."
+    "description": "Together with the NReco team behind SeekTable, we built petabyte-scale big data analysis with a live-chart system, then reworked the OLAP cube on in-memory key/value storage to deliver CMS reporting for French foreign affairs and closed audit organizations."
   },
   {
     "name": "National Library",
@@ -195,7 +196,7 @@
     ],
     "year": 2010,
     "thumbnail": "/assets/projects/1c.png",
-    "description": "We analyzed the 1C system in the data center that serves 50,000+ organizations across Uzbekistan, optimized its high-load Database and Webservice layer, and introduced a new load-balanced API on top of it. On that API we launched a mobile and tablet cabinet for its users."
+    "description": "We analyzed the 1C system in the data center that serves 50,000+ organizations across Uzbekistan, optimized its high-load database and web service layer, and introduced a new load-balanced API on top of it. On that API we launched a mobile and tablet cabinet for its users."
   },
   {
     "name": "Microsoft Repository",
@@ -206,7 +207,7 @@
     ],
     "year": 2010,
     "thumbnail": "/assets/projects/nuget.png",
-    "description": "Over 15+ years and 50+ organizations, we have built and reworked more than 10 open-source .NET libraries. They range from high-speed database bulk loaders and ORM extensions with migrations to storage clients and a cross-platform obfuscator for .NET assemblies."
+    "description": "Over 15 years and 50+ organizations, we have built and reworked more than 10 open-source .NET libraries. They range from high-speed database bulk loaders and ORM extensions with migrations to storage clients and a cross-platform obfuscator for .NET assemblies."
   },
   {
     "name": "OpenBank Crypto",
@@ -264,7 +265,7 @@
     "year": 2017,
     "thumbnail": "/assets/projects/dsn-tools.png",
     "icon": "https://www.dsn-tools.fr/wp-content/uploads/2018/11/cropped-dsntools-180x180.jpg",
-    "description": "DSN Tools helps French companies explore, check and aggregate their DSN payroll declarations across multiple periods, with custom extracts, data validation and ready-made HR reports. A five-year partnership: the co-founder says we went past the brief consistently."
+    "description": "DSN Tools helps French companies explore, check and aggregate their DSN payroll declarations across multiple periods, with custom extracts, data validation and ready-made HR reports. A five-year partnership: its co-founder says we consistently went past the brief."
   },
   {
     "name": "Identity & Access Management",
@@ -275,14 +276,15 @@
     ],
     "year": 2017,
     "thumbnail": "/assets/projects/keycloak.png",
-    "description": "Since 2017, through our company DOTNET.UZ, we have advised on and deployed Keycloak for organizations from government bodies to banks on an outsourcing basis — chosen knowing MyID's limitations and that it is not a pure single sign-on (SSO) system."
+    "description": "Since 2017, through our company DOTNET.UZ, we have advised on and deployed Keycloak for organizations from government bodies to banks on an outsourcing basis — recommended because MyID has known limitations and is not a pure single sign-on (SSO) system."
   },
   {
     "name": "Ping Exchange",
     "link": "https://ping.exchange/",
     "category": [
       "Clients",
-      "Fintech"
+      "Fintech",
+      "Blockchain"
     ],
     "year": 2018,
     "thumbnail": "/assets/projects/ping-exchange.png",
@@ -362,7 +364,7 @@
     "description": "TrueDEX is a private, order-book trading platform with its data center in New York and its traders in Moscow, built natively on newer protocols such as MProto and gRPC. We delivered the trading dashboard and an open API for private spot-market trading."
   },
   {
-    "name": "Mood Swings",
+    "name": "Moodzing B2B",
     "link": "https://themoodswings.eu/",
     "category": [
       "Clients",
@@ -370,7 +372,7 @@
     ],
     "year": 2023,
     "thumbnail": "/assets/projects/moodswings.png",
-    "description": "For Mood Swings, a fashion label with its own factory in Dubai and a shop in the EU, we built the complete e-commerce online store: limited, carefully curated collections sold across Europe in local currencies and languages, all from one storefront."
+    "description": "For the Mood Swings fashion label, with its factory in Dubai and its shop in the EU, we built the B2B e-commerce store. Every payment runs as a transaction through a bank gateway opened in Dubai, and the whole system passed a full audit by EmiratTech."
   },
   {
     "name": "RickSocial Rental",
