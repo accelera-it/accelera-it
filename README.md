@@ -49,9 +49,10 @@ site/
 ./upload.sh --delete    # also remove remote files no longer in site/
 ```
 
-Needs `lftp` (`brew install lftp`). Host and user are set in the script; the
-password and web root are read from `docs/ftp.txt`, and env vars `FTP_USER`,
-`FTP_HOST`, `FTP_PORT`, `FTP_PASS` and `REMOTE_DIR` override them. The
+Needs `lftp` (`brew install lftp`). Host, user, port, password and web root
+are read from `docs/ftp.txt`, which is git-ignored — create it locally, never
+commit it. Env vars `FTP_USER`, `FTP_HOST`, `FTP_PORT`, `FTP_PASS` and
+`REMOTE_DIR` override it. The
 `Dockerfile`, `.dockerignore` and `.DS_Store` files are never uploaded. Use
 `--delete` after removing a thumbnail or page so the old file goes too.
 
