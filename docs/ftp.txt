@@ -1,6 +1,6 @@
 FTP Username: upload@accelerait.us
-FTP server: server54.shared.spaceship.host
+FTP server: server49.shared.spaceship.host
 FTP & explicit FTPS port:  21
 
-psw: -vrEB9gUev}!DP2=
-root: /home/mhpqjofydg/accelerait.us
+psw: NrAatXntLOZ4Oc_(
+root: /home/vussedkijy/accelerait.us

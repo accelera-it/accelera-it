@@ -11,7 +11,7 @@
     "description": "Microsoft Azure's B-series are burstable, cost-efficient virtual machines for workloads that don't need full CPU power all the time. We implemented an NVIDIA CUDA module for the B-family Windows machines, so CUDA-based workloads can run on this lower-cost tier."
   },
   {
-    "name": "Microsoft 365 Administration",
+    "name": "Office365 Administration",
     "link": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-administration",
     "category": [
       "Clients",
@@ -186,7 +186,7 @@
     "description": "UzEx is Uzbekistan's Republican Commodity Exchange, running electronic commodity trading, public procurement and a national logistics portal. We built parts of its platforms and published .NET libraries from that work, including Oracle data access via Dapper and MinIO storage clients."
   },
   {
-    "name": "Database and Webservice layer",
+    "name": "1C Uzbekistan",
     "link": "https://1c-dn.com/",
     "category": [
       "Clients",
@@ -195,7 +195,7 @@
     ],
     "year": 2010,
     "thumbnail": "/assets/projects/1c.png",
-    "description": "We analyzed the 1C system in the data center that serves 50,000+ organizations across Uzbekistan, optimized its high-load SQL and IIS SOAP layer, and introduced a new load-balanced API on top of it. On that API we launched a mobile and tablet cabinet for its users."
+    "description": "We analyzed the 1C system in the data center that serves 50,000+ organizations across Uzbekistan, optimized its high-load Database and Webservice layer, and introduced a new load-balanced API on top of it. On that API we launched a mobile and tablet cabinet for its users."
   },
   {
     "name": "Microsoft Repository",
