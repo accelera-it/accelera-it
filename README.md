@@ -23,7 +23,8 @@ image and denied by `.htaccess` if uploaded.
 ```
 site/
 ├── index.html                     the landing page
-├── projects.json                  startups shown in the "Our new startups" popup
+├── projects.html                  "Our new startups" page, filterable by category
+├── projects.json                  startups (with categories) listed on projects.html
 ├── .htaccess                      server rules (see notes below)
 ├── robots.txt                     crawler policy
 ├── sitemap.xml                    edit <lastmod> when you change the page
@@ -40,7 +41,8 @@ site/
     ├── logo-mark.svg              square mark on navy
     ├── logo-mark-transparent.svg  mark alone, for dark backgrounds
     ├── logo-wordmark.svg          "AcceleraIT" — outlines, no font needed
-    └── logo-wordmark-white.svg    same, for dark backgrounds
+    ├── logo-wordmark-white.svg    same, for dark backgrounds
+    └── projects/                  1200 × 630 WebP site screenshots, thumbnails on projects.html
 ```
 
 ## Upload checklist

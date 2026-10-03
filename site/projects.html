@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Startups & client work — AcceleraIT</title>
+  <meta name="description"
+    content="Products AcceleraIT built and runs itself, and platforms its engineers have helped clients build — marketplaces, fintech, HR, data and more.">
+  <meta name="theme-color" content="#0B1220">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Startups & client work — AcceleraIT">
+  <meta property="og:description" content="Our own products, and platforms we have helped clients build.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://accelerait.us/projects.html">
+  <meta property="og:site_name" content="AcceleraIT">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://accelerait.us/assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AcceleraIT — twenty years across software, AI and data">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Startups & client work — AcceleraIT">
+  <meta name="twitter:description" content="Our own products, and platforms we have helped clients build.">
+  <meta name="twitter:image" content="https://accelerait.us/assets/og-image.png">
+
+  <link rel="canonical" href="https://accelerait.us/projects.html">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+    rel="stylesheet">
+
+  <!-- same CDN build and tokens as index.html — keep the two configs identical -->
+  <script src="https://cdn.tailwindcss.com/3.4.17?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: { DEFAULT: '#0B1220', 2: '#111C33', 3: '#1B2942', line: '#28374F' },
+            brand: { DEFAULT: '#2A55E5', deep: '#1D3FBF', soft: '#DDE4FA', lt: '#7D9BFF' },
+            paper: '#F7F8FA',
+            hair: '#E4E8EF',
+            muted: '#5B6880',
+            dim: '#93A1BC',
+          },
+          fontFamily: {
+            display: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+          },
+          maxWidth: { shell: '1160px' },
+          letterSpacing: { tighter2: '-0.008em' },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .balance {
+      text-wrap: balance;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid #2A55E5;
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    /* page head over the skyline, veiled like the index hero */
+    #headBg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(247, 248, 250, .97) 0%, rgba(247, 248, 250, .9) 50%, rgba(247, 248, 250, .78) 100%),
+        url("/assets/hero.jpg");
+      background-size: cover, cover;
+      background-position: center, center 60%;
+      background-repeat: no-repeat;
+      opacity: .8;
+      pointer-events: none;
+    }
+
+    @media (max-width: 767px) {
+      #headBg {
+        background-image:
+          linear-gradient(rgba(247, 248, 250, .92), rgba(247, 248, 250, .85)),
+          url("/assets/hero.jpg");
+      }
+    }
+
+    #footerBg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(11, 18, 32, .8), rgba(11, 18, 32, .88)),
+        url("/assets/hero.jpg");
+      background-size: cover, cover;
+      background-position: center, center 35%;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+
+    /* ── filter chips ──────────────────────────────────────────── */
+    .chip[aria-pressed="true"] {
+      background: #0B1220;
+      border-color: #0B1220;
+      color: #fff;
+    }
+
+    .chip[aria-pressed="true"] .chip-count {
+      color: rgba(255, 255, 255, .6);
+    }
+
+    /* ── cards ─────────────────────────────────────────────────── */
+    .project-cover {
+      border-bottom: 1px solid #E4E8EF;
+    }
+
+    /* no og-image: a branded panel with the product's initials instead */
+    .project-cover.is-empty {
+      display: grid;
+      place-items: center;
+      background-image:
+        radial-gradient(circle at 75% 20%, rgba(125, 155, 255, .35), transparent 55%),
+        linear-gradient(135deg, #1B2942, #0B1220);
+    }
+
+    .card-in {
+      animation: card-in .45s cubic-bezier(.16, 1, .3, 1) both;
+      animation-delay: var(--d, 0ms);
+    }
+
+    @keyframes card-in {
+      from { opacity: 0; transform: translateY(14px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: .001ms !important;
+        transition-duration: .001ms !important;
+      }
+    }
+  </style>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MSNM2N35');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body class="flex min-h-svh flex-col bg-paper font-sans text-[16px] leading-[1.6] text-ink antialiased">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSNM2N35"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <a href="#projects"
+    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[70] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:shadow">Skip
+    to projects</a>
+
+  <header class="relative overflow-hidden border-b border-hair">
+    <div id="headBg" aria-hidden="true"></div>
+
+    <div class="relative mx-auto flex w-full max-w-shell items-center justify-between gap-4 px-5 pt-6 sm:px-8">
+      <a href="/" class="inline-flex items-center" aria-label="AcceleraIT home">
+        <img src="/assets/logo-wordmark.svg" alt="AcceleraIT" class="h-7 w-auto sm:h-8">
+      </a>
+      <a href="/#s6"
+        class="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[0.88rem] font-semibold text-white transition hover:bg-brand-deep">
+        Book a call <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-shell px-5 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-20">
+      <h1
+        class="balance font-display text-[2.1rem] font-semibold leading-[1.12] tracking-tighter2 sm:text-[2.9rem] lg:text-[3.4rem]">
+        Startups &amp; client work
+      </h1>
+      <p class="balance mt-5 max-w-[52ch] text-[1.02rem] leading-[1.6] text-muted sm:text-[1.1rem]">
+        Products we designed, built and run ourselves — and platforms our engineers have helped clients build and scale.
+      </p>
+    </div>
+  </header>
+
+  <main id="projects" class="mx-auto w-full max-w-shell flex-1 px-5 py-10 sm:px-8 sm:py-14">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <!-- chips are built from the categories in /projects.json -->
+      <div id="filters" role="group" aria-label="Filter by category" class="flex flex-wrap gap-2"></div>
+      <p id="resultCount" class="shrink-0 font-mono text-[0.75rem] uppercase tracking-[0.14em] text-dim" aria-live="polite"></p>
+    </div>
+
+    <ul id="projectList" class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <li class="text-[0.93rem] text-muted">Loading…</li>
+    </ul>
+
+    <noscript>
+      <p class="mt-8 text-[0.93rem] text-muted">This page needs JavaScript to list the projects.</p>
+    </noscript>
+  </main>
+
+  <footer class="relative overflow-hidden border-t border-ink-line bg-ink py-16 text-center text-white">
+    <div id="footerBg" aria-hidden="true"></div>
+    <p class="relative px-5 font-mono text-[0.68rem] leading-[1.6] text-white/75 sm:text-[0.72rem]">
+      © <span id="year">2026</span> AcceleraIT LLC. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const list = document.getElementById('projectList');
+    const filters = document.getElementById('filters');
+    const resultCount = document.getElementById('resultCount');
+    const ALL = 'all';
+    let projects = [];
+
+    function el(tag, cls, text) {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text) n.textContent = text;   // textContent, never innerHTML: the JSON is data
+      return n;
+    }
+
+    const slug = s => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    // `category` may be a single string or a list
+    const categoriesOf = p => [].concat(p.category || []);
+
+    function initials(name) {
+      return name.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+    }
+
+    // no thumbnail, or one that fails to load: a branded panel with the initials
+    function emptyCover(cover, name) {
+      cover.style.backgroundImage = '';
+      cover.removeAttribute('role');
+      cover.classList.add('is-empty');
+      const mark = el('span', 'font-display text-[2.4rem] font-semibold tracking-tighter2 text-white/90', initials(name));
+      mark.setAttribute('aria-hidden', 'true');
+      cover.replaceChildren(mark);
+    }
+
+    function card(p) {
+      const article = el('article', 'flex h-full flex-col overflow-hidden rounded-2xl border border-hair bg-white transition-colors duration-200 hover:border-brand');
+
+      const cover = el('div', 'project-cover relative aspect-[1200/630] bg-ink bg-cover bg-center');
+      if (p.thumbnail) {
+        cover.style.backgroundImage = `url("${encodeURI(p.thumbnail)}")`;
+        cover.setAttribute('role', 'img');
+        cover.setAttribute('aria-label', p.name);
+        const probe = new Image();
+        probe.onerror = () => emptyCover(cover, p.name);
+        probe.src = p.thumbnail;
+      } else {
+        emptyCover(cover, p.name);
+      }
+
+      const head = el('div', 'flex items-center gap-3');
+      if (p.icon) {
+        const icon = el('img', 'h-9 w-9 shrink-0 rounded-lg border border-hair bg-white object-cover');
+        icon.src = p.icon; icon.alt = ''; icon.loading = 'lazy';
+        icon.referrerPolicy = 'no-referrer';
+        icon.onerror = () => icon.remove();
+        head.append(icon);
+      }
+      const title = el('h2', 'font-display text-[1.2rem] font-semibold tracking-tighter2');
+      if (p.link) {
+        const a = el('a', 'underline-offset-4 transition-colors hover:text-brand hover:underline', p.name);
+        a.href = p.link; a.target = '_blank'; a.rel = 'noopener';
+        title.append(a);
+      } else {
+        title.textContent = p.name;
+      }
+      head.append(title);
+
+      const tags = el('div', 'mt-4 flex flex-wrap gap-1.5');
+      categoriesOf(p).forEach(c =>
+        tags.append(el('span', 'rounded-full bg-brand-soft px-2.5 py-0.5 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-brand-deep', c)));
+
+      const body = el('div', 'flex flex-1 flex-col p-6');
+      body.append(head,
+        el('p', 'mt-3 flex-1 text-[0.92rem] leading-[1.55] text-muted', p.description),
+        tags);
+
+      article.append(cover, body);
+      return article;
+    }
+
+    function chip(key, label, count) {
+      const b = el('button', 'chip inline-flex items-center gap-2 rounded-full border border-hair bg-white px-4 py-2 text-[0.88rem] font-medium transition hover:border-ink');
+      b.type = 'button';
+      b.dataset.cat = key;
+      b.append(label, el('span', 'chip-count font-mono text-[0.72rem] text-dim', String(count)));
+      b.addEventListener('click', () => select(key, true));
+      return b;
+    }
+
+    function buildFilters() {
+      // categories in order of first appearance, with how many projects each has
+      const counts = new Map();
+      projects.forEach(p => categoriesOf(p).forEach(c => counts.set(c, (counts.get(c) || 0) + 1)));
+      filters.replaceChildren(chip(ALL, 'All', projects.length),
+        ...Array.from(counts, ([c, n]) => chip(slug(c), c, n)));
+      filters.hidden = counts.size === 0;
+    }
+
+    function select(key, push) {
+      const known = Array.from(filters.children).some(b => b.dataset.cat === key);
+      if (!known) key = ALL;
+      filters.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.cat === key)));
+
+      const shown = key === ALL ? projects : projects.filter(p => categoriesOf(p).some(c => slug(c) === key));
+      list.replaceChildren(...shown.map((p, i) => {
+        const li = el('li', 'card-in'); li.style.setProperty('--d', `${i * 60}ms`);
+        li.append(card(p)); return li;
+      }));
+      resultCount.textContent = `${shown.length} ${shown.length === 1 ? 'project' : 'projects'}`;
+
+      // keep the filter in the URL so a filtered view can be shared
+      if (push) {
+        const url = new URL(location.href);
+        if (key === ALL) url.searchParams.delete('category'); else url.searchParams.set('category', key);
+        history.replaceState(null, '', url);
+      }
+    }
+
+    fetch('/projects.json', { cache: 'no-cache' })
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(data => {
+        projects = data;
+        buildFilters();
+        select(new URLSearchParams(location.search).get('category') || ALL, false);
+      })
+      .catch(() => {
+        list.replaceChildren(el('li', 'text-[0.93rem] text-muted', 'Projects could not be loaded. Please refresh the page.'));
+      });
+  </script>
+</body>
+
+</html>

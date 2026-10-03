@@ -2,29 +2,215 @@
   {
     "name": "Rent Local",
     "link": "https://ricksocial.com",
-    "thumbnail": "https://ricksocial.com/assets/brand/og-image.jpg",
+    "category": [
+      "Our startups",
+      "Marketplace"
+    ],
+    "thumbnail": "/assets/projects/rent-local.webp",
     "icon": "https://ricksocial.com/apple-touch-icon.png",
     "description": "A peer-to-peer rental marketplace: rent tools and equipment from people nearby, or earn by listing your own. Secure payments and damage coverage on every booking."
   },
   {
     "name": "Terminal API",
     "link": "https://tapi.uz",
-    "thumbnail": "https://tapi.uz/images/og-image.png",
+    "category": [
+      "Our startups",
+      "HR & Workforce"
+    ],
+    "thumbnail": "/assets/projects/terminal-api.webp",
     "icon": "https://tapi.uz/images/apple-touch-icon.png",
     "description": "Cloud HRMS for growing teams. Face-recognition terminals and an AI assistant automate attendance, overtime and payroll, with real-time reporting across multiple organizations."
   },
   {
     "name": "PC Monitoring",
     "link": "https://pcmonitor.app",
-    "thumbnail": "https://pcmonitor.app/images/og-image.png",
+    "category": [
+      "Our startups",
+      "HR & Workforce"
+    ],
+    "thumbnail": "/assets/projects/pc-monitoring.webp",
     "icon": "https://pcmonitor.app/images/apple-touch-icon.png",
     "description": "Employee attendance and work-time tracking for Windows PCs. Arrivals and departures come from Windows events, with daily app-usage reports and active-screen screenshots — all in one dashboard, from $3 per computer a month."
   },
   {
     "name": "VPN Tool",
     "link": "https://darkzone.uz",
-    "thumbnail": "https://darkzone.uz/og-image.png",
+    "category": [
+      "Our startups",
+      "Privacy & Security"
+    ],
+    "thumbnail": "/assets/projects/vpn-tool.webp",
     "icon": "https://darkzone.uz/logo.png",
     "description": "A private, encrypted VPN for Windows, macOS and Android. One sign-in and you're connected — no configuration required."
+  },
+  {
+    "name": "CSMarketCap",
+    "link": "https://csmarketcap.com/",
+    "category": [
+      "Client work",
+      "Gaming"
+    ],
+    "thumbnail": "/assets/projects/csmarketcap.webp",
+    "icon": "https://csmarketcap.com/apple-touch-icon.png",
+    "description": "CS2 skin price comparison across 20+ marketplaces, with a trade-up calculator, inventory checker and real-time market analytics."
+  },
+  {
+    "name": "Freecash",
+    "link": "https://freecash.com/en",
+    "category": [
+      "Client work",
+      "Gaming"
+    ],
+    "thumbnail": "/assets/projects/freecash.webp",
+    "icon": "https://freecash.com/apple-icon.png",
+    "description": "A rewards platform with 80M+ users who earn real cash for playing games, completing surveys and trying apps."
+  },
+  {
+    "name": "Züs",
+    "link": "https://zus.network/",
+    "category": [
+      "Client work",
+      "Cloud & Data"
+    ],
+    "thumbnail": "/assets/projects/zus.webp",
+    "icon": "https://zus.network/favicons/apple-touch-icon.png",
+    "description": "A high-performance datahub on a zero-knowledge network: breach-proof, S3-compatible storage for backups, data lakes and AI workloads."
+  },
+  {
+    "name": "PAYONE",
+    "link": "https://www.payone.com/DE-en",
+    "category": [
+      "Client work",
+      "Fintech"
+    ],
+    "thumbnail": "/assets/projects/payone.webp",
+    "icon": "https://www.payone.com/apple-touch-icon-57x57.png",
+    "description": "A European payment provider for online, in-store and omnichannel businesses."
+  },
+  {
+    "name": "Reaxys",
+    "link": "https://www.reaxys.com",
+    "category": [
+      "Client work",
+      "Research & Science"
+    ],
+    "thumbnail": "/assets/projects/reaxys.webp",
+    "description": "A chemistry research database of reactions, substances and properties, used by researchers in industry and academia."
+  },
+  {
+    "name": "mobile.de",
+    "link": "https://www.mobile.de/en",
+    "category": [
+      "Client work",
+      "Marketplace"
+    ],
+    "icon": "https://static.classistatic.de/static/favicons/favicon-180x180.png",
+    "description": "Germany's largest vehicle marketplace for new and used cars, motorhomes, motorcycles and commercial vehicles."
+  },
+  {
+    "name": "Ping Exchange",
+    "link": "https://ping.exchange/",
+    "category": [
+      "Client work",
+      "Fintech"
+    ],
+    "thumbnail": "/assets/projects/ping-exchange.webp",
+    "description": "A hybrid crypto exchange with secure CorePass login — the first to list Core Coin (XCB) and Core Token (CTN)."
+  },
+  {
+    "name": "DSN Tools",
+    "link": "https://www.dsn-tools.fr/",
+    "category": [
+      "Client work",
+      "HR & Workforce"
+    ],
+    "thumbnail": "/assets/projects/dsn-tools.webp",
+    "icon": "https://www.dsn-tools.fr/wp-content/uploads/2018/11/cropped-dsntools-180x180.jpg",
+    "description": "Explore, check and aggregate French DSN payroll declarations across periods, with custom extracts and ready-made HR reports."
+  },
+  {
+    "name": "Loglig",
+    "link": "https://loglig.com/logineng",
+    "category": [
+      "Client work",
+      "Sports"
+    ],
+    "thumbnail": "/assets/projects/loglig.webp",
+    "description": "An integrated social app for sports federations and leagues, built to manage clubs and engage their members."
+  },
+  {
+    "name": "Eppli",
+    "link": "https://www.eppli.com/en/",
+    "category": [
+      "Client work",
+      "E-commerce"
+    ],
+    "thumbnail": "/assets/projects/eppli.webp",
+    "icon": "https://www.eppli.com/out/EPP/img/favicons/apple-touch-icon-180x180.png",
+    "description": "Online presence for a sworn auction house, jeweller and pawnbroker with over 40 years of experience."
+  },
+  {
+    "name": "Smart Axiata",
+    "link": "https://www.smart.com.kh/",
+    "category": [
+      "Client work",
+      "Telecom"
+    ],
+    "thumbnail": "/assets/projects/smart-axiata.webp",
+    "icon": "https://www.smart.com.kh/apple-touch-icon.png",
+    "description": "Cambodia's leading mobile operator: mobile plans, 4G/5G data, home internet and digital services for millions of subscribers."
+  },
+  {
+    "name": "UzEx",
+    "link": "https://uzex.uz/",
+    "category": [
+      "Client work",
+      "Fintech"
+    ],
+    "thumbnail": "/assets/projects/uzex.webp",
+    "icon": "https://uzex.uz/images/assets/favicon.png",
+    "description": "Uzbekistan's Republican Commodity Exchange: electronic commodity trading, public procurement and a logistics portal."
+  },
+  {
+    "name": "TADI",
+    "link": "https://tadi.uz/",
+    "category": [
+      "Client work",
+      "AI"
+    ],
+    "thumbnail": "/assets/projects/tadi.webp",
+    "icon": "https://tadi.uz/wp-content/uploads/2021/12/%D0%BB%D0%BE%D0%B3%D0%BE.png",
+    "description": "TAD Industries: biometric identity verification and AI solutions for secure, password-free access."
+  },
+  {
+    "name": "QuickManage",
+    "link": "https://www.quickmanage.ai/",
+    "category": [
+      "Client work",
+      "Logistics"
+    ],
+    "thumbnail": "/assets/projects/quickmanage.webp",
+    "icon": "https://framerusercontent.com/images/aIZUooTe9hLknKv7g3OwYKIoCW8.png",
+    "description": "An all-in-one transport management system for fleet, document and expense management."
+  },
+  {
+    "name": "Azure Virtual Machines",
+    "link": "https://azure.microsoft.com/en-us/products/virtual-machines/windows/",
+    "category": [
+      "Client work",
+      "Cloud & Data"
+    ],
+    "thumbnail": "/assets/projects/azure-vms.webp",
+    "description": "Implemented an NVIDIA CUDA module for B-family virtual machines on Microsoft Azure."
+  },
+  {
+    "name": "1C Uzbekistan",
+    "link": "https://1c.uz/",
+    "category": [
+      "Client work",
+      "BI & Analytics"
+    ],
+    "thumbnail": "/assets/projects/1c.webp",
+    "description": "BI and reporting on 1C:Enterprise, covering more than 50,000 brands."
   }
 ]
