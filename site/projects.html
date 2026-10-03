@@ -184,10 +184,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/" class="inline-flex items-center" aria-label="AcceleraIT home">
         <img src="/assets/logo-wordmark.svg" alt="AcceleraIT" class="h-7 w-auto sm:h-8">
       </a>
-      <a href="/#s6"
-        class="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[0.88rem] font-semibold text-white transition hover:bg-brand-deep">
-        Book a call <span aria-hidden="true">→</span>
-      </a>
+      <div class="flex items-center gap-2">
+        <a href="https://t.me/acceleraitus" target="_blank" rel="noopener"
+          class="hidden items-center rounded-full border border-ink/15 bg-white/70 px-5 py-2.5 text-[0.88rem] font-semibold backdrop-blur-sm transition hover:border-ink hover:bg-white sm:inline-flex">
+          Contact Us
+        </a>
+        <a href="/#s6"
+          class="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[0.88rem] font-semibold text-white transition hover:bg-brand-deep">
+          Book a Call <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
 
     <div class="relative mx-auto w-full max-w-shell px-5 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-20">
@@ -202,11 +208,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </header>
 
   <main id="projects" class="mx-auto w-full max-w-shell flex-1 px-5 py-10 sm:px-8 sm:py-14">
-    <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-      <!-- chips are built from the categories in /projects.json -->
-      <div id="filters" role="group" aria-label="Filter by category" class="flex flex-wrap gap-2"></div>
-      <p id="resultCount" class="shrink-0 font-mono text-[0.75rem] uppercase tracking-[0.14em] text-dim" aria-live="polite"></p>
-    </div>
+    <!-- chips are built from the categories in /projects.json -->
+    <div id="filters" role="group" aria-label="Filter by category" class="flex w-full flex-wrap gap-2"></div>
 
     <ul id="projectList" class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       <li class="text-[0.93rem] text-muted">Loading…</li>
@@ -215,6 +218,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <noscript>
       <p class="mt-8 text-[0.93rem] text-muted">This page needs JavaScript to list the projects.</p>
     </noscript>
+
+    <!-- contact: Telegram for a quick message, Cal.com (via the landing page) for a call -->
+    <section id="contact"
+      class="mt-16 flex flex-col gap-6 rounded-2xl bg-ink p-7 text-white sm:p-9 md:flex-row md:items-center md:justify-between">
+      <div>
+        <h2 class="balance font-display text-[1.35rem] font-semibold leading-[1.25] tracking-tighter2 sm:text-[1.55rem]">
+          Have a project like these in mind?
+        </h2>
+        <p class="mt-2 max-w-[48ch] text-[0.96rem] leading-[1.6] text-white/60">
+          Message us on Telegram, or book a 30-minute call with the engineers who would do the work.
+        </p>
+      </div>
+      <div class="flex shrink-0 flex-wrap gap-3">
+        <a href="https://t.me/acceleraitus" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-[0.94rem] font-semibold text-ink transition hover:-translate-y-0.5">
+          Contact Us on Telegram <span aria-hidden="true">→</span>
+        </a>
+        <a href="https://cal.com/accelerait-llc/30min" target="_blank" rel="noopener"
+          class="inline-flex items-center rounded-full border border-ink-line px-6 py-3.5 text-[0.94rem] font-semibold text-white transition hover:border-brand-lt">
+          Book a 30-Minute Call
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer class="relative overflow-hidden border-t border-ink-line bg-ink py-16 text-center text-white">
@@ -229,7 +255,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     const list = document.getElementById('projectList');
     const filters = document.getElementById('filters');
-    const resultCount = document.getElementById('resultCount');
     const ALL = 'all';
     let projects = [];
 
@@ -291,9 +316,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
       head.append(title);
 
-      const tags = el('div', 'mt-4 flex flex-wrap gap-1.5');
+      const tags = el('div', 'mt-4 flex flex-wrap items-center gap-1.5');
       categoriesOf(p).forEach(c =>
         tags.append(el('span', 'rounded-full bg-brand-soft px-2.5 py-0.5 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-brand-deep', c)));
+      if (p.year) tags.append(el('span', 'ml-auto font-mono text-[0.72rem] text-dim', String(p.year)));
 
       const body = el('div', 'flex flex-1 flex-col p-6');
       body.append(head,
@@ -332,7 +358,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const li = el('li', 'card-in'); li.style.setProperty('--d', `${i * 60}ms`);
         li.append(card(p)); return li;
       }));
-      resultCount.textContent = `${shown.length} ${shown.length === 1 ? 'project' : 'projects'}`;
 
       // keep the filter in the URL so a filtered view can be shared
       if (push) {

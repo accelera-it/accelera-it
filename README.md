@@ -42,7 +42,7 @@ site/
     ├── logo-mark-transparent.svg  mark alone, for dark backgrounds
     ├── logo-wordmark.svg          "AcceleraIT" — outlines, no font needed
     ├── logo-wordmark-white.svg    same, for dark backgrounds
-    └── projects/                  1200 × 630 WebP site screenshots, thumbnails on projects.html
+    └── projects/                  1200 × 630 PNG site screenshots, thumbnails on projects.html
 ```
 
 ## Upload checklist

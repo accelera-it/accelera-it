@@ -1,58 +1,71 @@
 [
   {
-    "name": "Rent Local",
-    "link": "https://ricksocial.com",
-    "category": [
-      "Startups",
-      "Marketplace"
-    ],
-    "thumbnail": "/assets/projects/rent-local.webp",
-    "icon": "https://ricksocial.com/apple-touch-icon.png",
-    "description": "A peer-to-peer rental marketplace: rent tools and equipment from people nearby, or earn by listing your own. Secure payments and damage coverage on every booking."
-  },
-  {
-    "name": "Terminal API",
-    "link": "https://tapi.uz",
-    "category": [
-      "Startups",
-      "HR"
-    ],
-    "thumbnail": "/assets/projects/terminal-api.webp",
-    "icon": "https://tapi.uz/images/apple-touch-icon.png",
-    "description": "Cloud HRMS for growing teams. Face-recognition terminals and an AI assistant automate attendance, overtime and payroll, with real-time reporting across multiple organizations."
-  },
-  {
-    "name": "PC Monitoring",
-    "link": "https://pcmonitor.app",
-    "category": [
-      "Startups",
-      "HR"
-    ],
-    "thumbnail": "/assets/projects/pc-monitoring.webp",
-    "icon": "https://pcmonitor.app/images/apple-touch-icon.png",
-    "description": "Employee attendance and work-time tracking for Windows PCs. Arrivals and departures come from Windows events, with daily app-usage reports and active-screen screenshots — all in one dashboard, from $3 per computer a month."
-  },
-  {
-    "name": "VPN Tool",
-    "link": "https://darkzone.uz",
-    "category": [
-      "Startups",
-      "Security"
-    ],
-    "thumbnail": "/assets/projects/vpn-tool.webp",
-    "icon": "https://darkzone.uz/logo.png",
-    "description": "A private, encrypted VPN for Windows, macOS and Android. One sign-in and you're connected — no configuration required."
-  },
-  {
-    "name": "CSMarketCap Skins",
-    "link": "https://csmarketcap.com/",
+    "name": "Azure VMs",
+    "link": "https://azure.microsoft.com/en-us/products/virtual-machines/windows/",
     "category": [
       "Clients",
-      "Gaming"
+      "Cloud"
     ],
-    "thumbnail": "/assets/projects/csmarketcap.webp",
-    "icon": "https://csmarketcap.com/apple-touch-icon.png",
-    "description": "CS2 skin price comparison across 20+ marketplaces, with a trade-up calculator, inventory checker and real-time market analytics."
+    "year": 1991,
+    "thumbnail": "/assets/projects/azure-vms.png",
+    "description": "Microsoft Azure's B-series are burstable, cost-efficient virtual machines for workloads that don't need full CPU power all the time. We implemented an NVIDIA CUDA module for the B-family Windows machines, so CUDA-based workloads can run on this lower-cost tier."
+  },
+  {
+    "name": "Microsoft 365 Administration",
+    "link": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-administration",
+    "category": [
+      "Clients",
+      "Cloud"
+    ],
+    "year": 1991,
+    "thumbnail": "/assets/projects/m365-admin.png",
+    "description": "Under a long-term contract through our EU-registered company, we worked inside a large Microsoft team to redevelop the Office Agenda system for Microsoft 365 administration, with direct support from the DevExpress team on the UI components behind it."
+  },
+  {
+    "name": "Vehicle Marketplace",
+    "link": "https://www.mobile.de/en",
+    "category": [
+      "Clients",
+      "Marketplace"
+    ],
+    "year": 1996,
+    "thumbnail": "/assets/projects/mobile-de.png",
+    "icon": "https://static.classistatic.de/static/favicons/favicon-180x180.png",
+    "description": "mobile.de is Germany's largest vehicle marketplace for new and used cars, motorhomes, motorcycles and commercial vehicles. Buyers search millions of listings by make, model, price, mileage and location, and dealers and private sellers reach them from a single platform."
+  },
+  {
+    "name": "ETL Plugin",
+    "link": "https://www.postgresql.org/",
+    "category": [
+      "Open-source",
+      "Database"
+    ],
+    "year": 1996,
+    "thumbnail": "/assets/projects/postgresql.png",
+    "description": "A GPU-accelerated bulk processor built on PostgreSQL, with import pipelines that move data from around 20 different relational databases into Postgres at high speed. The work was accepted by a Google development team, which whitelisted us as official contributors."
+  },
+  {
+    "name": "USPS Gateway",
+    "link": "https://gateway.usps.com/",
+    "category": [
+      "Clients",
+      "Logistics"
+    ],
+    "year": 1997,
+    "thumbnail": "/assets/projects/usps-gateway.png",
+    "description": "Integration with the USPS Business Customer Gateway, the Postal Service's single portal for business mailers and shippers. It covers access to USPS mailing and shipping services, returns and Informed Visibility tracking for letters, flats, bundles and containers."
+  },
+  {
+    "name": "PAYONE Clearing",
+    "link": "https://www.payone.com/DE-en",
+    "category": [
+      "Clients",
+      "Fintech"
+    ],
+    "year": 1998,
+    "thumbnail": "/assets/projects/payone.png",
+    "icon": "https://www.payone.com/apple-touch-icon-57x57.png",
+    "description": "PAYONE is a European payment provider for online, in-store and omnichannel payments. Building on bs-payone, our open-source .NET client for its merchant interface, Microsoft quickly signed a contract and integrated PAYONE for all of its payments across the EU."
   },
   {
     "name": "Freecash Blockchain",
@@ -62,31 +75,78 @@
       "Gaming",
       "Blockchain"
     ],
-    "thumbnail": "/assets/projects/freecash.webp",
+    "year": 1999,
+    "thumbnail": "/assets/projects/freecash.png",
     "icon": "https://freecash.com/apple-icon.png",
-    "description": "A rewards platform with 80M+ users who earn real cash for playing games, completing surveys and trying apps."
+    "description": "Freecash is a rewards platform trusted by more than 80 million users, who earn real cash for playing games, completing surveys, trying apps and finishing small tasks. Earnings are withdrawn through PayPal, gift cards such as Amazon, and cryptocurrency payouts."
   },
   {
-    "name": "Züs Storage",
-    "link": "https://zus.network/",
-    "category": [
-      "Clients",
-      "Cloud"
-    ],
-    "thumbnail": "/assets/projects/zus.webp",
-    "icon": "https://zus.network/favicons/apple-touch-icon.png",
-    "description": "A high-performance datahub on a zero-knowledge network: breach-proof, S3-compatible storage for backups, data lakes and AI workloads."
-  },
-  {
-    "name": "PAYONE Clearing",
-    "link": "https://www.payone.com/DE-en",
+    "name": "CME Risk-Management",
+    "link": "https://www.cmegroup.com/solutions/risk-management.html",
     "category": [
       "Clients",
       "Fintech"
     ],
-    "thumbnail": "/assets/projects/payone.webp",
-    "icon": "https://www.payone.com/apple-touch-icon-57x57.png",
-    "description": "A European payment provider for online, in-store and omnichannel businesses."
+    "year": 1999,
+    "thumbnail": "/assets/projects/cme-risk.png",
+    "description": "In CME Group's risk management module, we integrated Clearing House and Clicker services into SPAN/margin trading systems, then reworked them to prevent phishing. The core is written in C++ and driven from Java, with regional SFTP sync keeping CSV data current."
+  },
+  {
+    "name": "Database Management",
+    "link": "https://www.monetdb.org/",
+    "category": [
+      "Open-source",
+      "Database"
+    ],
+    "year": 2000,
+    "thumbnail": "/assets/projects/monetdb.png",
+    "icon": "https://www.monetdb.org/images/Favicon.svg",
+    "description": "Official GitHub contributors to MonetDB, the open-source column-store database built for high-performance analytics with standard SQL. Around 2015 we created a database management tool for administering MonetDB servers, and we have kept maintaining it ever since."
+  },
+  {
+    "name": "Eppli Auction/Jewelry",
+    "link": "https://www.eppli.com/en/jewelry/",
+    "category": [
+      "Clients",
+      "E-commerce"
+    ],
+    "year": 2005,
+    "thumbnail": "/assets/projects/eppli.png",
+    "icon": "https://www.eppli.com/out/EPP/img/favicons/apple-touch-icon-180x180.png",
+    "description": "Eppli is a sworn auction house, jeweller and pawnbroker in Germany with over 40 years of experience. Its platform covers online and judicial auctions, an online shop for jewelry, watches, art and coins, and certificates of authenticity from its own expert center."
+  },
+  {
+    "name": "Ministries of Uzbekistan",
+    "link": "https://gov.uz/en",
+    "category": [
+      "Clients",
+      "Government"
+    ],
+    "year": 2006,
+    "thumbnail": "/assets/projects/gov-uz.png",
+    "description": "For nearly five years we worked as consultants, engineers and team leads alongside the technical teams of Uzbekistan's ministries of Tax, Transport, Health, Water, Finance, Higher Education, Foreign Affairs and Internal Affairs."
+  },
+  {
+    "name": "Pivot Table",
+    "link": "https://www.seektable.com/",
+    "category": [
+      "Clients",
+      "Analytics"
+    ],
+    "year": 2006,
+    "thumbnail": "/assets/projects/seektable.png",
+    "description": "With a senior team, we built petabyte-scale big data analysis with a live-chart system on top of it, then reworked the OLAP cube on in-memory key/value storage to deliver a CMS reporting system for French foreign-affairs and closed audit organizations."
+  },
+  {
+    "name": "National Library",
+    "link": "https://www.natlib.uz/en",
+    "category": [
+      "Clients",
+      "Government"
+    ],
+    "year": 2006,
+    "thumbnail": "/assets/projects/natlib.png",
+    "description": "Together with the library's team, we built the digital archive and integrated search for the National Library of Uzbekistan named after Alisher Navoi, along with a CRM for readers and services and full automation of the library's administrative work."
   },
   {
     "name": "Reaxys Analyst",
@@ -96,60 +156,9 @@
       "Science",
       "Analytics"
     ],
-    "thumbnail": "/assets/projects/reaxys.webp",
-    "description": "Clinical analysis across Elsevier's research network: we built analytics on top of ScienceDirect and Scopus data for Reaxys, Elsevier's chemistry intelligence platform."
-  },
-  {
-    "name": "mobile.de",
-    "link": "https://www.mobile.de/en",
-    "category": [
-      "Clients",
-      "Marketplace"
-    ],
-    "icon": "https://static.classistatic.de/static/favicons/favicon-180x180.png",
-    "description": "Germany's largest vehicle marketplace for new and used cars, motorhomes, motorcycles and commercial vehicles."
-  },
-  {
-    "name": "Ping Exchange",
-    "link": "https://ping.exchange/",
-    "category": [
-      "Clients",
-      "Fintech"
-    ],
-    "thumbnail": "/assets/projects/ping-exchange.webp",
-    "description": "A hybrid crypto exchange with secure CorePass login — the first to list Core Coin (XCB) and Core Token (CTN)."
-  },
-  {
-    "name": "DSN Tools",
-    "link": "https://www.dsn-tools.fr/",
-    "category": [
-      "Clients",
-      "HR"
-    ],
-    "thumbnail": "/assets/projects/dsn-tools.webp",
-    "icon": "https://www.dsn-tools.fr/wp-content/uploads/2018/11/cropped-dsntools-180x180.jpg",
-    "description": "Explore, check and aggregate French DSN payroll declarations across periods, with custom extracts and ready-made HR reports."
-  },
-  {
-    "name": "Loglig Basketball",
-    "link": "https://loglig.com/logineng",
-    "category": [
-      "Clients",
-      "Sports"
-    ],
-    "thumbnail": "/assets/projects/loglig.webp",
-    "description": "An integrated social app for sports federations and leagues, built to manage clubs and engage their members."
-  },
-  {
-    "name": "Eppli Auction/Jewelry",
-    "link": "https://www.eppli.com/en/",
-    "category": [
-      "Clients",
-      "E-commerce"
-    ],
-    "thumbnail": "/assets/projects/eppli.webp",
-    "icon": "https://www.eppli.com/out/EPP/img/favicons/apple-touch-icon-180x180.png",
-    "description": "Online presence for a sworn auction house, jeweller and pawnbroker with over 40 years of experience."
+    "year": 2008,
+    "thumbnail": "/assets/projects/reaxys.png",
+    "description": "Reaxys is Elsevier's chemistry intelligence platform, combining curated reaction and substance data with AI for small-molecule discovery. We built clinical analysis on top of ScienceDirect and Scopus, Elsevier's research literature and citation databases."
   },
   {
     "name": "Smart-HRM Axiata",
@@ -159,9 +168,10 @@
       "Telecom",
       "HR"
     ],
-    "thumbnail": "/assets/projects/smart-axiata.webp",
+    "year": 2008,
+    "thumbnail": "/assets/projects/smart-axiata.png",
     "icon": "https://www.smart.com.kh/apple-touch-icon.png",
-    "description": "An HRM system for Smart Axiata, Cambodia's leading mobile operator serving millions of subscribers."
+    "description": "Smart Axiata is Cambodia's leading mobile operator, serving millions of subscribers with mobile plans, 5G data, home internet and digital services. We built Smart-HRM, its human resources management system for running employee records and HR processes across the company."
   },
   {
     "name": "UzEx Platforms",
@@ -170,9 +180,67 @@
       "Clients",
       "Fintech"
     ],
-    "thumbnail": "/assets/projects/uzex.webp",
+    "year": 2009,
+    "thumbnail": "/assets/projects/uzex.png",
     "icon": "https://uzex.uz/images/assets/favicon.png",
-    "description": "Uzbekistan's Republican Commodity Exchange: electronic commodity trading, public procurement and a logistics portal."
+    "description": "UzEx is Uzbekistan's Republican Commodity Exchange, running electronic commodity trading, public procurement and a national logistics portal. We built parts of its platforms and published .NET libraries from that work, including Oracle data access via Dapper and MinIO storage clients."
+  },
+  {
+    "name": "Database and Webservice layer",
+    "link": "https://1c-dn.com/",
+    "category": [
+      "Clients",
+      "Analytics",
+      "Mobile"
+    ],
+    "year": 2010,
+    "thumbnail": "/assets/projects/1c.png",
+    "description": "We analyzed the 1C system in the data center that serves 50,000+ organizations across Uzbekistan, optimized its high-load SQL and IIS SOAP layer, and introduced a new load-balanced API on top of it. On that API we launched a mobile and tablet cabinet for its users."
+  },
+  {
+    "name": "Microsoft Repository",
+    "link": "https://www.nuget.org/profiles/elyor0529",
+    "category": [
+      "Open-source",
+      "Database"
+    ],
+    "year": 2010,
+    "thumbnail": "/assets/projects/nuget.png",
+    "description": "Over 15+ years and 50+ organizations, we have built and reworked more than 10 open-source .NET libraries. They range from high-speed database bulk loaders and ORM extensions with migrations to storage clients and a cross-platform obfuscator for .NET assemblies."
+  },
+  {
+    "name": "Loglig Basketball",
+    "link": "https://loglig.com/logineng",
+    "category": [
+      "Clients",
+      "Sports"
+    ],
+    "year": 2012,
+    "thumbnail": "/assets/projects/loglig.png",
+    "description": "Loglig is an integrated social app for sports management, built for federations, associations and leagues — basketball first among them. Its goal is a more participatory experience for every member, with features, plans and registration in Hebrew and English."
+  },
+  {
+    "name": "DSN Tools",
+    "link": "https://www.dsn-tools.fr/",
+    "category": [
+      "Clients",
+      "HR"
+    ],
+    "year": 2017,
+    "thumbnail": "/assets/projects/dsn-tools.png",
+    "icon": "https://www.dsn-tools.fr/wp-content/uploads/2018/11/cropped-dsntools-180x180.jpg",
+    "description": "DSN Tools helps French companies explore, check and aggregate their DSN payroll declarations across multiple periods, with custom extracts, data validation and ready-made HR reports. A five-year partnership: the co-founder says we went past the brief consistently."
+  },
+  {
+    "name": "Ping Exchange",
+    "link": "https://ping.exchange/",
+    "category": [
+      "Clients",
+      "Fintech"
+    ],
+    "year": 2018,
+    "thumbnail": "/assets/projects/ping-exchange.png",
+    "description": "Ping is a hybrid crypto exchange that combines blockchain with a uniquely secure login through CorePass, which manages each user's identity and access. It was the first exchange to offer Core Coin (XCB) and Core Token (CTN), with trading, markets and a help center."
   },
   {
     "name": "TADI FacePay",
@@ -181,41 +249,10 @@
       "Clients",
       "AI"
     ],
-    "thumbnail": "/assets/projects/tadi.webp",
+    "year": 2018,
+    "thumbnail": "/assets/projects/tadi.png",
     "icon": "https://tadi.uz/wp-content/uploads/2021/12/%D0%BB%D0%BE%D0%B3%D0%BE.png",
-    "description": "Face-recognition payments for retail in Uzbekistan: shoppers pay at the till with their face — fast, secure checkout with shorter queues."
-  },
-  {
-    "name": "QuickManage Modules",
-    "link": "https://www.quickmanage.ai/",
-    "category": [
-      "Clients",
-      "Logistics",
-      "Mobile"
-    ],
-    "thumbnail": "/assets/projects/quickmanage.webp",
-    "icon": "https://framerusercontent.com/images/aIZUooTe9hLknKv7g3OwYKIoCW8.png",
-    "description": "An all-in-one transport management system for fleet, document and expense management. We built the first version of its mobile app and customer cabinet."
-  },
-  {
-    "name": "Azure Virtual Machines",
-    "link": "https://azure.microsoft.com/en-us/products/virtual-machines/windows/",
-    "category": [
-      "Clients",
-      "Cloud"
-    ],
-    "thumbnail": "/assets/projects/azure-vms.webp",
-    "description": "Implemented an NVIDIA CUDA module for B-family virtual machines on Microsoft Azure."
-  },
-  {
-    "name": "1C Uzbekistan",
-    "link": "https://1c.uz/",
-    "category": [
-      "Clients",
-      "Analytics"
-    ],
-    "thumbnail": "/assets/projects/1c.webp",
-    "description": "BI and reporting on 1C:Enterprise, covering more than 50,000 brands."
+    "description": "TADI (TAD Industries) builds biometric and AI solutions in Uzbekistan. Its FacePay service lets shoppers pay at the till with their face instead of a card or phone — fast, secure checkout that shortens queues and makes retailers more efficient, with no passwords to lose."
   },
   {
     "name": "Energy Trucking",
@@ -224,28 +261,94 @@
       "Clients",
       "Logistics"
     ],
-    "thumbnail": "/assets/projects/energy-trucking.webp",
+    "year": 2019,
+    "thumbnail": "/assets/projects/energy-trucking.png",
     "icon": "https://static.tildacdn.net/tild3230-3366-4662-a535-343162363338/EN_Favicon.png",
-    "description": "Integrations for a US trucking carrier: fuel cards, City Fuel, Samsara and EFS, plus FMCSA (U.S. DOT) carrier data."
+    "description": "Energy Trucking is a US carrier running routes across all 48 states. We connected its operations to the services a fleet depends on: fuel cards, City Fuel, Samsara telematics and EFS payments, plus FMCSA (U.S. DOT) carrier data for compliance and safety checks."
   },
   {
-    "name": "USPS Gateway",
-    "link": "https://gateway.usps.com/",
+    "name": "QuickManage Modules",
+    "link": "https://app.quickmanage.com",
     "category": [
       "Clients",
-      "Logistics"
+      "Logistics",
+      "Mobile"
     ],
-    "thumbnail": "/assets/projects/usps-gateway.webp",
-    "description": "Integration with the USPS Business Customer Gateway, the Postal Service's portal for business mailing and shipping services."
+    "year": 2020,
+    "thumbnail": "/assets/projects/quickmanage.png",
+    "icon": "https://framerusercontent.com/images/aIZUooTe9hLknKv7g3OwYKIoCW8.png",
+    "description": "QuickManage is an all-in-one transport management system for fleet, document and expense management, with dashboards for revenue per truck, cost per mile and profit margin. We built the first version of its mobile app and its customer cabinet for carriers."
   },
   {
-    "name": "CME Risk Management",
-    "link": "https://www.cmegroup.com/solutions/risk-management.html",
+    "name": "CSMarketCap Skins",
+    "link": "https://csmarketcap.com/",
     "category": [
       "Clients",
-      "Fintech"
+      "Gaming"
     ],
-    "thumbnail": "/assets/projects/cme-risk.webp",
-    "description": "Risk management solutions for CME Group, the world's leading derivatives marketplace."
+    "year": 2020,
+    "thumbnail": "/assets/projects/csmarketcap.png",
+    "icon": "https://csmarketcap.com/apple-touch-icon.png",
+    "description": "CSMarketCap tracks CS2 skin prices across 20+ marketplaces in real time, so traders can compare offers and see market capitalization, trending and falling skins. It adds a trade-up calculator, an inventory checker and live analytics for the whole in-game economy."
+  },
+  {
+    "name": "Züs Storage",
+    "link": "https://zus.network/",
+    "category": [
+      "Clients",
+      "Cloud"
+    ],
+    "year": 2021,
+    "thumbnail": "/assets/projects/zus.png",
+    "icon": "https://zus.network/favicons/apple-touch-icon.png",
+    "description": "Züs is a high-performance datahub on a zero-knowledge network: breach-proof, S3-compatible storage with ACID integrity for backups, data lakes and AI workloads. It is built to cut database, security, API and egress costs compared with traditional cloud storage."
+  },
+  {
+    "name": "Rent Local",
+    "link": "https://ricksocial.com",
+    "category": [
+      "Startups",
+      "Marketplace"
+    ],
+    "year": 2024,
+    "thumbnail": "/assets/projects/rent-local.png",
+    "icon": "https://ricksocial.com/apple-touch-icon.png",
+    "description": "A peer-to-peer rental platform for tools and equipment: owners earn from items that would otherwise sit idle, and renters pay a fraction of the purchase price. Payments run through Stripe, every booking includes damage coverage, and rentals are managed in iOS and Android apps."
+  },
+  {
+    "name": "Terminal API",
+    "link": "https://tapi.uz",
+    "category": [
+      "Startups",
+      "HR"
+    ],
+    "year": 2025,
+    "thumbnail": "/assets/projects/terminal-api.png",
+    "icon": "https://tapi.uz/images/apple-touch-icon.png",
+    "description": "A cloud HRMS where face-recognition terminals (Hikvision SDK) track working time and calculate payroll automatically, while two AI assistants answer 30+ kinds of HR and accounting questions in Uzbek, Russian or English. Used by 20+ organizations and 5,000+ employees."
+  },
+  {
+    "name": "PC Monitoring",
+    "link": "https://pcmonitor.app",
+    "category": [
+      "Startups",
+      "HR"
+    ],
+    "year": 2026,
+    "thumbnail": "/assets/projects/pc-monitoring.png",
+    "icon": "https://pcmonitor.app/images/apple-touch-icon.png",
+    "description": "Attendance and work-time tracking for Windows PCs, built on Windows events instead of manual check-ins: daily app-usage reports with Excel export, screenshots every 15 seconds and remote control from the dashboard. Scales to 100,000 PCs, from $3 per computer a month."
+  },
+  {
+    "name": "VPN Tool",
+    "link": "https://darkzone.uz",
+    "category": [
+      "Startups",
+      "Security"
+    ],
+    "year": 2026,
+    "thumbnail": "/assets/projects/vpn-tool.png",
+    "icon": "https://darkzone.uz/logo.png",
+    "description": "A private VPN for Windows, macOS and Android. Traffic is encrypted end to end through a private relay, every session is verified so only approved accounts stay connected, and there is nothing to configure and no admin rights needed — just sign in and press Start."
   }
 ]
