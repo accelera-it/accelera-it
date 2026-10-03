@@ -38,7 +38,7 @@ docker compose up -d --build   # from repo root → http://localhost:8081
 
 ## .htaccess notes
 
-Numbered sections, each wrapped in `<IfModule>` so a missing module doesn't 500. Forces HTTPS (except for `localhost`, for the Docker preview), disables directory listing, sets security/cache/MIME headers, blocks sensitive files (all `.json` is denied except `projects.json` and `site.webmanifest` — add an exception for any new JSON the page fetches), and routes 404s to the landing page. The Content-Security-Policy (section 7) is commented out because the Tailwind CDN needs `unsafe-eval`; if you add any new external origin (script, font, image), it would need adding to that CSP line too.
+Numbered sections, each wrapped in `<IfModule>` so a missing module doesn't 500. Forces HTTPS (except for `localhost`, for the Docker preview), disables directory listing, sets security/cache/MIME headers, blocks sensitive files (all `.json` is denied except `projects.json` — add an exception for any new JSON the page fetches), and routes 404s to the landing page. The Content-Security-Policy (section 7) is commented out because the Tailwind CDN needs `unsafe-eval`; if you add any new external origin (script, font, image), it would need adding to that CSP line too.
 
 ## Known follow-ups (from README)
 

@@ -28,15 +28,9 @@ site/
 ├── .htaccess                      server rules (see notes below)
 ├── robots.txt                     crawler policy
 ├── sitemap.xml                    edit <lastmod> when you change the page
-├── site.webmanifest               installable-icon metadata
 ├── favicon.ico                    16 / 32 / 48 / 64 px, multi-resolution
+├── og-image.png                   1200 × 630, social + AI link previews
 └── assets/
-    ├── og-image.png               1200 × 630, social + AI link previews
-    ├── favicon.svg                modern browsers prefer this over .ico
-    ├── apple-touch-icon.png       180 × 180, iOS home screen
-    ├── icon-192.png               Android / PWA
-    ├── icon-512.png               Android / PWA
-    ├── icon-512-maskable.png      Android adaptive icon, 18% safe padding
     ├── logo-wordmark.svg          "AcceleraIT" — outlines, no font needed
     └── projects/                  1200 × 630 PNG site screenshots, thumbnails on projects.html
 ```

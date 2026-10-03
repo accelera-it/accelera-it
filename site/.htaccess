@@ -114,8 +114,8 @@ AddDefaultCharset UTF-8
   </IfModule>
 </FilesMatch>
 
-# Keep the manifest and the startups list reachable despite the .json rule above
-<FilesMatch "^(site\.webmanifest|projects\.json)$">
+# Keep the projects list reachable despite the .json rule above
+<FilesMatch "^projects\.json$">
   <IfModule mod_authz_core.c>
     Require all granted
   </IfModule>
