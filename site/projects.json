@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Rent Local",
+    "link": "https://ricksocial.com",
+    "thumbnail": "https://ricksocial.com/assets/brand/og-image.jpg",
+    "icon": "https://ricksocial.com/apple-touch-icon.png",
+    "description": "A peer-to-peer rental marketplace: rent tools and equipment from people nearby, or earn by listing your own. Secure payments and damage coverage on every booking."
+  },
+  {
+    "name": "Terminal API",
+    "link": "https://tapi.uz",
+    "thumbnail": "https://tapi.uz/images/og-image.png",
+    "icon": "https://tapi.uz/images/apple-touch-icon.png",
+    "description": "Cloud HRMS for growing teams. Face-recognition terminals and an AI assistant automate attendance, overtime and payroll, with real-time reporting across multiple organizations."
+  },
+  {
+    "name": "PC Monitoring",
+    "link": "https://pcmonitor.app",
+    "thumbnail": "https://pcmonitor.app/images/og-image.png",
+    "icon": "https://pcmonitor.app/images/apple-touch-icon.png",
+    "description": "Employee attendance and work-time tracking for Windows PCs. Arrivals and departures come from Windows events, with daily app-usage reports and active-screen screenshots — all in one dashboard, from $3 per computer a month."
+  },
+  {
+    "name": "VPN Tool",
+    "link": "https://darkzone.uz",
+    "thumbnail": "https://darkzone.uz/og-image.png",
+    "icon": "https://darkzone.uz/logo.png",
+    "description": "A private, encrypted VPN for Windows, macOS and Android. One sign-in and you're connected — no configuration required."
+  }
+]

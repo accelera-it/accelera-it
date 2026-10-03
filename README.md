@@ -1,11 +1,29 @@
 # AcceleraIT — deployment package
 
-Upload everything to the web root of `accelerait.us`, keeping this exact
-folder structure. No build step, no dependencies.
+Everything that is served lives in `site/`. Upload the **contents** of `site/`
+to the web root of `accelerait.us`, keeping this exact folder structure. No
+build step, no dependencies.
+
+## Run locally with Docker
+
+```bash
+docker compose up -d --build    # from the repo root → http://localhost:8081
+docker compose down
+```
+
+Apache (`httpd:2.4-alpine`) with `.htaccess` enabled, so the redirects,
+headers and file blocks behave as in production. `site/` is mounted read-only,
+so edits show without a rebuild; Apache's `access_log` and `error_log` are
+written to `./logs/` (git-ignored). The container runs on its own
+`accelerait-net` bridge network. The HTTPS redirect skips `localhost`.
+`docker-compose.yml` is at the repo root and builds from `site/Dockerfile`.
+The `Dockerfile` and `.dockerignore` sit in `site/` but are kept out of the
+image and denied by `.htaccess` if uploaded.
 
 ```
-/
+site/
 ├── index.html                     the landing page
+├── projects.json                  startups shown in the "Our new startups" popup
 ├── .htaccess                      server rules (see notes below)
 ├── robots.txt                     crawler policy
 ├── sitemap.xml                    edit <lastmod> when you change the page

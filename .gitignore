@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local env / secrets
+.env
+.env.*
+docker-compose.override.yml
+
+# Archives and backups of the site
+*.zip
+*.tar.gz
+*.bak
+
+# Claude Code per-user settings
+.claude/settings.local.json
+
+# Tailwind build tooling, if the CDN is ever replaced (see README)
+node_modules/
+
+# Apache logs from the Docker container
+logs/

@@ -19,8 +19,10 @@ AddDefaultCharset UTF-8
   RewriteEngine On
 
   # ── 4. Force HTTPS ───────────────────────────────────────────────────
+  # localhost is exempt so the Docker container can be previewed over plain HTTP
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:\d+)?$ [NC]
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
   # ── 5. Drop the www, matching the canonical tag ──────────────────────
@@ -102,7 +104,7 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 # ── 11. Block access to sensitive files ────────────────────────────────
-<FilesMatch "(^\.|~$|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp|env|json|md)$)">
+<FilesMatch "(^\.|~$|^Dockerfile$|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp|env|json|md|yml|yaml)$)">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>
@@ -112,12 +114,12 @@ AddDefaultCharset UTF-8
   </IfModule>
 </FilesMatch>
 
-# Keep the manifest reachable despite the .json rule above
-<Files "site.webmanifest">
+# Keep the manifest and the startups list reachable despite the .json rule above
+<FilesMatch "^(site\.webmanifest|projects\.json)$">
   <IfModule mod_authz_core.c>
     Require all granted
   </IfModule>
-</Files>
+</FilesMatch>
 
 # ── 12. Error pages ────────────────────────────────────────────────────
 # Single-page site, so send 404s to the landing page rather than a bare

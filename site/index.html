@@ -262,6 +262,58 @@
       opacity: 1;
     }
 
+    /* ── startups dialog ────────────────────────────────────────── */
+    #startups {
+      width: min(920px, calc(100vw - 32px));
+      max-height: calc(100svh - 32px);
+      margin: auto;
+      padding: 0;
+      border: 0;
+      border-radius: 20px;
+      background: #F7F8FA;
+      color: #0B1220;
+      box-shadow: 0 30px 80px -20px rgba(11, 18, 32, .55);
+      overflow: hidden;
+    }
+
+    #startups[open] {
+      display: flex;
+      flex-direction: column;
+      animation: dlg-in .35s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    #startups::backdrop {
+      background: rgba(11, 18, 32, .62);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      animation: dlg-fade .3s ease-out;
+    }
+
+    @keyframes dlg-in {
+      from { opacity: 0; transform: translateY(18px) scale(.98); }
+    }
+
+    @keyframes dlg-fade {
+      from { opacity: 0; }
+    }
+
+    body.dlg-open {
+      overflow: hidden;
+    }
+
+    .project-cover {
+      border-bottom: 1px solid #E4E8EF;
+    }
+
+    /* no og-image: a branded panel with the product's initials instead */
+    .project-cover.is-empty {
+      display: grid;
+      place-items: center;
+      background-image:
+        radial-gradient(circle at 75% 20%, rgba(125, 155, 255, .35), transparent 55%),
+        linear-gradient(135deg, #1B2942, #0B1220);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -378,10 +430,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="transition group-hover:translate-x-0.5" aria-hidden="true">→</span>
           </a>
           <!-- sits over the skyline, so it needs its own ground to read against -->
-          <a href="#s3"
+          <button type="button" id="openStartups" aria-haspopup="dialog" aria-controls="startups"
             class="inline-flex items-center rounded-full border border-ink/15 bg-white/70 px-7 py-4 text-[0.95rem] font-semibold backdrop-blur-sm transition hover:border-ink hover:bg-white">
-            How we work
-          </a>
+            Our new startups
+          </button>
         </div>
 
         <dl class="rise mt-14 grid max-w-3xl grid-cols-3 gap-6 border-t border-hair pt-7" style="--d:480ms">
@@ -493,15 +545,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="block text-[0.89rem] font-semibold leading-tight lg:text-[0.82rem]">Discovery</span>
             </button>
             <button role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" data-label="Design"
-              data-weeks="Weeks 2 — 3"
+              data-weeks="Weeks 2–3"
               class="rounded-lg bg-ink-3 px-3 py-3 text-left lg:px-2.5 transition hover:bg-ink-line aria-selected:bg-brand lg:col-span-2">
-              <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W2 — W3</span>
+              <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W2–W3</span>
               <span class="block text-[0.89rem] font-semibold leading-tight lg:text-[0.82rem]">Design</span>
             </button>
             <button role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" data-label="Development"
-              data-weeks="Weeks 4 — 7"
+              data-weeks="Weeks 4–7"
               class="rounded-lg bg-ink-3 px-3 py-3 text-left lg:px-2.5 transition hover:bg-ink-line aria-selected:bg-brand lg:col-span-4">
-              <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W4 — W7</span>
+              <span class="mb-1 block font-mono text-[0.62rem] tracking-[0.1em] text-white/60">W4–W7</span>
               <span class="block text-[0.89rem] font-semibold leading-tight lg:text-[0.82rem]">Development</span>
             </button>
             <button role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" data-label="Deployment"
@@ -547,8 +599,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div role="tabpanel" id="panel-3" aria-labelledby="tab-3" class="grid gap-6 md:grid-cols-2 md:gap-10"
               hidden>
-              <p class="text-[0.98rem] leading-[1.6] text-white/75">Two-week sprints. You review real software every
-                fortnight, not a status report.</p>
+              <p class="text-[0.98rem] leading-[1.6] text-white/75">Two-week sprints. At the end of each one you review
+                working software, not a status report.</p>
               <ul class="grid gap-2 text-[0.93rem] text-white/90">
                 <li
                   class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
@@ -657,14 +709,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="s6" class="slide bg-ink text-white">
       <div class="mx-auto grid w-full max-w-shell gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div>
+          <span class="rise sec-num" style="--d:0ms" aria-hidden="true">05</span>
           <h2
             class="rise balance font-display text-[1.65rem] font-semibold leading-[1.18] tracking-tighter2 sm:text-[2.1rem]"
             style="--d:60ms">
             Tell us what you need built.
           </h2>
           <p class="rise mt-4 max-w-[46ch] text-[1rem] leading-[1.6] text-white/60" style="--d:140ms">
-            Book a time that suits you and talk to the people who would do the work. If email suits you better, we
-            reply within one business day.
+            Book a call and talk directly to the engineers who would do the work. Prefer email? We reply within
+            one business day.
           </p>
 
           <dl class="rise mt-8 grid gap-4" style="--d:220ms">
@@ -696,7 +749,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Thirty minutes, and you will know where you stand.
           </h3>
           <p class="mt-4 max-w-[46ch] text-[0.96rem] leading-[1.6] text-white/60">
-            Pick a slot that suits you. Nothing to prepare — bring the problem, not a specification.
+            Pick any open slot. Nothing to prepare — bring the problem, not a specification.
           </p>
 
           <ul class="mt-7 grid gap-2 text-[0.93rem] text-white/90">
@@ -708,12 +761,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               An honest read on the timeline</li>
             <li
               class="relative pl-5 before:absolute before:left-0 before:top-[0.62em] before:h-px before:w-2.5 before:bg-brand-lt">
-              If we are the wrong team, we say so on the call</li>
+              If we're not the right team, we'll tell you on the call</li>
           </ul>
 
           <a href="https://cal.com/accelerait-llc/30min" target="_blank" rel="noopener"
             class="mt-8 inline-block rounded-full bg-white px-7 py-3.5 text-[0.94rem] font-semibold text-ink transition hover:-translate-y-0.5">
-            Book a 30-minute call →
+            Book a 30-minute call <span aria-hidden="true">→</span>
           </a>
         </div>
       </div>
@@ -724,9 +777,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <footer class="relative overflow-hidden border-t border-ink-line bg-ink py-16 text-center text-white">
     <div id="footerBg" aria-hidden="true"></div>
     <p class="relative px-5 font-mono text-[0.68rem] leading-[1.6] text-white/75 sm:text-[0.72rem]">
-      Copyright © <span id="year">2026</span> AcceleraIT LLC. All rights reserved.
+      © <span id="year">2026</span> AcceleraIT LLC. All rights reserved.
     </p>
   </footer>
+
+  <!-- filled from /projects.json when first opened -->
+  <dialog id="startups" aria-labelledby="startupsTitle">
+    <header class="flex items-start justify-between gap-6 border-b border-hair bg-white px-5 py-5 sm:px-9 sm:py-7">
+      <div>
+        <p class="mb-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-brand">Built in-house</p>
+        <h2 id="startupsTitle"
+          class="font-display text-[1.35rem] font-semibold leading-[1.15] tracking-tighter2 sm:text-[1.9rem]">
+          Our new startups
+        </h2>
+        <p class="balance mt-2 max-w-[52ch] text-[0.88rem] leading-[1.55] text-muted sm:text-[0.93rem]">
+          Products we designed, built and run ourselves — live worldwide, with payments through Stripe.
+        </p>
+      </div>
+      <button type="button" id="closeStartups" aria-label="Close"
+        class="-mr-2 -mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-full text-[1.4rem] leading-none text-muted transition hover:bg-paper hover:text-ink">
+        ×
+      </button>
+    </header>
+    <div class="overflow-y-auto px-5 py-5 sm:px-9 sm:py-8">
+      <ul id="projectList" class="grid gap-4 sm:grid-cols-2" aria-live="polite">
+        <li class="text-[0.93rem] text-muted">Loading…</li>
+      </ul>
+    </div>
+  </dialog>
 
   <script>
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -825,6 +903,97 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         tabs[next].focus(); select(next);
       });
     });
+
+    /* ── startups dialog ───────────────────────────────────────── */
+    const dlg = document.getElementById('startups');
+    const list = document.getElementById('projectList');
+    let loaded = null;
+
+    function el(tag, cls, text) {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text) n.textContent = text;   // textContent, never innerHTML: the JSON is data
+      return n;
+    }
+
+    function initials(name) {
+      return name.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+    }
+
+    // no thumbnail, or one that fails to load: a branded panel with the initials
+    function emptyCover(cover, name) {
+      cover.style.backgroundImage = '';
+      cover.removeAttribute('role');
+      cover.classList.add('is-empty');
+      const mark = el('span', 'font-display text-[2.4rem] font-semibold tracking-tighter2 text-white/90', initials(name));
+      mark.setAttribute('aria-hidden', 'true');
+      cover.replaceChildren(mark);
+    }
+
+    function render(projects) {
+      list.replaceChildren(...projects.map(p => {
+        const card = el('article', 'flex h-full flex-col overflow-hidden rounded-2xl border border-hair bg-white transition-colors duration-200 hover:border-brand');
+
+        // the thumbnail already carries its own headline, so it gets the top of the
+        // card to itself rather than having the name and description laid over it
+        const cover = el('div', 'project-cover relative aspect-[1200/630] bg-ink bg-cover bg-center');
+        if (p.thumbnail) {
+          cover.style.backgroundImage = `url("${encodeURI(p.thumbnail)}")`;
+          cover.setAttribute('role', 'img');
+          cover.setAttribute('aria-label', p.name);
+          const probe = new Image();
+          probe.onerror = () => emptyCover(cover, p.name);
+          probe.src = p.thumbnail;
+        } else {
+          emptyCover(cover, p.name);
+        }
+
+        const head = el('div', 'flex items-center gap-3');
+        if (p.icon) {
+          const icon = el('img', 'h-9 w-9 shrink-0 rounded-lg border border-hair bg-white object-cover');
+          icon.src = p.icon; icon.alt = ''; icon.loading = 'lazy';
+          icon.referrerPolicy = 'no-referrer';
+          icon.onerror = () => icon.remove();
+          head.append(icon);
+        }
+        const title = el('h3', 'font-display text-[1.2rem] font-semibold tracking-tighter2');
+        if (p.link) {
+          const a = el('a', 'underline-offset-4 transition-colors hover:text-brand hover:underline', p.name);
+          a.href = p.link; a.target = '_blank'; a.rel = 'noopener';
+          title.append(a);
+        } else {
+          title.textContent = p.name;
+        }
+        head.append(title);
+
+        const body = el('div', 'flex flex-1 flex-col p-6');
+        body.append(head,
+          el('p', 'mt-3 flex-1 text-[0.92rem] leading-[1.55] text-muted', p.description));
+
+        card.append(cover, body);
+        const li = el('li'); li.append(card); return li;
+      }));
+    }
+
+    function load() {
+      loaded = loaded || fetch('/projects.json', { cache: 'no-cache' })
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(render)
+        .catch(() => {
+          loaded = null;   // let the next open retry
+          list.replaceChildren(el('li', 'text-[0.93rem] text-muted', 'Projects could not be loaded. Please try again.'));
+        });
+    }
+
+    document.getElementById('openStartups').addEventListener('click', () => {
+      load();
+      dlg.showModal();
+      document.body.classList.add('dlg-open');
+    });
+    document.getElementById('closeStartups').addEventListener('click', () => dlg.close());
+    dlg.addEventListener('close', () => document.body.classList.remove('dlg-open'));
+    // click on the backdrop (the dialog element itself, outside its content) closes it
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
   </script>
 </body>
 

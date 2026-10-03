@@ -1,0 +1,22 @@
+services:
+  web:
+    build: ./site
+    image: accelerait-site
+    container_name: accelerait-site
+    ports:
+      - "8081:80"
+    volumes:
+      - ./site:/usr/local/apache2/htdocs:ro
+      - ./logs:/usr/local/apache2/logs
+    networks:
+      - accelerait-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost/ || exit 1"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+networks:
+  accelerait-net:
+    driver: bridge
