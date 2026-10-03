@@ -44,7 +44,7 @@
     "description": "A private, encrypted VPN for Windows, macOS and Android. One sign-in and you're connected — no configuration required."
   },
   {
-    "name": "CSMarketCap",
+    "name": "CSMarketCap Skins",
     "link": "https://csmarketcap.com/",
     "category": [
       "Client work",
@@ -55,18 +55,19 @@
     "description": "CS2 skin price comparison across 20+ marketplaces, with a trade-up calculator, inventory checker and real-time market analytics."
   },
   {
-    "name": "Freecash",
+    "name": "Freecash Blockchain",
     "link": "https://freecash.com/en",
     "category": [
       "Client work",
-      "Gaming"
+      "Gaming",
+      "Blockchain"
     ],
     "thumbnail": "/assets/projects/freecash.webp",
     "icon": "https://freecash.com/apple-icon.png",
     "description": "A rewards platform with 80M+ users who earn real cash for playing games, completing surveys and trying apps."
   },
   {
-    "name": "Züs",
+    "name": "Züs Storage",
     "link": "https://zus.network/",
     "category": [
       "Client work",
@@ -77,7 +78,7 @@
     "description": "A high-performance datahub on a zero-knowledge network: breach-proof, S3-compatible storage for backups, data lakes and AI workloads."
   },
   {
-    "name": "PAYONE",
+    "name": "PAYONE Clearing",
     "link": "https://www.payone.com/DE-en",
     "category": [
       "Client work",
@@ -88,14 +89,15 @@
     "description": "A European payment provider for online, in-store and omnichannel businesses."
   },
   {
-    "name": "Reaxys",
+    "name": "Reaxys Analyst",
     "link": "https://www.reaxys.com",
     "category": [
       "Client work",
-      "Research & Science"
+      "Research & Science",
+      "BI & Analytics"
     ],
     "thumbnail": "/assets/projects/reaxys.webp",
-    "description": "A chemistry research database of reactions, substances and properties, used by researchers in industry and academia."
+    "description": "Clinical analysis across Elsevier's research network: we built analytics on top of ScienceDirect and Scopus data for Reaxys, Elsevier's chemistry intelligence platform."
   },
   {
     "name": "mobile.de",
@@ -129,7 +131,7 @@
     "description": "Explore, check and aggregate French DSN payroll declarations across periods, with custom extracts and ready-made HR reports."
   },
   {
-    "name": "Loglig",
+    "name": "Loglig Basketball",
     "link": "https://loglig.com/logineng",
     "category": [
       "Client work",
@@ -139,7 +141,7 @@
     "description": "An integrated social app for sports federations and leagues, built to manage clubs and engage their members."
   },
   {
-    "name": "Eppli",
+    "name": "Eppli Auction/Jewelry",
     "link": "https://www.eppli.com/en/",
     "category": [
       "Client work",
@@ -150,18 +152,19 @@
     "description": "Online presence for a sworn auction house, jeweller and pawnbroker with over 40 years of experience."
   },
   {
-    "name": "Smart Axiata",
+    "name": "Smart-HRM Axiata",
     "link": "https://www.smart.com.kh/",
     "category": [
       "Client work",
-      "Telecom"
+      "Telecom",
+      "HR & Workforce"
     ],
     "thumbnail": "/assets/projects/smart-axiata.webp",
     "icon": "https://www.smart.com.kh/apple-touch-icon.png",
-    "description": "Cambodia's leading mobile operator: mobile plans, 4G/5G data, home internet and digital services for millions of subscribers."
+    "description": "An HRM system for Smart Axiata, Cambodia's leading mobile operator serving millions of subscribers."
   },
   {
-    "name": "UzEx",
+    "name": "UzEx Platforms",
     "link": "https://uzex.uz/",
     "category": [
       "Client work",
@@ -183,15 +186,16 @@
     "description": "Face-recognition payments for retail in Uzbekistan: shoppers pay at the till with their face — fast, secure checkout with shorter queues."
   },
   {
-    "name": "QuickManage",
+    "name": "QuickManage Modules",
     "link": "https://www.quickmanage.ai/",
     "category": [
       "Client work",
-      "Logistics"
+      "Logistics",
+      "Mobile"
     ],
     "thumbnail": "/assets/projects/quickmanage.webp",
     "icon": "https://framerusercontent.com/images/aIZUooTe9hLknKv7g3OwYKIoCW8.png",
-    "description": "An all-in-one transport management system for fleet, document and expense management."
+    "description": "An all-in-one transport management system for fleet, document and expense management. We built the first version of its mobile app and customer cabinet."
   },
   {
     "name": "Azure Virtual Machines",
@@ -212,5 +216,36 @@
     ],
     "thumbnail": "/assets/projects/1c.webp",
     "description": "BI and reporting on 1C:Enterprise, covering more than 50,000 brands."
+  },
+  {
+    "name": "Energy Trucking",
+    "link": "https://energytrucking.com/",
+    "category": [
+      "Client work",
+      "Logistics"
+    ],
+    "thumbnail": "/assets/projects/energy-trucking.webp",
+    "icon": "https://static.tildacdn.net/tild3230-3366-4662-a535-343162363338/EN_Favicon.png",
+    "description": "Integrations for a US trucking carrier: fuel cards, City Fuel, Samsara and EFS, plus FMCSA (U.S. DOT) carrier data."
+  },
+  {
+    "name": "USPS Gateway",
+    "link": "https://gateway.usps.com/",
+    "category": [
+      "Client work",
+      "Logistics"
+    ],
+    "thumbnail": "/assets/projects/usps-gateway.webp",
+    "description": "Integration with the USPS Business Customer Gateway, the Postal Service's portal for business mailing and shipping services."
+  },
+  {
+    "name": "CME Risk Management",
+    "link": "https://www.cmegroup.com/solutions/risk-management.html",
+    "category": [
+      "Client work",
+      "Fintech"
+    ],
+    "thumbnail": "/assets/projects/cme-risk.webp",
+    "description": "Risk management solutions for CME Group, the world's leading derivatives marketplace."
   }
 ]

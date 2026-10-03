@@ -23,7 +23,7 @@ image and denied by `.htaccess` if uploaded.
 ```
 site/
 ├── index.html                     the landing page
-├── projects.html                  "Our new startups" page, filterable by category
+├── projects.html                  "Our Project Journey" page, filterable by category
 ├── projects.json                  startups (with categories) listed on projects.html
 ├── .htaccess                      server rules (see notes below)
 ├── robots.txt                     crawler policy
