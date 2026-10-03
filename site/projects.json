@@ -4,7 +4,8 @@
     "link": "https://azure.microsoft.com/en-us/products/virtual-machines/windows/",
     "category": [
       "Clients",
-      "Cloud"
+      "Cloud",
+      "AI"
     ],
     "year": 1991,
     "thumbnail": "/assets/projects/azure-vms.png",
@@ -15,7 +16,8 @@
     "link": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-administration",
     "category": [
       "Clients",
-      "Cloud"
+      "Cloud",
+      "Productivity"
     ],
     "year": 1991,
     "thumbnail": "/assets/projects/m365-admin.png",
@@ -27,7 +29,8 @@
     "category": [
       "Clients",
       "Marketplace",
-      "Mobile"
+      "Automotive",
+      "Data Engineering"
     ],
     "year": 1996,
     "thumbnail": "/assets/projects/mobile-de.png",
@@ -38,7 +41,8 @@
     "link": "https://www.postgresql.org/",
     "category": [
       "Open-source",
-      "Database"
+      "Database",
+      "Data Engineering"
     ],
     "year": 1996,
     "thumbnail": "/assets/projects/postgresql.png",
@@ -49,7 +53,8 @@
     "link": "https://gateway.usps.com/",
     "category": [
       "Clients",
-      "Logistics"
+      "Logistics",
+      "Government"
     ],
     "year": 1997,
     "thumbnail": "/assets/projects/usps-gateway.png",
@@ -60,6 +65,7 @@
     "link": "https://www.payone.com/DE-en",
     "category": [
       "Clients",
+      "Payments",
       "Fintech"
     ],
     "year": 1998,
@@ -71,7 +77,9 @@
     "link": "https://www.salesforce.com/sales/mapping-software/",
     "category": [
       "Clients",
-      "Cloud"
+      "Cloud",
+      "Productivity",
+      "Analytics"
     ],
     "year": 1998,
     "thumbnail": "/assets/projects/salesforce-maps.png",
@@ -83,7 +91,8 @@
     "category": [
       "Clients",
       "Gaming",
-      "Blockchain"
+      "Blockchain",
+      "Payments"
     ],
     "year": 1999,
     "thumbnail": "/assets/projects/freecash.png",
@@ -94,7 +103,9 @@
     "link": "https://www.cmegroup.com/solutions/risk-management.html",
     "category": [
       "Clients",
-      "Fintech"
+      "Trading",
+      "Fintech",
+      "Security"
     ],
     "year": 1999,
     "thumbnail": "/assets/projects/cme-risk.png",
@@ -105,7 +116,8 @@
     "link": "https://www.monetdb.org/",
     "category": [
       "Open-source",
-      "Database"
+      "Database",
+      "Analytics"
     ],
     "year": 2000,
     "thumbnail": "/assets/projects/monetdb.png",
@@ -116,7 +128,8 @@
     "link": "https://www.eppli.com/en/jewelry/",
     "category": [
       "Clients",
-      "E-commerce"
+      "E-commerce",
+      "Marketplace"
     ],
     "year": 2005,
     "thumbnail": "/assets/projects/eppli.png",
@@ -138,7 +151,8 @@
     "link": "https://www.seektable.com/",
     "category": [
       "Clients",
-      "Analytics"
+      "Analytics",
+      "Data Engineering"
     ],
     "year": 2006,
     "thumbnail": "/assets/projects/seektable.png",
@@ -149,7 +163,8 @@
     "link": "https://www.natlib.uz/en",
     "category": [
       "Clients",
-      "Government"
+      "Government",
+      "Education"
     ],
     "year": 2006,
     "thumbnail": "/assets/projects/natlib.png",
@@ -161,6 +176,7 @@
     "category": [
       "Clients",
       "Science",
+      "Healthcare",
       "Analytics"
     ],
     "year": 2008,
@@ -184,7 +200,9 @@
     "link": "https://uzex.uz/",
     "category": [
       "Clients",
-      "Fintech"
+      "Trading",
+      "Government",
+      "Logistics"
     ],
     "year": 2009,
     "thumbnail": "/assets/projects/uzex.png",
@@ -195,7 +213,8 @@
     "link": "https://1c-dn.com/",
     "category": [
       "Clients",
-      "Analytics",
+      "ERP",
+      "Database",
       "Mobile"
     ],
     "year": 2010,
@@ -207,7 +226,8 @@
     "link": "https://www.nuget.org/profiles/elyor0529",
     "category": [
       "Open-source",
-      "Database"
+      "Database",
+      "Data Engineering"
     ],
     "year": 2010,
     "thumbnail": "/assets/projects/nuget.png",
@@ -218,8 +238,10 @@
     "link": "https://www.openbankproject.com/solutions/blockchain/",
     "category": [
       "Clients",
+      "Open-source",
       "Blockchain",
-      "Fintech"
+      "Banking",
+      "Payments"
     ],
     "year": 2010,
     "thumbnail": "/assets/projects/openbank.png",
@@ -230,6 +252,7 @@
     "link": "https://kwpmc.com/",
     "category": [
       "Clients",
+      "Real Estate",
       "Hospitality"
     ],
     "year": 2010,
@@ -241,7 +264,8 @@
     "link": "https://screenshotmonitor.com/",
     "category": [
       "Clients",
-      "HR"
+      "HR",
+      "Productivity"
     ],
     "year": 2011,
     "thumbnail": "/assets/projects/screenshotmonitor.png",
@@ -252,7 +276,8 @@
     "link": "https://loglig.com/logineng",
     "category": [
       "Clients",
-      "Sports"
+      "Sports",
+      "Mobile"
     ],
     "year": 2012,
     "thumbnail": "/assets/projects/loglig.png",
@@ -263,7 +288,8 @@
     "link": "https://www.easydatafeed.com/",
     "category": [
       "Clients",
-      "E-commerce"
+      "E-commerce",
+      "Data Engineering"
     ],
     "year": 2013,
     "thumbnail": "/assets/projects/easydatafeed.png",
@@ -274,7 +300,8 @@
     "link": "https://mixerp.net/",
     "category": [
       "Open-source",
-      "Clients"
+      "Clients",
+      "ERP"
     ],
     "year": 2015,
     "thumbnail": "/assets/projects/mixerp.png",
@@ -285,7 +312,8 @@
     "link": "https://www.dsn-tools.fr/",
     "category": [
       "Clients",
-      "HR"
+      "HR",
+      "Data Engineering"
     ],
     "year": 2017,
     "thumbnail": "/assets/projects/dsn-tools.png",
@@ -296,7 +324,9 @@
     "link": "https://www.keycloak.org/",
     "category": [
       "Clients",
-      "Security"
+      "Security",
+      "Government",
+      "Banking"
     ],
     "year": 2017,
     "thumbnail": "/assets/projects/keycloak.png",
@@ -307,8 +337,9 @@
     "link": "https://ping.exchange/",
     "category": [
       "Clients",
-      "Fintech",
-      "Blockchain"
+      "Trading",
+      "Blockchain",
+      "Fintech"
     ],
     "year": 2018,
     "thumbnail": "/assets/projects/ping-exchange.png",
@@ -319,7 +350,9 @@
     "link": "https://tadi.uz/en/",
     "category": [
       "Clients",
-      "AI"
+      "AI",
+      "Payments",
+      "Security"
     ],
     "year": 2018,
     "thumbnail": "/assets/projects/tadi.png",
@@ -330,7 +363,8 @@
     "link": "https://energytrucking.com/",
     "category": [
       "Clients",
-      "Logistics"
+      "Logistics",
+      "Payments"
     ],
     "year": 2019,
     "thumbnail": "/assets/projects/energy-trucking.png",
@@ -342,7 +376,8 @@
     "category": [
       "Clients",
       "Logistics",
-      "Mobile"
+      "Mobile",
+      "Cloud"
     ],
     "year": 2020,
     "thumbnail": "/assets/projects/quickmanage.png",
@@ -353,7 +388,9 @@
     "link": "https://csmarketcap.com/",
     "category": [
       "Clients",
-      "Gaming"
+      "Gaming",
+      "Analytics",
+      "Trading"
     ],
     "year": 2020,
     "thumbnail": "/assets/projects/csmarketcap.png",
@@ -364,8 +401,9 @@
     "link": "https://zus.network/",
     "category": [
       "Clients",
+      "Blockchain",
       "Cloud",
-      "Blockchain"
+      "Security"
     ],
     "year": 2021,
     "thumbnail": "/assets/projects/zus.png",
@@ -376,8 +414,9 @@
     "link": "https://truedex.io/",
     "category": [
       "Clients",
-      "Fintech",
-      "Blockchain"
+      "Trading",
+      "Blockchain",
+      "Fintech"
     ],
     "year": 2023,
     "thumbnail": "/assets/projects/truedex.png",
@@ -388,7 +427,8 @@
     "link": "https://themoodswings.eu/",
     "category": [
       "Clients",
-      "E-commerce"
+      "E-commerce",
+      "Payments"
     ],
     "year": 2023,
     "thumbnail": "/assets/projects/moodswings.png",
@@ -399,7 +439,9 @@
     "link": "https://ricksocial.com",
     "category": [
       "Startups",
-      "Marketplace"
+      "Marketplace",
+      "Payments",
+      "Mobile"
     ],
     "year": 2024,
     "thumbnail": "/assets/projects/rent-local.png",
@@ -410,7 +452,8 @@
     "link": "https://tapi.uz",
     "category": [
       "Startups",
-      "HR"
+      "HR",
+      "AI"
     ],
     "year": 2025,
     "thumbnail": "/assets/projects/terminal-api.png",
@@ -421,7 +464,9 @@
     "link": "https://pcmonitor.app",
     "category": [
       "Startups",
-      "HR"
+      "HR",
+      "Productivity",
+      "Security"
     ],
     "year": 2026,
     "thumbnail": "/assets/projects/pc-monitoring.png",
