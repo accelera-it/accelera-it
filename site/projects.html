@@ -136,6 +136,14 @@
       display: none;
     }
 
+    /* phones: fade the right edge so the tab row reads as swipeable */
+    @media (max-width: 639px) {
+      #filters {
+        -webkit-mask-image: linear-gradient(to right, #000 82%, transparent);
+        mask-image: linear-gradient(to right, #000 82%, transparent);
+      }
+    }
+
     /* ── cards ─────────────────────────────────────────────────── */
     .project-cover {
       border-bottom: 1px solid #E4E8EF;
@@ -294,9 +302,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     function card(p) {
-      const article = el('article', 'flex h-full flex-col overflow-hidden rounded-2xl border border-hair bg-white transition-colors duration-200 hover:border-brand');
+      const article = el('article', 'group flex h-full flex-col overflow-hidden rounded-2xl border border-hair bg-white transition-colors duration-200 hover:border-brand');
 
-      const cover = el('div', 'project-cover relative aspect-[1200/630] bg-ink bg-cover bg-center');
+      const cover = el('div', 'project-cover relative aspect-[1200/630] bg-paper bg-contain bg-center bg-no-repeat');
       if (p.thumbnail) {
         cover.style.backgroundImage = `url("${encodeURI(p.thumbnail)}")`;
         cover.setAttribute('role', 'img');

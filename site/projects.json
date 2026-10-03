@@ -209,6 +209,18 @@
     "description": "Over 15+ years and 50+ organizations, we have built and reworked more than 10 open-source .NET libraries. They range from high-speed database bulk loaders and ORM extensions with migrations to storage clients and a cross-platform obfuscator for .NET assemblies."
   },
   {
+    "name": "OpenBank Crypto",
+    "link": "https://www.openbankproject.com/solutions/blockchain/",
+    "category": [
+      "Clients",
+      "Blockchain",
+      "Fintech"
+    ],
+    "year": 2010,
+    "thumbnail": "/assets/projects/openbank.png",
+    "description": "After studying BTCPay Server, our team members fluent in Ripple (XRP) helped bring Stellar (XLM) into the Open Bank Project. Following negotiations with its tech team in Frankfurt, Germany, we rolled out our own crypto module for banks on the platform."
+  },
+  {
     "name": "Loglig Basketball",
     "link": "https://loglig.com/logineng",
     "category": [
@@ -253,6 +265,17 @@
     "thumbnail": "/assets/projects/dsn-tools.png",
     "icon": "https://www.dsn-tools.fr/wp-content/uploads/2018/11/cropped-dsntools-180x180.jpg",
     "description": "DSN Tools helps French companies explore, check and aggregate their DSN payroll declarations across multiple periods, with custom extracts, data validation and ready-made HR reports. A five-year partnership: the co-founder says we went past the brief consistently."
+  },
+  {
+    "name": "Identity & Access Management",
+    "link": "https://www.keycloak.org/",
+    "category": [
+      "Clients",
+      "Security"
+    ],
+    "year": 2017,
+    "thumbnail": "/assets/projects/keycloak.png",
+    "description": "Since 2017, through our company DOTNET.UZ, we have advised on and deployed Keycloak for organizations from government bodies to banks on an outsourcing basis — chosen knowing MyID's limitations and that it is not a pure single sign-on (SSO) system."
   },
   {
     "name": "Ping Exchange",
@@ -300,7 +323,7 @@
     "year": 2020,
     "thumbnail": "/assets/projects/quickmanage.png",
     "icon": "https://framerusercontent.com/images/aIZUooTe9hLknKv7g3OwYKIoCW8.png",
-    "description": "QuickManage is an all-in-one transport management system for fleet, document and expense management, with dashboards for revenue per truck, cost per mile and profit margin. We built the first version of its mobile app and its customer cabinet for carriers."
+    "description": "QuickManage is an all-in-one transport management system for fleet, document and expense management. We helped build the first version of its customer cabinet and mobile app, and moved the project forward on the infrastructure side."
   },
   {
     "name": "CSMarketCap Skins",
@@ -337,6 +360,17 @@
     "year": 2023,
     "thumbnail": "/assets/projects/truedex.png",
     "description": "TrueDEX is a private, order-book trading platform with its data center in New York and its traders in Moscow, built natively on newer protocols such as MProto and gRPC. We delivered the trading dashboard and an open API for private spot-market trading."
+  },
+  {
+    "name": "Mood Swings",
+    "link": "https://themoodswings.eu/",
+    "category": [
+      "Clients",
+      "E-commerce"
+    ],
+    "year": 2023,
+    "thumbnail": "/assets/projects/moodswings.png",
+    "description": "For Mood Swings, a fashion label with its own factory in Dubai and a shop in the EU, we built the complete e-commerce online store: limited, carefully curated collections sold across Europe in local currencies and languages, all from one storefront."
   },
   {
     "name": "RickSocial Rental",
