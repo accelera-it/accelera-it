@@ -12,7 +12,7 @@
     "description": "Microsoft Azure's B-series are burstable, cost-efficient virtual machines for workloads that don't need full CPU power all the time. We implemented an NVIDIA CUDA module for B-series Windows machines, so CUDA-based workloads can run on this lower-cost tier."
   },
   {
-    "name": "Office 365 Administration",
+    "name": "Office365 Backoffice",
     "link": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-administration",
     "category": [
       "Clients",
@@ -124,7 +124,7 @@
     "description": "We are official GitHub contributors to MonetDB, the open-source column-store database built for high-performance analytics with standard SQL. Around 2015 we created a database management tool for administering MonetDB servers, and have maintained it ever since."
   },
   {
-    "name": "Eppli Auction/Jewelry",
+    "name": "Jewelry Auction",
     "link": "https://www.eppli.com/en/jewelry/",
     "category": [
       "Clients",
@@ -136,7 +136,7 @@
     "description": "Eppli is a sworn auction house, jeweler and pawnbroker in Germany with over 40 years of experience. Its platform covers online and judicial auctions, an online shop for jewelry, watches, art and coins, and certificates of authenticity from its own expert center."
   },
   {
-    "name": "Ministries of Uzbekistan",
+    "name": "Local Ministries",
     "link": "https://gov.uz/en",
     "category": [
       "Clients",
@@ -184,7 +184,7 @@
     "description": "Reaxys is Elsevier's chemistry intelligence platform, combining curated reaction and substance data with AI for small-molecule discovery. We built clinical analysis on top of ScienceDirect and Scopus, Elsevier's research literature and citation databases."
   },
   {
-    "name": "Smart-HRM Axiata",
+    "name": "Smart HRMS",
     "link": "https://www.smart.com.kh/",
     "category": [
       "Clients",
@@ -209,7 +209,7 @@
     "description": "UzEx is Uzbekistan's Republican Commodity Exchange, running electronic commodity trading, public procurement and a national logistics portal. We built parts of its platforms and published .NET libraries from that work, including Oracle data access via Dapper and MinIO storage clients."
   },
   {
-    "name": "1C Uzbekistan",
+    "name": "1C Dashboard",
     "link": "https://1c-dn.com/",
     "category": [
       "Clients",
@@ -359,20 +359,6 @@
     "description": "Ping is a hybrid crypto exchange that combines blockchain with a uniquely secure login through CorePass, which manages each user's identity and access. It was the first exchange to offer Core Coin (XCB) and Core Token (CTN), with trading, markets and a help center."
   },
   {
-    "name": "TADI FacePay",
-    "link": "https://tadi.uz/en/",
-    "category": [
-      "Clients",
-      "AI",
-      "Payments",
-      "Fintech",
-      "Security"
-    ],
-    "year": 2018,
-    "thumbnail": "/assets/projects/tadi.png",
-    "description": "Around FacePay, which lets shoppers pay at the till with their face, we built a P2P and B2B payment system: a payment gateway, bank processing, business and client cabinets, SMS, tax receipts, MyGov data and offline ID checks with the Regula SDK. It passed the Humo and Uzcard audits and PCI DSS, and holds a Central Bank license."
-  },
-  {
     "name": "Energy Trucking",
     "link": "https://energytrucking.com/",
     "category": [
@@ -422,6 +408,20 @@
     "year": 2021,
     "thumbnail": "/assets/projects/zus.png",
     "description": "As part of 0Chain's updated Web3 strategy, we reworked its full MinIO-based storage core in Go, extended its compression levels and split data into terabyte-scale rather than gigabyte-scale blocks, delivering a complete, transparent backup and restore system."
+  },
+  {
+    "name": "TADI FacePay",
+    "link": "https://yuzpay.uz/",
+    "category": [
+      "Clients",
+      "AI",
+      "Payments",
+      "Fintech",
+      "Security"
+    ],
+    "year": 2022,
+    "thumbnail": "/assets/projects/yuzpay.png",
+    "description": "Around FacePay, which lets shoppers pay at the till with their face, we built a P2P and B2B payment system: a payment gateway, bank processing, business and client cabinets, SMS, tax receipts, MyGov data and offline ID checks with the Regula SDK. It passed the Humo and Uzcard audits and PCI DSS, and holds a Central Bank license."
   },
   {
     "name": "Trading Platform",
