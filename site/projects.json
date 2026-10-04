@@ -308,6 +308,19 @@
     "description": "As GitHub contributors to MixERP, we set it up for desktop and offline use with full localization and deployed it at 10+ organizations in Uzbekistan, back in 2015 when SAP and 1C were still closed systems. Today we carry this work forward on the commercial ERPNext."
   },
   {
+    "name": "FindFace Cluster",
+    "link": "https://ntechlab.com/",
+    "category": [
+      "Clients",
+      "AI",
+      "Security",
+      "Government"
+    ],
+    "year": 2015,
+    "thumbnail": "/assets/projects/findface.png",
+    "description": "FindFace Cluster is NtechLab's face-recognition platform. In Uzbekistan we built separate high-capacity APIs connecting it to Interior Ministry (MVD) cameras, the GSI API, airport cameras, railway stations, and bus and metro systems."
+  },
+  {
     "name": "DSN Tools",
     "link": "https://www.dsn-tools.fr/",
     "category": [
@@ -352,11 +365,12 @@
       "Clients",
       "AI",
       "Payments",
+      "Fintech",
       "Security"
     ],
     "year": 2018,
     "thumbnail": "/assets/projects/tadi.png",
-    "description": "TADI (TAD Industries) builds biometric and AI solutions in Uzbekistan. Alongside FacePay, which lets shoppers pay at the till with their face, we rolled out face-ID systems for C/B, airports, stations, the traffic police (GAI) and GSI/GSP."
+    "description": "Around FacePay, which lets shoppers pay at the till with their face, we built a P2P and B2B payment system: a payment gateway, bank processing, business and client cabinets, SMS, tax receipts, MyGov data and offline ID checks with the Regula SDK. It passed the Humo and Uzcard audits and PCI DSS, and holds a Central Bank license."
   },
   {
     "name": "Energy Trucking",
