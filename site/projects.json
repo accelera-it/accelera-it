@@ -508,5 +508,17 @@
     "year": 2026,
     "thumbnail": "/assets/projects/vpn-tool.png",
     "description": "A private VPN for Windows, macOS and Android. Traffic is encrypted end to end through a private relay, every session is verified so only approved accounts stay connected, and there is nothing to configure and no admin rights needed — just sign in and press Start."
+  },
+  {
+    "name": "BizDiler Ecosystem",
+    "link": "https://bizdiler.com/",
+    "category": [
+      "Startups",
+      "Logistics",
+      "Analytics"
+    ],
+    "year": 2026,
+    "thumbnail": "/assets/projects/bizdiler.png",
+    "description": "A B2B platform connecting brands imported into Uzbekistan with their local distributors: each brand issues licenses to its distributors and keeps fair, quality-controlled oversight of them, all communication runs in one workspace, and dealers' sales agents and couriers are tracked through SalesMap. More than 10 major brands signed annual contracts during the pilot."
   }
 ]
