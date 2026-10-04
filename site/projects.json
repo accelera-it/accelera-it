@@ -462,6 +462,18 @@
     "description": "A peer-to-peer rental platform for tools and equipment: owners earn from items that would otherwise sit idle, and renters pay a fraction of the purchase price. Payments run through Stripe, every booking includes damage coverage, and rentals are managed in iOS and Android apps."
   },
   {
+    "name": "Silk Stars",
+    "link": "https://silkroadhotel.uz/en-gb/",
+    "category": [
+      "Clients",
+      "Hospitality",
+      "Government"
+    ],
+    "year": 2024,
+    "thumbnail": "/assets/projects/silkroad.png",
+    "description": "Silk Stars Team in Tashkent was running into many internal problems with its Booking and Expedia partnerships. In 2011 we re-examined its setup and over a year built a new inventory system, fully launched in 2012. In its first phase for the Ministry of Tourism, it placed guests from Central Asian countries in hotels in Bukhara, Khorezm and Samarkand."
+  },
+  {
     "name": "Terminal API",
     "link": "https://tapi.uz",
     "category": [
