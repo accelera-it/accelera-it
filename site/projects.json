@@ -134,6 +134,19 @@
     "description": "Eppli is a sworn auction house, jeweler and pawnbroker in Germany with over 40 years of experience. Its platform covers online and judicial auctions, an online shop for jewelry, watches, art and coins, and certificates of authenticity from its own expert center."
   },
   {
+    "name": "HID OMNIKEY",
+    "link": "https://www.hidglobal.com/",
+    "category": [
+      "Clients",
+      "Security",
+      "Payments",
+      "Sports"
+    ],
+    "year": 2005,
+    "thumbnail": "/projects/hid-omnikey.png",
+    "description": "HID Global makes OMNIKEY smart card readers for secure identity and access. For about ten golf and tennis complexes in the Netherlands, our large team fully reworked HID's C driver, added COM-port support, implemented the OMNIKEY 3121 USB driver and launched an open SOAP API, so members top up an offline card wallet with online payments, a large system for the 2010s."
+  },
+  {
     "name": "Local Ministries",
     "link": "https://gov.uz/en",
     "category": [
@@ -266,7 +279,7 @@
     ],
     "year": 2010,
     "thumbnail": "/projects/mc-metallhandel.png",
-    "description": "MC Metallhandel is a Frankfurt metal trader and recycler in the Metall-Chemie Group, processing non-ferrous scrap and new metals. For its metal 3D printer we built real-time monitoring: high-capacity SVG and D3 charts that analyze up to 10 million points per second."
+    "description": "MC Metallhandel is a Frankfurt metal trader and recycler in the Metall-Chemie Group, processing non-ferrous scrap and new metals. For its metal 3D printer we built real-time monitoring: high-capacity SVG and D3 charts that analyze millions of points per second."
   },
   {
     "name": "Screenshot Monitor",
