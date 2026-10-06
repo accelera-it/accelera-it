@@ -39,7 +39,6 @@ website/                           → accelerait.uz (PHP host)
 ├── index.html                     "Our Project Journey" page, filterable by category
 ├── projects.json                  projects (startups, clients, open-source…) listed on it
 ├── projects/                      1200 × 630 PNG site screenshots, thumbnails
-├── graph.csv                      year,new_projects — feeds the growth chart (hidden while empty)
 ├── .htaccess, robots.txt, sitemap.xml
 ├── og-image.png                   1200 × 630 tech-team link preview (Bukhara backdrop)
 ├── hero.png                       1200 × 500 Bukhara header / footer backdrop
@@ -139,11 +138,11 @@ jumps between slides.
 ## Projects page
 
 `website/index.html` renders the cards from `projects.json` in file order. Each
-entry is `{name, link?, category?, year?, thumbnail?, description}`:
+entry is `{id, name, link?, category?, year?, thumbnail?, description}`:
 
-- **`year`** — the year the linked domain was registered (look it up via
-  RDAP / `whois`). It isn't shown on the cards, but keep the file sorted by it,
-  oldest first.
+- **`year`** — the approximate year the team worked on the project. It isn't
+  shown on the cards, but it drives the "Projects delivered" chart; keep the
+  file sorted by it, oldest first.
 - **`category`** — a string or a list. Filter chips are built from the data,
   with Startups, Clients and Open-source first.
 - **`thumbnail`** — `/projects/<slug>.png`, a 1200 × 630 homepage
