@@ -257,6 +257,18 @@
     "description": "Through VirtuWorks, we studied the capabilities of BirchStreet Systems at Trump Tower New York and developed an improved platform for KW Property Management & Consulting, relaunched at Trump Tower and about ten top-rated hotels around it with a full inventory system."
   },
   {
+    "name": "3D Printer",
+    "link": "https://www.mc-metallhandel.de/en/",
+    "category": [
+      "Clients",
+      "Analytics",
+      "Data Engineering"
+    ],
+    "year": 2010,
+    "thumbnail": "/projects/mc-metallhandel.png",
+    "description": "MC Metallhandel is a Frankfurt metal trader and recycler in the Metall-Chemie Group, processing non-ferrous scrap and new metals. For its metal 3D printer we built real-time monitoring: high-capacity SVG and D3 charts that analyze up to 10 million points per second."
+  },
+  {
     "name": "Screenshot Monitor",
     "link": "https://screenshotmonitor.com/",
     "category": [
@@ -416,6 +428,18 @@
     "year": 2022,
     "thumbnail": "/projects/yuzpay.png",
     "description": "Around FacePay, which lets shoppers pay at the till with their face, we built a P2P and B2B payment system: a payment gateway, bank processing, business and client cabinets, SMS, tax receipts, MyGov data and offline ID checks with the Regula SDK. It passed the Humo and Uzcard audits and PCI DSS, and holds a Central Bank license."
+  },
+  {
+    "name": "FalconSpace CMS",
+    "link": "https://falconspace.ru/",
+    "category": [
+      "Clients",
+      "Government",
+      "Productivity"
+    ],
+    "year": 2022,
+    "thumbnail": "/projects/falconspace.png",
+    "description": "Falcon Space is a low-code platform on .NET Core and SQL Server for business web apps with personal accounts. On it we built a CRM-focused CMS, rolled out to 200+ government organizations in Moscow and launched together with more than 20 teams, making it a large-scale system."
   },
   {
     "name": "Trading Platform",
