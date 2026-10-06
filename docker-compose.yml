@@ -1,21 +1,35 @@
 services:
-  web:
-    build: ./site
-    image: accelerait-site
-    container_name: accelerait-site
+  landing:
+    build: ./landing
+    image: accelerait-landing
+    container_name: accelerait-landing
     ports:
       - "8081:80"
     volumes:
-      - ./site:/usr/local/apache2/htdocs:ro
-      - ./logs:/usr/local/apache2/logs
+      - ./landing:/usr/local/apache2/htdocs:ro
+      - ./logs/landing:/usr/local/apache2/logs
     networks:
       - accelerait-net
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD-SHELL", "wget -q --spider http://localhost/ || exit 1"]
+    healthcheck: &healthcheck
+      test: [ "CMD-SHELL", "wget -q --spider http://localhost/ || exit 1" ]
       interval: 30s
       timeout: 3s
       retries: 3
+
+  website:
+    build: ./website
+    image: accelerait-website
+    container_name: accelerait-website
+    ports:
+      - "8082:80"
+    volumes:
+      - ./website:/usr/local/apache2/htdocs:ro
+      - ./logs/website:/usr/local/apache2/logs
+    networks:
+      - accelerait-net
+    restart: unless-stopped
+    healthcheck: *healthcheck
 
 networks:
   accelerait-net:

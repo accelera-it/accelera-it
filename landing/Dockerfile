@@ -1,7 +1,7 @@
 FROM httpd:2.4-alpine
 
 # The stock config ignores .htaccess and leaves most of the modules it uses
-# switched off, so enable them and let site/.htaccess take effect.
+# switched off, so enable them and let the .htaccess next to this file take effect.
 # Logs go to files under logs/ (mounted as a volume) instead of stdout.
 RUN sed -i \
       -e 's/^#\(LoadModule rewrite_module\)/\1/' \

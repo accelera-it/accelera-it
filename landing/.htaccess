@@ -39,6 +39,9 @@ AddDefaultCharset UTF-8
   # ── 6. Strip a trailing index.html ───────────────────────────────────
   RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
   RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+  # The projects page moved to its own site; the query (?category=) is kept
+  RewriteRule ^projects\.html$ https://accelerait.uz/ [R=301,L]
 </IfModule>
 
 # ── 7. Security headers ────────────────────────────────────────────────
@@ -111,13 +114,6 @@ AddDefaultCharset UTF-8
   <IfModule !mod_authz_core.c>
     Order allow,deny
     Deny from all
-  </IfModule>
-</FilesMatch>
-
-# Keep the projects list reachable despite the .json rule above
-<FilesMatch "^projects\.json$">
-  <IfModule mod_authz_core.c>
-    Require all granted
   </IfModule>
 </FilesMatch>
 

@@ -1,50 +1,61 @@
 # AcceleraIT — deployment package
 
-Everything that is served lives in `site/`. Upload the **contents** of `site/`
-to the web root of `accelerait.us`, keeping this exact folder structure. No
-build step, no dependencies.
+Two static sites, each uploaded as-is to its own web root, keeping this exact
+folder structure. No build step, no dependencies.
+
+- **`landing/`** → `accelerait.us` — the one-page company landing.
+- **`website/`** → `accelerait.uz` — the "Our Project Journey" projects page,
+  on a separate PHP host. The landing's "Our Project Journey" links point here,
+  and the old `accelerait.us/projects.html` 301-redirects to it.
 
 ## Run locally with Docker
 
 ```bash
-docker compose up -d --build    # from the repo root → http://localhost:8081
+docker compose up -d --build    # from the repo root → landing http://localhost:8081, website http://localhost:8082
 docker compose down
 ```
 
 Apache (`httpd:2.4-alpine`) with `.htaccess` enabled, so the redirects,
-headers and file blocks behave as in production. `site/` is mounted read-only,
-so edits show without a rebuild; Apache's `access_log` and `error_log` are
-written to `./logs/` (git-ignored). The container runs on its own
-`accelerait-net` bridge network. The HTTPS redirect skips `localhost`.
-`docker-compose.yml` is at the repo root and builds from `site/Dockerfile`.
-The `Dockerfile` and `.dockerignore` sit in `site/` but are kept out of the
-image and denied by `.htaccess` if uploaded.
+headers and file blocks behave as in production. Each folder is mounted
+read-only, so edits show without a rebuild; Apache's `access_log` and
+`error_log` are written to `./logs/landing/` and `./logs/website/`
+(git-ignored). Both containers run on the `accelerait-net` bridge network. The
+HTTPS redirect skips `localhost`. `docker-compose.yml` is at the repo root and
+builds from each folder's `Dockerfile`, which (with `.dockerignore`) is kept
+out of the image and denied by `.htaccess` if uploaded.
 
 ```
-site/
+landing/                           → accelerait.us
 ├── index.html                     the landing page
-├── projects.html                  "Our Project Journey" page, filterable by category
-├── projects.json                  projects (startups, clients, open-source…) listed on projects.html
 ├── .htaccess                      server rules (see notes below)
 ├── robots.txt                     crawler policy
 ├── sitemap.xml                    edit <lastmod> when you change the page
 ├── favicon.ico                    16 / 32 / 48 / 64 px, multi-resolution
 ├── og-image.png                   1200 × 630, social + AI link previews
 ├── hero.png                       1200 × 500 hero / footer backdrop
-├── logo.png                       539 × 130 "AcceleraIT" wordmark (projects.html header)
-└── projects/                      1200 × 630 PNG site screenshots, thumbnails on projects.html
+└── logo.png                       539 × 130 "AcceleraIT" wordmark
+
+website/                           → accelerait.uz (PHP host)
+├── index.html                     "Our Project Journey" page, filterable by category
+├── projects.json                  projects (startups, clients, open-source…) listed on it
+├── projects/                      1200 × 630 PNG site screenshots, thumbnails
+├── .htaccess, robots.txt, sitemap.xml
+└── favicon.ico, og-image.png, hero.png, logo.png   copies of the landing's
 ```
 
 ## Deploy
 
 ```bash
-./upload.sh --dry-run   # show what would change on the server
-./upload.sh             # upload new/changed files from site/ over FTPS (lftp)
-./upload.sh --delete    # also remove remote files no longer in site/
+./upload.sh landing --dry-run   # show what would change on accelerait.us
+./upload.sh landing             # upload new/changed files from landing/ over FTPS (lftp)
+./upload.sh website             # same for website/ → accelerait.uz
+./upload.sh website --delete    # also remove remote files no longer in website/
 ```
 
-Needs `lftp` (`brew install lftp`); without it (e.g. Git Bash on Windows) the script re-runs itself in an `alpine` Docker container that has it. Host, user, port, password and web root
-are read from `docs/ftp.txt`; env vars `FTP_USER`, `FTP_HOST`, `FTP_PORT`,
+Needs `lftp` (`brew install lftp`); without it (e.g. Git Bash on Windows) the script re-runs itself in an `alpine` Docker container that has it. Host, user, port and password
+are read from `docs/ftp.txt` (landing) or `docs/ftp-website.txt` (website,
+same `FTP Username:` / `FTP server:` / `FTP & explicit FTPS port:` / `psw:`
+lines); env vars `FTP_USER`, `FTP_HOST`, `FTP_PORT`,
 `FTP_PASS` and `REMOTE_DIR` override them. The
 `Dockerfile`, `.dockerignore` and `.DS_Store` files are never uploaded. Use
 `--delete` after removing a thumbnail or page so the old file goes too. The
@@ -67,8 +78,8 @@ never touches them.
 
 ## After it is live
 
-- Submit `https://accelerait.us/sitemap.xml` in Google Search Console and
-  Bing Webmaster Tools.
+- Submit `https://accelerait.us/sitemap.xml` and `https://accelerait.uz/sitemap.xml`
+  in Google Search Console and Bing Webmaster Tools.
 - Test the link preview: paste the URL into LinkedIn's Post Inspector,
   Facebook's Sharing Debugger, and a Slack message.
 - Verify the crawler policy loads at `https://accelerait.us/robots.txt`.
@@ -121,7 +132,7 @@ jumps between slides.
 
 ## Projects page
 
-`projects.html` renders the cards from `projects.json` in file order. Each
+`website/index.html` renders the cards from `projects.json` in file order. Each
 entry is `{name, link?, category?, year?, thumbnail?, description}`:
 
 - **`year`** — the year the linked domain was registered (look it up via
@@ -136,8 +147,8 @@ entry is `{name, link?, category?, year?, thumbnail?, description}`:
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
     --hide-scrollbars --window-size=1200,630 --virtual-time-budget=8000 \
     --screenshot=shot.png https://example.com/
-  pngquant --quality=90-100 --output site/projects/<slug>.png shot.png
-  oxipng -o max site/projects/<slug>.png
+  pngquant --quality=90-100 --output website/projects/<slug>.png shot.png
+  oxipng -o max website/projects/<slug>.png
   ```
 
   If `pngquant` can't reach that quality (exit code 99, common with photo-heavy
