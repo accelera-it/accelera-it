@@ -65,10 +65,19 @@ set ssl:verify-certificate yes
 set net:max-retries 2
 set net:timeout 20
 set cmd:fail-exit true
+# Excluded paths are neither uploaded nor removed by --delete, so the host's own
+# files in the web root (cPanel quota, ACME challenges, logs, …) are left alone.
 mirror --reverse --only-newer --verbose --parallel=4 $DRY $DELETE \
   --exclude-glob Dockerfile \
   --exclude-glob .dockerignore \
   --exclude-glob .DS_Store \
+  --exclude-glob .ftpquota \
+  --exclude-glob .user.ini \
+  --exclude-glob php.ini \
+  --exclude-glob error_log \
+  --exclude '^\.well-known/' \
+  --exclude '^cgi-bin/' \
+  --exclude '^home/' \
   site/ "$REMOTE_DIR"
 EOF
 

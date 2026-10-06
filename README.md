@@ -47,7 +47,10 @@ Needs `lftp` (`brew install lftp`); without it (e.g. Git Bash on Windows) the sc
 are read from `docs/ftp.txt`; env vars `FTP_USER`, `FTP_HOST`, `FTP_PORT`,
 `FTP_PASS` and `REMOTE_DIR` override them. The
 `Dockerfile`, `.dockerignore` and `.DS_Store` files are never uploaded. Use
-`--delete` after removing a thumbnail or page so the old file goes too.
+`--delete` after removing a thumbnail or page so the old file goes too. The
+host's own files in the web root (`.ftpquota`, `.user.ini`, `php.ini`,
+`error_log`, `.well-known/`, `cgi-bin/`, `home/`) are excluded, so `--delete`
+never touches them.
 
 ## Upload checklist
 
