@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AcceleraIT Tech Team — Software Engineering Projects from Uzbekistan</title>
+  <title>AcceleraIT — Software Engineering Projects</title>
   <meta name="description"
-    content="ООО &quot;ACCELERAIT&quot; is the AcceleraIT tech team in Uzbekistan: the engineers behind our own products and the platforms we have built for clients — fintech, marketplaces, HR, data and open source.">
+    content="&quot;ACCELERAIT&quot; MCHJ is the AcceleraIT tech team in Uzbekistan: the engineers behind our own products and the platforms we have built for clients — fintech, marketplaces, HR, data and open source.">
   <meta name="theme-color" content="#0B1220">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="author" content="ООО &quot;ACCELERAIT&quot;">
+  <meta name="author" content="&quot;ACCELERAIT&quot; MCHJ">
 
   <meta property="og:title" content="AcceleraIT Tech Team — Our Project Journey">
   <meta property="og:description"
@@ -42,7 +42,7 @@
     {
       "@type": "Organization",
       "@id": "https://accelerait.uz/#org",
-      "name": "ООО \"ACCELERAIT\"",
+      "name": "\"ACCELERAIT\" MCHJ",
       "alternateName": "AcceleraIT Tech Team",
       "url": "https://accelerait.uz/",
       "logo": "https://accelerait.uz/logo.png",
@@ -183,20 +183,23 @@
       transform: rotate(180deg);
     }
 
-    /* ── project scroll box ─────────────────────────────────────── */
-    .list-scroll {
-      scrollbar-width: thin;
-      scrollbar-color: #C9D1DE transparent;
+    /* ── project sliders ────────────────────────────────────── */
+    /* phones: the row bleeds to the screen edge, so snap inside the page gutter */
+    .slider {
+      scroll-padding-inline: 20px;
     }
 
-    .list-scroll::-webkit-scrollbar {
-      width: 8px;
+    @media (min-width: 640px) {
+      .slider {
+        scroll-padding-inline: 0;
+      }
     }
 
-    .list-scroll::-webkit-scrollbar-thumb {
-      background: #C9D1DE;
-      border-radius: 8px;
+    .page-btn:disabled {
+      opacity: .35;
+      pointer-events: none;
     }
+
 
     /* ── cards ─────────────────────────────────────────────────── */
     .project-cover {
@@ -210,6 +213,17 @@
       background-image:
         radial-gradient(circle at 75% 20%, rgba(125, 155, 255, .35), transparent 55%),
         linear-gradient(135deg, #1B2942, #0B1220);
+    }
+
+    /* growth chart: bars rise from the baseline, one after another */
+    .growth-bar {
+      transform-origin: bottom;
+      animation: bar-up .7s cubic-bezier(.16, 1, .3, 1) both;
+      animation-delay: var(--d, 0ms);
+    }
+
+    @keyframes bar-up {
+      from { transform: scaleY(0); }
     }
 
     .card-in {
@@ -257,71 +271,106 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/" class="inline-flex items-center" aria-label="AcceleraIT Tech Team home">
         <img src="/logo.png" alt="AcceleraIT" class="h-7 w-auto sm:h-8">
       </a>
-      <a href="https://t.me/acceleraitus" target="_blank" rel="noopener"
-        class="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-[0.88rem] font-semibold text-white transition hover:bg-brand">
-        Contact Us <span aria-hidden="true">→</span>
-      </a>
     </div>
 
-    <div class="relative mx-auto w-full max-w-shell px-5 pb-8 pt-8 sm:px-8 sm:pb-10 sm:pt-10">
-      <p class="mb-3 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-muted">Uzbekistan, Tashkent</p>
-      <h1
-        class="balance font-display text-[2.1rem] font-semibold leading-[1.12] tracking-tighter2 sm:text-[2.9rem] lg:text-[3.4rem]">
-        Our Project Journey
-      </h1>
-      <p class="balance mt-4 max-w-[52ch] text-[1.02rem] leading-[1.6] text-muted sm:text-[1.1rem]">
-        We are the engineers behind AcceleraIT — the products we designed, built and run ourselves, and the platforms we
-        have helped clients build and scale.
-      </p>
+    <div
+      class="relative mx-auto grid w-full max-w-shell gap-8 px-5 pb-8 pt-8 sm:px-8 sm:pb-10 sm:pt-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-end lg:gap-12">
+      <div>
+        <p class="mb-3 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-muted">Tech Team · Tashkent, UZ</p>
+        <h1
+          class="balance font-display text-[2.1rem] font-semibold leading-[1.12] tracking-tighter2 sm:text-[2.9rem] lg:text-[3.4rem]">
+          Our Project Journey
+        </h1>
+        <p class="balance mt-4 max-w-[52ch] text-[1.02rem] leading-[1.6] text-muted sm:text-[1.1rem]">
+          We are the engineers behind AcceleraIT — the startups we build and run ourselves, the platforms we deliver for
+          clients, and the open source we share with everyone.
+        </p>
+      </div>
+
+      <!-- growth: projects delivered so far, by year, from /graph.csv (year,new_projects — new ones that year;
+           the bars are the running total). Stays hidden until at least two years have a number. -->
+      <figure id="growth" hidden aria-labelledby="growthTitle"
+        class="rounded-2xl border border-hair bg-white/85 p-5 shadow-sm backdrop-blur-sm sm:p-6">
+        <figcaption class="flex items-end justify-between gap-4">
+          <div>
+            <p id="growthTitle" class="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-muted">Projects delivered</p>
+            <p class="mt-1 font-display text-[2rem] font-semibold leading-none tracking-tighter2" id="growthTotal"></p>
+          </div>
+          <p id="growthDelta" class="text-right text-[0.85rem] leading-[1.4] text-muted"></p>
+        </figcaption>
+        <div id="growthChart" class="relative mt-5 h-[150px]">
+          <div id="growthBars" class="absolute inset-0 flex items-end gap-[2px] border-b border-hair"></div>
+          <div id="growthTip" role="status" hidden
+            class="pointer-events-none absolute bottom-full z-10 mb-2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-ink px-3 py-2 text-[0.78rem] leading-[1.4] text-white shadow-lg"></div>
+        </div>
+        <div id="growthAxis" class="mt-2 flex justify-between font-mono text-[0.68rem] text-dim" aria-hidden="true"></div>
+        <table class="sr-only">
+          <caption>Projects delivered by year</caption>
+          <thead><tr><th scope="col">Year</th><th scope="col">New projects</th><th scope="col">Total</th></tr></thead>
+          <tbody id="growthTable"></tbody>
+        </table>
+      </figure>
     </div>
   </header>
 
-  <main id="projects" class="mx-auto w-full max-w-shell flex-1 px-5 pb-10 pt-6 sm:px-8 sm:pb-12 sm:pt-7">
-    <!-- chips are built from the categories in /projects.json: one row (swipeable),
+  <main id="projects" class="mx-auto w-full max-w-shell flex-1 px-5 pb-16 pt-6 sm:px-8 sm:pb-20 sm:pt-7">
+    <!-- field chips (AI, Fintech, …) built from /projects.json filter every group below: one row (swipeable),
          and the toggle wraps them onto as many rows as they need -->
     <div class="flex items-start gap-3">
-      <div id="filters" role="group" aria-label="Filter by category"
+      <div id="filters" role="group" aria-label="Filter by field"
         class="no-scrollbar flex min-w-0 flex-1 gap-2 overflow-x-auto"></div>
       <button id="moreCats" type="button" aria-expanded="false" aria-controls="filters" hidden
         class="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2 text-[0.88rem] font-semibold text-brand transition hover:text-brand-deep">
-        <span id="moreCatsLabel">All categories</span>
+        <span id="moreCatsLabel">Show more</span>
         <span id="moreCatsIcon" class="transition-transform" aria-hidden="true">▾</span>
       </button>
     </div>
 
-    <!-- the cards scroll inside this box, so the filters stay in view -->
-    <div id="listBox" tabindex="0" aria-label="Projects"
-      class="list-scroll mt-6 max-h-[78svh] overflow-y-auto overscroll-contain rounded-2xl border border-hair bg-white/60 p-3 sm:p-5">
-      <ul id="projectList" class="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
-        <li class="text-[0.93rem] text-muted">Loading…</li>
-      </ul>
+    <!-- one section per kind of work (KINDS in the script), each a sideways slider -->
+    <div id="groups">
+      <p class="mt-10 text-[0.93rem] text-muted">Loading…</p>
     </div>
 
     <noscript>
       <p class="mt-8 text-[0.93rem] text-muted">This page needs JavaScript to list the projects.</p>
     </noscript>
+
+    <!-- contact: Telegram -->
+    <section id="contact" aria-labelledby="contact-title"
+      class="mt-16 flex flex-col gap-6 rounded-2xl bg-ink p-7 text-white sm:mt-20 sm:p-10 md:flex-row md:items-center md:justify-between">
+      <div>
+        <h2 id="contact-title"
+          class="balance font-display text-[1.45rem] font-semibold leading-[1.2] tracking-tighter2 sm:text-[1.8rem]">
+          Have a project like these in mind?
+        </h2>
+        <p class="mt-2 max-w-[52ch] text-[0.98rem] leading-[1.6] text-white/60">
+          Message us on Telegram and talk directly with the engineers who would do the work.
+        </p>
+      </div>
+      <a href="https://t.me/acceleraitus" target="_blank" rel="noopener"
+        class="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-full bg-white px-7 py-4 text-[0.95rem] font-semibold text-ink transition hover:-translate-y-0.5 md:self-auto">
+        Contact Us on Telegram <span aria-hidden="true">→</span>
+      </a>
+    </section>
   </main>
 
   <footer class="relative overflow-hidden border-t border-ink-line bg-ink py-16 text-center text-white">
     <div id="footerBg" aria-hidden="true"></div>
     <p class="relative px-5 font-mono text-[0.68rem] leading-[1.6] text-white/75 sm:text-[0.72rem]">
-      © <span id="year">2026</span>
-      <a href="https://orginfo.uz/en/organization/7762f625029a/" target="_blank" rel="noopener"
-        class="underline decoration-white/30 underline-offset-4 transition hover:text-white hover:decoration-brand-lt">ООО "ACCELERAIT"</a>.
-      All rights reserved.
+      © <span id="year">2026</span> "ACCELERAIT" MCHJ. All rights reserved.
     </p>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    const list = document.getElementById('projectList');
     const filters = document.getElementById('filters');
-    const listBox = document.getElementById('listBox');
+    const groups = document.getElementById('groups');
     const more = document.getElementById('moreCats');
     const moreLabel = document.getElementById('moreCatsLabel');
     const ALL = 'all';
     let projects = [];
+    let sliders = [];
 
     function el(tag, cls, text) {
       const n = document.createElement(tag);
@@ -333,6 +382,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const slug = s => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     // `category` may be a single string or a list
     const categoriesOf = p => [].concat(p.category || []);
+
+    // the kinds of work, in page order; every other category is a field (AI, Fintech, …)
+    const KINDS = [
+      { cat: 'Startups', id: 'startups', title: 'Our Startups',
+        blurb: 'Products we designed, built and run ourselves.' },
+      { cat: 'Clients', id: 'client-work', title: 'Client Work',
+        blurb: 'Platforms our engineers have built, extended and scaled for client teams.' },
+      { cat: 'Open-source', id: 'open-source', title: 'Open Source',
+        blurb: 'Libraries, drivers and tools we created or contributed to in the open.' },
+    ];
+    const KIND_CATS = KINDS.map(k => k.cat);
+    const fieldsOf = p => categoriesOf(p).filter(c => !KIND_CATS.includes(c));
 
     function initials(name) {
       return name.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
@@ -363,7 +424,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         emptyCover(cover, p.name);
       }
 
-      const title = el('h2', 'font-display text-[1.2rem] font-semibold tracking-tighter2');
+      const title = el('h3', 'font-display text-[1.2rem] font-semibold tracking-tighter2');
       if (p.link) {
         const a = el('a', 'underline-offset-4 transition-colors hover:text-brand hover:underline', p.name);
         a.href = p.link; a.target = '_blank'; a.rel = 'noopener';
@@ -372,8 +433,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         title.textContent = p.name;
       }
 
+      // the kind of work is the section the card sits in, so only the fields are tagged
       const tags = el('div', 'mt-4 flex flex-wrap items-center gap-1.5');
-      categoriesOf(p).forEach(c =>
+      fieldsOf(p).forEach(c =>
         tags.append(el('span', 'rounded-full bg-brand-soft px-2.5 py-0.5 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-brand-deep', c)));
 
       const body = el('div', 'flex flex-1 flex-col p-6');
@@ -394,18 +456,90 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       return b;
     }
 
+    // fields A–Z, each with how many projects it has
     function buildFilters() {
-      // how many projects each category has; the kind of work (LEAD) first, then fields A–Z
-      const LEAD = ['Startups', 'Clients', 'Open-source'];
       const counts = new Map();
-      projects.forEach(p => categoriesOf(p).forEach(c => counts.set(c, (counts.get(c) || 0) + 1)));
-      const rank = c => (LEAD.includes(c) ? LEAD.indexOf(c) : LEAD.length);
-      const cats = Array.from(counts.keys()).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+      projects.forEach(p => fieldsOf(p).forEach(c => counts.set(c, (counts.get(c) || 0) + 1)));
+      const cats = Array.from(counts.keys()).sort((a, b) => a.localeCompare(b));
       filters.replaceChildren(chip(ALL, 'All', projects.length),
         ...cats.map(c => chip(slug(c), c, counts.get(c))));
       filters.hidden = counts.size === 0;
     }
 
+    // ── sliders ─────────────────────────────────────────────────────
+    // one per kind: heading with count and arrows, a sideways row of cards, a progress track
+    function slider(kind, n) {
+      const section = el('section', 'scroll-mt-6 border-t border-hair pt-10 first:border-t-0 first:pt-8 sm:pt-12 sm:first:pt-10 [&+section]:mt-12');
+      section.id = kind.id;
+      section.setAttribute('aria-labelledby', `${kind.id}-title`);
+
+      const head = el('div', 'flex items-end justify-between gap-6');
+      const intro = el('div');
+      const h2 = el('h2', 'flex items-baseline gap-3 font-display text-[1.6rem] font-semibold leading-[1.15] tracking-tighter2 sm:text-[2rem]');
+      h2.id = `${kind.id}-title`;
+      h2.append(kind.title, el('span', 'font-mono text-[0.85rem] font-normal text-dim', String(n)));
+      intro.append(h2, el('p', 'mt-2 max-w-[60ch] text-[0.98rem] leading-[1.6] text-muted', kind.blurb));
+
+      const nav = el('div', 'hidden shrink-0 gap-2 sm:flex');
+      const arrow = (label, text) => {
+        const b = el('button', 'page-btn grid h-11 w-11 place-items-center rounded-full border border-hair bg-white text-[1.05rem] transition hover:border-ink', text);
+        b.type = 'button'; b.setAttribute('aria-label', `${label} ${kind.title.toLowerCase()}`);
+        return b;
+      };
+      const prev = arrow('Previous', '←'), next = arrow('Next', '→');
+      nav.append(prev, next);
+      head.append(intro, nav);
+
+      const box = el('div', 'slider no-scrollbar -mx-5 mt-6 snap-x snap-mandatory overflow-x-auto overflow-y-hidden overscroll-x-contain px-5 pb-1 sm:mx-0 sm:px-0');
+      box.tabIndex = 0;
+      box.setAttribute('aria-label', kind.title);
+      const list = el('ul', 'flex gap-4 sm:gap-5');
+      box.append(list);
+      [prev, next].forEach(b => b.setAttribute('aria-controls', box.id = `${kind.id}-list`));
+
+      const foot = el('div', 'mt-5 flex items-center gap-4');
+      const track = el('div', 'h-1 flex-1 overflow-hidden rounded-full bg-hair');
+      track.setAttribute('aria-hidden', 'true');
+      const bar = el('div', 'h-full rounded-full bg-ink transition-[width,margin] duration-200');
+      track.append(bar);
+      const counter = el('p', 'font-mono text-[0.75rem] text-muted');
+      foot.append(track, counter);
+
+      section.append(head, box, foot);
+
+      const s = { section, box, list, prev, next, bar, counter, foot };
+      const page = dir => box.scrollBy({ left: dir * box.clientWidth * 0.9, behavior: 'smooth' });
+      prev.addEventListener('click', () => page(-1));
+      next.addEventListener('click', () => page(1));
+      box.addEventListener('scroll', () => fitSlider(s), { passive: true });
+      box.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); page(e.key === 'ArrowRight' ? 1 : -1); }
+      });
+      return s;
+    }
+
+    // arrows at the ends, the visible slice on the track, and "4–6 / 37"
+    function fitSlider(s) {
+      const { scrollLeft: x, clientWidth: w, scrollWidth: total } = s.box;
+      const fits = total <= w + 1;
+      s.prev.disabled = x <= 1;
+      s.next.disabled = x + w >= total - 1;
+      s.foot.hidden = fits;
+      s.prev.parentElement.classList.toggle('sm:flex', !fits);
+      s.bar.style.width = `${Math.min(100, (w / total) * 100)}%`;
+      s.bar.style.marginLeft = `${(x / total) * 100}%`;
+      const view = s.box.getBoundingClientRect();
+      const seen = Array.from(s.list.children).map((li, i) => {
+        const r = li.getBoundingClientRect();
+        return r.left >= view.left - r.width / 2 && r.right <= view.right + r.width / 2 ? i + 1 : 0;
+      }).filter(Boolean);
+      s.counter.textContent = seen.length
+        ? `${seen[0]}${seen.length > 1 ? '–' + seen[seen.length - 1] : ''} / ${s.list.children.length}` : '';
+    }
+
+    const fitAll = () => sliders.forEach(fitSlider);
+
+    // ── filter chips ────────────────────────────────────────────────
     // one row of chips; the toggle shows only when they don't all fit
     function fitFilters() {
       const open = filters.classList.contains('is-open');
@@ -419,7 +553,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     function setOpen(open) {
       filters.classList.toggle('is-open', open);
       more.setAttribute('aria-expanded', String(open));
-      moreLabel.textContent = open ? 'Show less' : 'All categories';
+      moreLabel.textContent = open ? 'Show less' : 'Show more';
       fitFilters();
       revealActive();
     }
@@ -433,23 +567,110 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     more.addEventListener('click', () => setOpen(!filters.classList.contains('is-open')));
-    window.addEventListener('resize', fitFilters);
     filters.addEventListener('scroll', fitFilters, { passive: true });
-    // chip widths change once the web fonts arrive
-    document.fonts?.ready.then(() => { fitFilters(); revealActive(); });
+    window.addEventListener('resize', () => { fitFilters(); fitAll(); });
+    // chip and card widths change once the web fonts arrive
+    document.fonts?.ready.then(() => { fitFilters(); revealActive(); fitAll(); });
 
+    // ── growth chart ────────────────────────────────────────────────
+    // /graph.csv: "year,new_projects" per line; blank or non-numeric rows are skipped
+    function parseGraph(text) {
+      return text.split(/\r?\n/).slice(1)
+        .map(line => line.split(',').map(v => v.trim()))
+        .filter(([y, n]) => /^\d{4}$/.test(y) && /^\d+$/.test(n))
+        .map(([y, n]) => ({ y: Number(y), added: Number(n) }))
+        .sort((a, b) => a.y - b.y);
+    }
+
+    // the last 20 years in the file; each bar is the running total up to that year
+    function buildGrowth(data) {
+      const fig = document.getElementById('growth');
+      if (data.length < 2) { fig.hidden = true; return; }
+
+      let running = 0;
+      const all = data.map(r => ({ ...r, total: (running += r.added) }));
+      const rows = all.slice(-20);
+      const first = rows[0].y, last = rows[rows.length - 1].y;
+      const max = rows[rows.length - 1].total;
+      if (!max) { fig.hidden = true; return; }
+      const pct = (now, before) => (before > 0 ? Math.round(((now - before) / before) * 100) : null);
+
+      document.getElementById('growthTotal').textContent = String(max);
+      const five = all.find(r => r.y === last - 5);
+      const g = five && pct(max, five.total);
+      document.getElementById('growthDelta').textContent =
+        g ? `+${g}% since ${last - 5}` : `since ${first}`;
+
+      const bars = document.getElementById('growthBars');
+      const tip = document.getElementById('growthTip');
+      const chart = document.getElementById('growthChart');
+      bars.replaceChildren(...rows.map((r, i) => {
+        const prev = rows[i - 1];
+        const yoy = prev ? pct(r.total, prev.total) : null;
+        // the whole column is the hit target, so short bars are as easy to hover as tall ones
+        const col = el('div', 'group relative flex h-full flex-1 items-end');
+        col.tabIndex = 0;
+        col.setAttribute('aria-label', `${r.y}: ${r.total} projects, ${r.added} new`);
+        const bar = el('div', 'growth-bar w-full rounded-t-[4px] bg-brand transition-colors group-hover:bg-brand-deep group-focus:bg-brand-deep');
+        bar.style.height = `${Math.max(r.total ? 3 : 0, (r.total / max) * 100)}%`;
+        bar.style.setProperty('--d', `${i * 45}ms`);
+        col.append(bar);
+        const show = () => {
+          tip.replaceChildren(el('span', 'font-semibold', `${r.y} · ${r.total} projects`), el('br'),
+            el('span', 'text-white/70', `+${r.added} new${yoy !== null ? ` · ${yoy >= 0 ? '+' : ''}${yoy}% vs ${r.y - 1}` : ''}`));
+          tip.hidden = false;
+          const c = chart.getBoundingClientRect(), b = col.getBoundingClientRect();
+          // keep the tooltip inside the card at both ends
+          const x = Math.min(Math.max(b.left + b.width / 2 - c.left, 70), c.width - 70);
+          tip.style.left = `${x}px`;
+        };
+        col.addEventListener('mouseenter', show);
+        col.addEventListener('focus', show);
+        col.addEventListener('mouseleave', () => { tip.hidden = true; });
+        col.addEventListener('blur', () => { tip.hidden = true; });
+        return col;
+      }));
+
+      // first, middle and last year under the axis
+      const mid = rows[Math.floor((rows.length - 1) / 2)].y;
+      document.getElementById('growthAxis').replaceChildren(
+        ...[first, mid, last].map(y => el('span', '', String(y))));
+
+      document.getElementById('growthTable').replaceChildren(...rows.map(r => {
+        const tr = el('tr');
+        tr.append(el('td', '', String(r.y)), el('td', '', String(r.added)), el('td', '', String(r.total)));
+        return tr;
+      }));
+      fig.hidden = false;
+    }
+
+    // ── render ──────────────────────────────────────────────────────
     function select(key, push) {
       const known = Array.from(filters.children).some(b => b.dataset.cat === key);
       if (!known) key = ALL;
       filters.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.cat === key)));
       revealActive();
 
-      const shown = key === ALL ? projects : projects.filter(p => categoriesOf(p).some(c => slug(c) === key));
-      listBox.scrollTop = 0;
-      list.replaceChildren(...shown.map((p, i) => {
-        const li = el('li', 'card-in'); li.style.setProperty('--d', `${Math.min(i, 9) * 60}ms`);
-        li.append(card(p)); return li;
-      }));
+      const inField = p => key === ALL || fieldsOf(p).some(c => slug(c) === key);
+      // a project can be both client work and open source, so it shows in each
+      const rest = projects.filter(p => !categoriesOf(p).some(c => KIND_CATS.includes(c)));
+      const kinds = rest.length ? KINDS.concat({ cat: null, id: 'more-work', title: 'More Work', blurb: 'Other projects from the team.' }) : KINDS;
+
+      sliders = kinds.map(kind => {
+        const shown = (kind.cat ? projects.filter(p => categoriesOf(p).includes(kind.cat)) : rest).filter(inField);
+        if (!shown.length) return null;
+        const s = slider(kind, shown.length);
+        s.list.append(...shown.map((p, i) => {
+          const li = el('li', 'card-in w-[85%] shrink-0 snap-start sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)]');
+          li.style.setProperty('--d', `${Math.min(i, 5) * 60}ms`);
+          li.append(card(p)); return li;
+        }));
+        return s;
+      }).filter(Boolean);
+
+      groups.replaceChildren(...sliders.map(s => s.section));
+      if (!sliders.length) groups.append(el('p', 'mt-10 text-[0.93rem] text-muted', 'No projects in this field yet.'));
+      fitAll();
 
       // keep the filter in the URL so a filtered view can be shared
       if (push) {
@@ -459,16 +680,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     }
 
+    // the chart is independent of the projects list: a missing or empty file just leaves it hidden
+    fetch('/graph.csv', { cache: 'no-cache' })
+      .then(r => (r.ok ? r.text() : ''))
+      .then(text => buildGrowth(parseGraph(text)))
+      .catch(() => {});
+
     fetch('/projects.json', { cache: 'no-cache' })
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(data => {
         projects = data;
         buildFilters();
         fitFilters();
-        select(new URLSearchParams(location.search).get('category') || ALL, false);
+        // older links filtered by kind (?category=startups): show everything and jump to that section
+        const asked = new URLSearchParams(location.search).get('category') || ALL;
+        const kind = KINDS.find(k => slug(k.cat) === asked);
+        select(kind ? ALL : asked, Boolean(kind));
+        // after the fonts settle, or the cards above it are still changing height
+        if (kind) (document.fonts?.ready || Promise.resolve())
+          .then(() => requestAnimationFrame(() => document.getElementById(kind.id)?.scrollIntoView()));
       })
       .catch(() => {
-        list.replaceChildren(el('li', 'text-[0.93rem] text-muted', 'Projects could not be loaded. Please refresh the page.'));
+        groups.replaceChildren(el('p', 'mt-10 text-[0.93rem] text-muted', 'Projects could not be loaded. Please refresh the page.'));
       });
   </script>
 </body>

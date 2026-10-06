@@ -39,6 +39,7 @@ website/                           → accelerait.uz (PHP host)
 ├── index.html                     "Our Project Journey" page, filterable by category
 ├── projects.json                  projects (startups, clients, open-source…) listed on it
 ├── projects/                      1200 × 630 PNG site screenshots, thumbnails
+├── graph.csv                      year,new_projects — feeds the growth chart (hidden while empty)
 ├── .htaccess, robots.txt, sitemap.xml
 ├── og-image.png                   1200 × 630 tech-team link preview (Bukhara backdrop)
 ├── hero.png                       1200 × 500 Bukhara header / footer backdrop

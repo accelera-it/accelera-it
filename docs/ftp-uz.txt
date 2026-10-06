@@ -1,0 +1,6 @@
+Имя пользователя FTP: upload@accelerait.uz
+FTP-сервер: panel2.eskiz.uz
+FTP & explicit FTPS port:  21
+
+psw: GZmHyg~lA@DgjuxU
+root: //home/host5931/public_html
