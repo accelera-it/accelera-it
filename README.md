@@ -40,20 +40,25 @@ website/                           → accelerait.uz (PHP host)
 ├── projects.json                  projects (startups, clients, open-source…) listed on it
 ├── projects/                      1200 × 630 PNG site screenshots, thumbnails
 ├── .htaccess, robots.txt, sitemap.xml
-└── favicon.ico, og-image.png, hero.png, logo.png   copies of the landing's
+├── og-image.png                   1200 × 630 tech-team link preview (Bukhara backdrop)
+├── hero.png                       1200 × 500 Bukhara header / footer backdrop
+└── favicon.ico, logo.png          copies of the landing's
 ```
 
 ## Deploy
 
 ```bash
-./upload.sh landing --dry-run   # show what would change on accelerait.us
-./upload.sh landing             # upload new/changed files from landing/ over FTPS (lftp)
-./upload.sh website             # same for website/ → accelerait.uz
-./upload.sh website --delete    # also remove remote files no longer in website/
+./upload.sh --dry-run      # both sites: website/ → accelerait.uz, then landing/ → accelerait.us
+./upload.sh us --dry-run   # show what would change on accelerait.us (landing/)
+./upload.sh us             # upload new/changed files from landing/ over FTPS (lftp)
+./upload.sh uz             # same for website/ → accelerait.uz
+./upload.sh uz --delete    # also remove remote files no longer in website/
+
+`landing` and `website` work as aliases for `us` and `uz`.
 ```
 
 Needs `lftp` (`brew install lftp`); without it (e.g. Git Bash on Windows) the script re-runs itself in an `alpine` Docker container that has it. Host, user, port and password
-are read from `docs/ftp.txt` (landing) or `docs/ftp-website.txt` (website,
+are read from `docs/ftp-us.txt` (landing) or `docs/ftp-uz.txt` (website,
 same `FTP Username:` / `FTP server:` / `FTP & explicit FTPS port:` / `psw:`
 lines); env vars `FTP_USER`, `FTP_HOST`, `FTP_PORT`,
 `FTP_PASS` and `REMOTE_DIR` override them. The

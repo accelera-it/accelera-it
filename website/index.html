@@ -4,29 +4,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Our Startups &amp; Client Work — AcceleraIT</title>
+  <title>AcceleraIT Tech Team — Software Engineering Projects from Uzbekistan</title>
   <meta name="description"
-    content="Products AcceleraIT built and runs itself, and platforms its engineers have helped clients build — marketplaces, fintech, HR, data and more.">
+    content="ООО &quot;ACCELERAIT&quot; is the AcceleraIT tech team in Uzbekistan: the engineers behind our own products and the platforms we have built for clients — fintech, marketplaces, HR, data and open source.">
   <meta name="theme-color" content="#0B1220">
-  <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Our Startups &amp; Client Work — AcceleraIT">
-  <meta property="og:description" content="Our own products, and platforms we have helped clients build.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="ООО &quot;ACCELERAIT&quot;">
+
+  <meta property="og:title" content="AcceleraIT Tech Team — Our Project Journey">
+  <meta property="og:description"
+    content="The engineers behind AcceleraIT: our own products and the platforms we have built for clients.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://accelerait.uz/">
-  <meta property="og:site_name" content="AcceleraIT">
+  <meta property="og:site_name" content="AcceleraIT Tech">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://accelerait.uz/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="AcceleraIT — twenty years across software, AI and data">
+  <meta property="og:image:alt" content="AcceleraIT tech team, Tashkent — Our Project Journey">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Our Startups &amp; Client Work — AcceleraIT">
-  <meta name="twitter:description" content="Our own products, and platforms we have helped clients build.">
+  <meta name="twitter:title" content="AcceleraIT Tech Team — Our Project Journey">
+  <meta name="twitter:description"
+    content="The engineers behind AcceleraIT: our own products and the platforms we have built for clients.">
   <meta name="twitter:image" content="https://accelerait.uz/og-image.png">
+  <meta name="twitter:image:alt" content="AcceleraIT tech team, Tashkent — Our Project Journey">
 
   <link rel="canonical" href="https://accelerait.uz/">
   <link rel="icon" href="/favicon.ico" sizes="any">
+
+  <!-- the tech team (this site) and the sales team (accelerait.us) as one organisation -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://accelerait.uz/#org",
+      "name": "ООО \"ACCELERAIT\"",
+      "alternateName": "AcceleraIT Tech Team",
+      "url": "https://accelerait.uz/",
+      "logo": "https://accelerait.uz/logo.png",
+      "address": { "@type": "PostalAddress", "addressLocality": "Tashkent", "addressCountry": "UZ" },
+      "brand": { "@type": "Brand", "name": "AcceleraIT", "url": "https://accelerait.us/" },
+      "sameAs": ["https://orginfo.uz/en/organization/7762f625029a/"]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://accelerait.uz/#page",
+      "url": "https://accelerait.uz/",
+      "name": "Our Project Journey",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://accelerait.uz/#org" }
+    }
+  ]
+}
+</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -133,12 +166,35 @@
       display: none;
     }
 
-    /* phones: fade the right edge so the tab row reads as swipeable */
-    @media (max-width: 639px) {
-      #filters {
-        -webkit-mask-image: linear-gradient(to right, #000 82%, transparent);
-        mask-image: linear-gradient(to right, #000 82%, transparent);
-      }
+    /* one row that doesn't fit: fade the right edge so it reads as swipeable */
+    #filters.is-clipped {
+      -webkit-mask-image: linear-gradient(to right, #000 85%, transparent);
+      mask-image: linear-gradient(to right, #000 85%, transparent);
+    }
+
+    /* expanded: every chip, wrapped */
+    #filters.is-open {
+      flex-wrap: wrap;
+      overflow: visible;
+    }
+
+    #moreCats[aria-expanded="true"] #moreCatsIcon {
+      transform: rotate(180deg);
+    }
+
+    /* ── project scroll box ─────────────────────────────────────── */
+    .list-scroll {
+      scrollbar-width: thin;
+      scrollbar-color: #C9D1DE transparent;
+    }
+
+    .list-scroll::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .list-scroll::-webkit-scrollbar-thumb {
+      background: #C9D1DE;
+      border-radius: 8px;
     }
 
     /* ── cards ─────────────────────────────────────────────────── */
@@ -182,64 +238,61 @@
     <div id="headBg" aria-hidden="true"></div>
 
     <div class="relative mx-auto flex w-full max-w-shell items-center justify-between gap-4 px-5 pt-6 sm:px-8">
-      <a href="https://accelerait.us/" class="inline-flex items-center" aria-label="AcceleraIT home">
+      <a href="/" class="inline-flex items-center" aria-label="AcceleraIT Tech Team home">
         <img src="/logo.png" alt="AcceleraIT" class="h-7 w-auto sm:h-8">
+      </a>
+      <a href="https://t.me/acceleraitus" target="_blank" rel="noopener"
+        class="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-[0.88rem] font-semibold text-white transition hover:bg-brand">
+        Contact Us <span aria-hidden="true">→</span>
       </a>
     </div>
 
-    <div class="relative mx-auto w-full max-w-shell px-5 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-20">
+    <div class="relative mx-auto w-full max-w-shell px-5 pb-8 pt-8 sm:px-8 sm:pb-10 sm:pt-10">
+      <p class="mb-3 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-muted">Uzbekistan, Tashkent</p>
       <h1
         class="balance font-display text-[2.1rem] font-semibold leading-[1.12] tracking-tighter2 sm:text-[2.9rem] lg:text-[3.4rem]">
-        Our Startups &amp; Client Work
+        Our Project Journey
       </h1>
-      <p class="balance mt-5 max-w-[52ch] text-[1.02rem] leading-[1.6] text-muted sm:text-[1.1rem]">
-        Products we designed, built and run ourselves — and platforms our engineers have helped clients build and scale.
+      <p class="balance mt-4 max-w-[52ch] text-[1.02rem] leading-[1.6] text-muted sm:text-[1.1rem]">
+        We are the engineers behind AcceleraIT — the products we designed, built and run ourselves, and the platforms we
+        have helped clients build and scale.
       </p>
     </div>
   </header>
 
-  <main id="projects" class="mx-auto w-full max-w-shell flex-1 px-5 py-10 sm:px-8 sm:py-14">
-    <!-- chips are built from the categories in /projects.json -->
-    <!-- phones: one swipeable row so the tabs don't push the projects off screen; sm+: wrap -->
-    <div id="filters" role="group" aria-label="Filter by category"
-      class="no-scrollbar -mx-5 flex gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0"></div>
+  <main id="projects" class="mx-auto w-full max-w-shell flex-1 px-5 pb-10 pt-6 sm:px-8 sm:pb-12 sm:pt-7">
+    <!-- chips are built from the categories in /projects.json: one row (swipeable),
+         and the toggle wraps them onto as many rows as they need -->
+    <div class="flex items-start gap-3">
+      <div id="filters" role="group" aria-label="Filter by category"
+        class="no-scrollbar flex min-w-0 flex-1 gap-2 overflow-x-auto"></div>
+      <button id="moreCats" type="button" aria-expanded="false" aria-controls="filters" hidden
+        class="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2 text-[0.88rem] font-semibold text-brand transition hover:text-brand-deep">
+        <span id="moreCatsLabel">All categories</span>
+        <span id="moreCatsIcon" class="transition-transform" aria-hidden="true">▾</span>
+      </button>
+    </div>
 
-    <ul id="projectList" class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      <li class="text-[0.93rem] text-muted">Loading…</li>
-    </ul>
+    <!-- the cards scroll inside this box, so the filters stay in view -->
+    <div id="listBox" tabindex="0" aria-label="Projects"
+      class="list-scroll mt-6 max-h-[78svh] overflow-y-auto overscroll-contain rounded-2xl border border-hair bg-white/60 p-3 sm:p-5">
+      <ul id="projectList" class="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+        <li class="text-[0.93rem] text-muted">Loading…</li>
+      </ul>
+    </div>
 
     <noscript>
       <p class="mt-8 text-[0.93rem] text-muted">This page needs JavaScript to list the projects.</p>
     </noscript>
-
-    <!-- contact: Telegram for a quick message, Cal.com (via the landing page) for a call -->
-    <section id="contact"
-      class="mt-16 flex flex-col gap-6 rounded-2xl bg-ink p-7 text-white sm:p-9 md:flex-row md:items-center md:justify-between">
-      <div>
-        <h2 class="balance font-display text-[1.35rem] font-semibold leading-[1.25] tracking-tighter2 sm:text-[1.55rem]">
-          Have a project like these in mind?
-        </h2>
-        <p class="mt-2 max-w-[48ch] text-[0.96rem] leading-[1.6] text-white/60">
-          Message us on Telegram, or book a 30-minute call with the engineers who would do the work.
-        </p>
-      </div>
-      <div class="flex shrink-0 flex-wrap gap-3">
-        <a href="https://t.me/acceleraitus" target="_blank" rel="noopener"
-          class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-[0.94rem] font-semibold text-ink transition hover:-translate-y-0.5">
-          Contact Us on Telegram <span aria-hidden="true">→</span>
-        </a>
-        <a href="https://cal.com/accelerait-llc/30min" target="_blank" rel="noopener"
-          class="inline-flex items-center rounded-full border border-ink-line px-6 py-3.5 text-[0.94rem] font-semibold text-white transition hover:border-brand-lt">
-          Book a 30-Minute Call
-        </a>
-      </div>
-    </section>
   </main>
 
   <footer class="relative overflow-hidden border-t border-ink-line bg-ink py-16 text-center text-white">
     <div id="footerBg" aria-hidden="true"></div>
     <p class="relative px-5 font-mono text-[0.68rem] leading-[1.6] text-white/75 sm:text-[0.72rem]">
-      © <span id="year">2026</span> AcceleraIT LLC. All rights reserved.
+      © <span id="year">2026</span>
+      <a href="https://orginfo.uz/en/organization/7762f625029a/" target="_blank" rel="noopener"
+        class="underline decoration-white/30 underline-offset-4 transition hover:text-white hover:decoration-brand-lt">ООО "ACCELERAIT"</a>.
+      All rights reserved.
     </p>
   </footer>
 
@@ -248,6 +301,9 @@
 
     const list = document.getElementById('projectList');
     const filters = document.getElementById('filters');
+    const listBox = document.getElementById('listBox');
+    const more = document.getElementById('moreCats');
+    const moreLabel = document.getElementById('moreCatsLabel');
     const ALL = 'all';
     let projects = [];
 
@@ -334,14 +390,48 @@
       filters.hidden = counts.size === 0;
     }
 
+    // one row of chips; the toggle shows only when they don't all fit
+    function fitFilters() {
+      const open = filters.classList.contains('is-open');
+      const clipped = !open && filters.scrollWidth > filters.clientWidth + 1;
+      // fade only while there is more to the right
+      const atEnd = filters.scrollLeft + filters.clientWidth >= filters.scrollWidth - 1;
+      filters.classList.toggle('is-clipped', clipped && !atEnd);
+      more.hidden = !open && !clipped;
+    }
+
+    function setOpen(open) {
+      filters.classList.toggle('is-open', open);
+      more.setAttribute('aria-expanded', String(open));
+      moreLabel.textContent = open ? 'Show less' : 'All categories';
+      fitFilters();
+      revealActive();
+    }
+
+    // collapsed row: scroll the selected chip into view (sideways only, never the page)
+    function revealActive() {
+      const b = filters.querySelector('[aria-pressed="true"]');
+      if (!b || filters.classList.contains('is-open')) return;
+      const r = b.getBoundingClientRect(), f = filters.getBoundingClientRect();
+      if (r.left < f.left || r.right > f.right) filters.scrollLeft += r.left - f.left - 8;
+    }
+
+    more.addEventListener('click', () => setOpen(!filters.classList.contains('is-open')));
+    window.addEventListener('resize', fitFilters);
+    filters.addEventListener('scroll', fitFilters, { passive: true });
+    // chip widths change once the web fonts arrive
+    document.fonts?.ready.then(() => { fitFilters(); revealActive(); });
+
     function select(key, push) {
       const known = Array.from(filters.children).some(b => b.dataset.cat === key);
       if (!known) key = ALL;
       filters.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.cat === key)));
+      revealActive();
 
       const shown = key === ALL ? projects : projects.filter(p => categoriesOf(p).some(c => slug(c) === key));
+      listBox.scrollTop = 0;
       list.replaceChildren(...shown.map((p, i) => {
-        const li = el('li', 'card-in'); li.style.setProperty('--d', `${i * 60}ms`);
+        const li = el('li', 'card-in'); li.style.setProperty('--d', `${Math.min(i, 9) * 60}ms`);
         li.append(card(p)); return li;
       }));
 
@@ -358,6 +448,7 @@
       .then(data => {
         projects = data;
         buildFilters();
+        fitFilters();
         select(new URLSearchParams(location.search).get('category') || ALL, false);
       })
       .catch(() => {

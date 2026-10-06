@@ -28,3 +28,6 @@ node_modules/
 # Apache logs from the Docker container
 logs/*
 !logs/.gitkeep
+
+# FTP credentials for upload.sh
+docs/ftp*.txt

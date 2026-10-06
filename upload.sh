@@ -1,42 +1,57 @@
 #!/usr/bin/env bash
-# Deploy site/ to the production web root over explicit FTPS (lftp mirror).
+# Deploy landing/ or website/ to its web root over explicit FTPS (lftp mirror).
 #
-# Credentials are read from docs/ftp.txt (git-ignored):
-#   FTP Username: user@accelerait.us
-#   FTP server:   host
-#   FTP & explicit FTPS port:  21
-#   psw: ...
-# Env vars FTP_USER / FTP_HOST / FTP_PORT / FTP_PASS / REMOTE_DIR override the file.
+#   us | landing  → landing/ to accelerait.us  (credentials in docs/ftp-us.txt)
+#   uz | website  → website/ to accelerait.uz  (credentials in docs/ftp-uz.txt, PHP host)
+#
+# The credentials file holds "FTP Username: ...", "FTP server: ...",
+# "FTP & explicit FTPS port: ..." and "psw: ..." lines (the Russian
+# "Имя пользователя FTP:" / "FTP-сервер:" labels work too), so the password
+# never lives here. Env vars FTP_USER / FTP_HOST / FTP_PORT / FTP_PASS / REMOTE_DIR
+# override them.
 #
 # Usage:
-#   ./upload.sh            upload new/changed files
-#   ./upload.sh --dry-run  show what would be uploaded, change nothing
-#   ./upload.sh --delete   also remove remote files that no longer exist in site/
+#   ./upload.sh                  both sites, uz first (landing links point there)
+#   ./upload.sh us|uz            upload new/changed files
+#   ./upload.sh us|uz --dry-run  show what would be uploaded, change nothing
+#   ./upload.sh us|uz --delete   also remove remote files that no longer exist locally
 set -euo pipefail
 
 cd "$(dirname "$0")"
 
-CREDS=docs/ftp.txt
-field() { [ -f "$CREDS" ] && sed -nE "s/^$1[[:space:]]*//p" "$CREDS" | head -1 | tr -d '\r' || true; }
-
-FTP_USER=${FTP_USER:-$(field 'FTP Username:')}
-FTP_HOST=${FTP_HOST:-$(field 'FTP server:')}
-FTP_PORT=${FTP_PORT:-$(field 'FTP & explicit FTPS port:')}
-FTP_PORT=${FTP_PORT:-21}
-FTP_PASS=${FTP_PASS:-$(field 'psw:')}
-# The FTP account is chrooted to the domain folder, so "/" is the web root.
-REMOTE_DIR=${REMOTE_DIR:-/}
-
+TARGET=""
 DRY=""
 DELETE=""
 for arg in "$@"; do
   case $arg in
+    us|landing)  TARGET=us ;;
+    uz|website)  TARGET=uz ;;
     --dry-run) DRY="--dry-run" ;;
     --delete)  DELETE="--delete" ;;
-    -h|--help) sed -n '2,16p' "$0"; exit 0 ;;
+    -h|--help) sed -n '2,19p' "$0"; exit 0 ;;
     *) echo "Unknown option: $arg" >&2; exit 1 ;;
   esac
 done
+# No site named: deploy both, one after the other, with the same flags
+if [ -z "$TARGET" ]; then
+  "$0" uz "$@"
+  exec "$0" us "$@"
+fi
+
+# docs/ftp-<domain>.txt holds the credentials for the folder served on that domain
+case $TARGET in
+  us) DIR=landing ;;
+  uz) DIR=website ;;
+esac
+CREDS=docs/ftp-$TARGET.txt
+field() { [ -f "$CREDS" ] && sed -nE "s/^$1[[:space:]]*//p" "$CREDS" | head -1 | tr -d '\r' || true; }
+
+FTP_USER=${FTP_USER:-$(field '(FTP Username|Имя пользователя FTP):')}
+FTP_HOST=${FTP_HOST:-$(field '(FTP server|FTP-сервер):')}
+FTP_PORT=${FTP_PORT:-$(field 'FTP & explicit FTPS port:')}
+FTP_PORT=${FTP_PORT:-21}
+FTP_PASS=${FTP_PASS:-$(field psw:)}
+REMOTE_DIR=${REMOTE_DIR:-/}  # FTP accounts are chrooted to their web root
 
 for v in FTP_USER FTP_HOST FTP_PASS; do
   [ -n "${!v}" ] || { echo "$v is empty — check $CREDS" >&2; exit 1; }
@@ -54,7 +69,7 @@ if ! command -v lftp >/dev/null; then
     alpine:3.20 sh -c 'apk add -q bash lftp ca-certificates && bash -c "$(tr -d "\r" < upload.sh)" upload.sh "$@"' sh "$@"
 fi
 
-echo "→ ${FTP_USER}@${FTP_HOST}:${FTP_PORT}${REMOTE_DIR} ${DRY:+(dry run)}"
+echo "→ ${DIR}/ (accelerait.${TARGET}): ${FTP_USER}@${FTP_HOST}:${FTP_PORT}${REMOTE_DIR} ${DRY:+(dry run)}"
 
 # Password goes through the environment, not argv, so it doesn't show in `ps`.
 export LFTP_PASSWORD=$FTP_PASS
@@ -78,7 +93,7 @@ mirror --reverse --only-newer --verbose --parallel=4 $DRY $DELETE \
   --exclude '^\.well-known/' \
   --exclude '^cgi-bin/' \
   --exclude '^home/' \
-  site/ "$REMOTE_DIR"
+  "$DIR/" "$REMOTE_DIR"
 EOF
 
 echo "✓ done"
