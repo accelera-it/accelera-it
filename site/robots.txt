@@ -6,7 +6,6 @@
 # ── Default: everyone may crawl everything ─────────────────────────────
 User-agent: *
 Allow: /
-Disallow: /assets/tmp/
 Disallow: /*?*fbclid=
 Disallow: /*?*utm_
 

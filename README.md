@@ -30,9 +30,9 @@ site/
 ├── sitemap.xml                    edit <lastmod> when you change the page
 ├── favicon.ico                    16 / 32 / 48 / 64 px, multi-resolution
 ├── og-image.png                   1200 × 630, social + AI link previews
-└── assets/
-    ├── logo-wordmark.svg          "AcceleraIT" — outlines, no font needed
-    └── projects/                  1200 × 630 PNG site screenshots, thumbnails on projects.html
+├── hero.png                       1200 × 500 hero / footer backdrop
+├── logo.png                       539 × 130 "AcceleraIT" wordmark (projects.html header)
+└── projects/                      1200 × 630 PNG site screenshots, thumbnails on projects.html
 ```
 
 ## Deploy
@@ -126,15 +126,15 @@ entry is `{name, link?, category?, year?, thumbnail?, description}`:
   oldest first.
 - **`category`** — a string or a list. Filter chips are built from the data,
   with Startups, Clients and Open-source first.
-- **`thumbnail`** — `/assets/projects/<slug>.png`, a 1200 × 630 homepage
+- **`thumbnail`** — `/projects/<slug>.png`, a 1200 × 630 homepage
   screenshot taken with headless Chrome:
 
   ```bash
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
     --hide-scrollbars --window-size=1200,630 --virtual-time-budget=8000 \
     --screenshot=shot.png https://example.com/
-  pngquant --quality=90-100 --output site/assets/projects/<slug>.png shot.png
-  oxipng -o max site/assets/projects/<slug>.png
+  pngquant --quality=90-100 --output site/projects/<slug>.png shot.png
+  oxipng -o max site/projects/<slug>.png
   ```
 
   If `pngquant` can't reach that quality (exit code 99, common with photo-heavy

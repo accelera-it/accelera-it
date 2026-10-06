@@ -8,7 +8,7 @@
       "AI"
     ],
     "year": 1991,
-    "thumbnail": "/assets/projects/azure-vms.png",
+    "thumbnail": "/projects/azure-vms.png",
     "description": "Microsoft Azure's B-series are burstable, cost-efficient virtual machines for workloads that don't need full CPU power all the time. We implemented an NVIDIA CUDA module for B-series Windows machines, so CUDA-based workloads can run on this lower-cost tier."
   },
   {
@@ -20,7 +20,7 @@
       "Productivity"
     ],
     "year": 1991,
-    "thumbnail": "/assets/projects/m365-admin.png",
+    "thumbnail": "/projects/m365-admin.png",
     "description": "Under a long-term contract through our EU-registered company, we worked inside a large Microsoft team to redevelop the Office Agenda system for Microsoft 365 administration, with direct support from the DevExpress team on the UI components behind it."
   },
   {
@@ -33,7 +33,7 @@
       "Data Engineering"
     ],
     "year": 1996,
-    "thumbnail": "/assets/projects/mobile-de.png",
+    "thumbnail": "/projects/mobile-de.png",
     "description": "For mobile.de, Germany's largest vehicle marketplace, we set up the full back office: online APIs and scrapers collect listings from around 100 systems into one platform, which feeds live data to both the web portal and the mobile apps."
   },
   {
@@ -45,7 +45,7 @@
       "Data Engineering"
     ],
     "year": 1996,
-    "thumbnail": "/assets/projects/postgresql.png",
+    "thumbnail": "/projects/postgresql.png",
     "description": "A GPU-accelerated bulk processor built on PostgreSQL, with import pipelines that move data from around 20 different relational databases into Postgres at high speed. The work was accepted by a Google development team, which whitelisted us as official contributors."
   },
   {
@@ -57,7 +57,7 @@
       "Government"
     ],
     "year": 1997,
-    "thumbnail": "/assets/projects/usps-gateway.png",
+    "thumbnail": "/projects/usps-gateway.png",
     "description": "Connected to the USPS Business Customer Gateway, we launched a private system for carriers across about 45 US states. It manages every fuel card assigned to each truck and company, and all USPS loads are flushed into it automatically."
   },
   {
@@ -69,7 +69,7 @@
       "Fintech"
     ],
     "year": 1998,
-    "thumbnail": "/assets/projects/payone.png",
+    "thumbnail": "/projects/payone.png",
     "description": "PAYONE is a European payment provider for online, in-store and omnichannel payments. Thanks to bs-payone, our open-source .NET client for its merchant interface, Microsoft quickly signed a contract and integrated PAYONE for all of its payments across the EU."
   },
   {
@@ -78,11 +78,10 @@
     "category": [
       "Clients",
       "Cloud",
-      "Productivity",
       "Analytics"
     ],
     "year": 1998,
-    "thumbnail": "/assets/projects/salesforce-maps.png",
+    "thumbnail": "/projects/salesforce-maps.png",
     "description": "Salesforce Maps brings CRM-based mapping to field sales: customer visualization, route planning and territories. With full SOAP API access granted to our team, we built the map tier on Google Maps that serves the complete CRM for every customer account."
   },
   {
@@ -95,7 +94,7 @@
       "Payments"
     ],
     "year": 1999,
-    "thumbnail": "/assets/projects/freecash.png",
+    "thumbnail": "/projects/freecash.png",
     "description": "Freecash is a rewards platform trusted by 80M+ users. We implemented its full blockchain layer, from the wallet system to payments in around ten crypto tokens, and handed everything over running behind a VPN with strict, transparent traffic controls."
   },
   {
@@ -108,7 +107,7 @@
       "Security"
     ],
     "year": 1999,
-    "thumbnail": "/assets/projects/cme-risk.png",
+    "thumbnail": "/projects/cme-risk.png",
     "description": "In CME Group's risk management module, we integrated Clearing House and Clicker services into SPAN/margin trading systems, then reworked them to prevent phishing. The core is written in C++ and driven from Java, with regional SFTP sync keeping CSV data current."
   },
   {
@@ -120,7 +119,7 @@
       "Analytics"
     ],
     "year": 2000,
-    "thumbnail": "/assets/projects/monetdb.png",
+    "thumbnail": "/projects/monetdb.png",
     "description": "We are official GitHub contributors to MonetDB, the open-source column-store database built for high-performance analytics with standard SQL. Around 2015 we created a database management tool for administering MonetDB servers, and have maintained it ever since."
   },
   {
@@ -128,11 +127,10 @@
     "link": "https://www.eppli.com/en/jewelry/",
     "category": [
       "Clients",
-      "E-commerce",
-      "Marketplace"
+      "E-commerce"
     ],
     "year": 2005,
-    "thumbnail": "/assets/projects/eppli.png",
+    "thumbnail": "/projects/eppli.png",
     "description": "Eppli is a sworn auction house, jeweler and pawnbroker in Germany with over 40 years of experience. Its platform covers online and judicial auctions, an online shop for jewelry, watches, art and coins, and certificates of authenticity from its own expert center."
   },
   {
@@ -143,7 +141,7 @@
       "Government"
     ],
     "year": 2006,
-    "thumbnail": "/assets/projects/gov-uz.png",
+    "thumbnail": "/projects/gov-uz.png",
     "description": "For nearly five years we worked as consultants, engineers and team leads alongside the technical teams of Uzbekistan's ministries and agencies of Tax, Customs, Transport, Health, Water, Finance, Higher Education, Foreign Affairs and Internal Affairs."
   },
   {
@@ -155,7 +153,7 @@
       "Data Engineering"
     ],
     "year": 2006,
-    "thumbnail": "/assets/projects/seektable.png",
+    "thumbnail": "/projects/seektable.png",
     "description": "Together with the NReco team behind SeekTable, we built petabyte-scale big data analysis with a live-chart system, then reworked the OLAP cube on in-memory key/value storage to deliver CMS reporting for French foreign affairs and closed audit organizations."
   },
   {
@@ -167,7 +165,7 @@
       "Education"
     ],
     "year": 2006,
-    "thumbnail": "/assets/projects/natlib.png",
+    "thumbnail": "/projects/natlib.png",
     "description": "Together with the library's team, we built the digital archive and integrated search for the National Library of Uzbekistan named after Alisher Navoi, along with a CRM for readers and services and full automation of the library's administrative work."
   },
   {
@@ -180,7 +178,7 @@
       "Analytics"
     ],
     "year": 2008,
-    "thumbnail": "/assets/projects/reaxys.png",
+    "thumbnail": "/projects/reaxys.png",
     "description": "Reaxys is Elsevier's chemistry intelligence platform, combining curated reaction and substance data with AI for small-molecule discovery. We built clinical analysis on top of ScienceDirect and Scopus, Elsevier's research literature and citation databases."
   },
   {
@@ -192,7 +190,7 @@
       "HR"
     ],
     "year": 2008,
-    "thumbnail": "/assets/projects/smart-axiata.png",
+    "thumbnail": "/projects/smart-axiata.png",
     "description": "Smart Axiata is Cambodia's leading mobile operator, serving millions of subscribers with mobile plans, 5G data, home internet and digital services. We built Smart-HRM, its human resources management system for running employee records and HR processes across the company."
   },
   {
@@ -205,7 +203,7 @@
       "Logistics"
     ],
     "year": 2009,
-    "thumbnail": "/assets/projects/uzex.png",
+    "thumbnail": "/projects/uzex.png",
     "description": "UzEx is Uzbekistan's Republican Commodity Exchange, running electronic commodity trading, public procurement and a national logistics portal. We built parts of its platforms and published .NET libraries from that work, including Oracle data access via Dapper and MinIO storage clients."
   },
   {
@@ -218,7 +216,7 @@
       "Mobile"
     ],
     "year": 2010,
-    "thumbnail": "/assets/projects/1c.png",
+    "thumbnail": "/projects/1c.png",
     "description": "We analyzed the 1C system in the data center that serves 50,000+ organizations across Uzbekistan, optimized its high-load database and web service layer, and introduced a new load-balanced API on top of it. On that API we launched a mobile and tablet cabinet for its users."
   },
   {
@@ -230,7 +228,7 @@
       "Data Engineering"
     ],
     "year": 2010,
-    "thumbnail": "/assets/projects/nuget.png",
+    "thumbnail": "/projects/nuget.png",
     "description": "Over 15 years and 50+ organizations, we have built and reworked more than 10 open-source .NET libraries. They range from high-speed database bulk loaders and ORM extensions with migrations to storage clients and a cross-platform obfuscator for .NET assemblies."
   },
   {
@@ -240,11 +238,10 @@
       "Clients",
       "Open-source",
       "Blockchain",
-      "Banking",
-      "Payments"
+      "Banking"
     ],
     "year": 2010,
-    "thumbnail": "/assets/projects/openbank.png",
+    "thumbnail": "/projects/openbank.png",
     "description": "After studying BTCPay Server, our team members fluent in Ripple (XRP) helped bring Stellar (XLM) into the Open Bank Project. Following negotiations with its tech team in Frankfurt, Germany, we rolled out our own crypto module for banks on the platform."
   },
   {
@@ -256,7 +253,7 @@
       "Hospitality"
     ],
     "year": 2010,
-    "thumbnail": "/assets/projects/kwpmc.png",
+    "thumbnail": "/projects/kwpmc.png",
     "description": "Through VirtuWorks, we studied the capabilities of BirchStreet Systems at Trump Tower New York and developed an improved platform for KW Property Management & Consulting, relaunched at Trump Tower and about ten top-rated hotels around it with a full inventory system."
   },
   {
@@ -268,7 +265,7 @@
       "Productivity"
     ],
     "year": 2011,
-    "thumbnail": "/assets/projects/screenshotmonitor.png",
+    "thumbnail": "/projects/screenshotmonitor.png",
     "description": "Screenshot Monitor tracks employee activity and time against tasks, much like the desktop apps of Upwork, Toptal, Crossover and Hubstaff, but as a standalone service. It was a top platform during the pandemic lockdowns; we built version 1, later expanded as scrin.io."
   },
   {
@@ -280,7 +277,7 @@
       "Mobile"
     ],
     "year": 2012,
-    "thumbnail": "/assets/projects/loglig.png",
+    "thumbnail": "/projects/loglig.png",
     "description": "Loglig is an integrated social app for sports management, built for federations, associations and leagues — basketball first among them. Its goal is a more participatory experience for every member, with features, plans and registration in Hebrew and English."
   },
   {
@@ -292,7 +289,7 @@
       "Data Engineering"
     ],
     "year": 2013,
-    "thumbnail": "/assets/projects/easydatafeed.png",
+    "thumbnail": "/projects/easydatafeed.png",
     "description": "For Easy Data Feed, we pulled product and order data from 50+ leading e-commerce platforms onto a single server, sorted and normalized it through SFTP and CSV feeds, and loaded it into one central system — giving the business a working foundation for its sales."
   },
   {
@@ -304,7 +301,7 @@
       "ERP"
     ],
     "year": 2015,
-    "thumbnail": "/assets/projects/mixerp.png",
+    "thumbnail": "/projects/mixerp.png",
     "description": "As GitHub contributors to MixERP, we set it up for desktop and offline use with full localization and deployed it at 10+ organizations in Uzbekistan, back in 2015 when SAP and 1C were still closed systems. Today we carry this work forward on the commercial ERPNext."
   },
   {
@@ -317,7 +314,7 @@
       "Government"
     ],
     "year": 2015,
-    "thumbnail": "/assets/projects/findface.png",
+    "thumbnail": "/projects/findface.png",
     "description": "FindFace Cluster is NtechLab's face-recognition platform. In Uzbekistan we built separate high-capacity APIs connecting it to Interior Ministry (MVD) cameras, the GSI API, airport cameras, railway stations, and bus and metro systems."
   },
   {
@@ -329,7 +326,7 @@
       "Data Engineering"
     ],
     "year": 2017,
-    "thumbnail": "/assets/projects/dsn-tools.png",
+    "thumbnail": "/projects/dsn-tools.png",
     "description": "DSN Tools helps French companies explore, check and aggregate their DSN payroll declarations across multiple periods, with custom extracts, data validation and ready-made HR reports. A five-year partnership: its co-founder says we consistently went past the brief."
   },
   {
@@ -342,7 +339,7 @@
       "Banking"
     ],
     "year": 2017,
-    "thumbnail": "/assets/projects/keycloak.png",
+    "thumbnail": "/projects/keycloak.png",
     "description": "Since 2017, through our company DOTNET.UZ, we have advised on and deployed Keycloak for organizations from government bodies to banks on an outsourcing basis — recommended because MyID has known limitations and is not a pure single sign-on (SSO) system."
   },
   {
@@ -351,11 +348,10 @@
     "category": [
       "Clients",
       "Trading",
-      "Blockchain",
-      "Fintech"
+      "Blockchain"
     ],
     "year": 2018,
-    "thumbnail": "/assets/projects/ping-exchange.png",
+    "thumbnail": "/projects/ping-exchange.png",
     "description": "Ping is a hybrid crypto exchange that combines blockchain with a uniquely secure login through CorePass, which manages each user's identity and access. It was the first exchange to offer Core Coin (XCB) and Core Token (CTN), with trading, markets and a help center."
   },
   {
@@ -367,7 +363,7 @@
       "Payments"
     ],
     "year": 2019,
-    "thumbnail": "/assets/projects/energy-trucking.png",
+    "thumbnail": "/projects/energy-trucking.png",
     "description": "Energy Trucking is a US carrier running routes across all 48 states. We connected its operations to the services a fleet depends on: fuel cards, City Fuel, Samsara telematics and EFS payments, plus FMCSA (U.S. DOT) carrier data for compliance and safety checks."
   },
   {
@@ -380,7 +376,7 @@
       "Cloud"
     ],
     "year": 2020,
-    "thumbnail": "/assets/projects/quickmanage.png",
+    "thumbnail": "/projects/quickmanage.png",
     "description": "QuickManage is an all-in-one transport management system for fleet, document and expense management. We helped build the first version of its customer cabinet and mobile app, and moved the project forward on the infrastructure side."
   },
   {
@@ -393,7 +389,7 @@
       "Trading"
     ],
     "year": 2020,
-    "thumbnail": "/assets/projects/csmarketcap.png",
+    "thumbnail": "/projects/csmarketcap.png",
     "description": "CSMarketCap tracks CS2 skin prices across 20+ marketplaces in real time, so traders can compare offers and see market capitalization, trending and falling skins. It adds a trade-up calculator, an inventory checker and live analytics for the whole in-game economy."
   },
   {
@@ -402,11 +398,10 @@
     "category": [
       "Clients",
       "Blockchain",
-      "Cloud",
-      "Security"
+      "Cloud"
     ],
     "year": 2021,
-    "thumbnail": "/assets/projects/zus.png",
+    "thumbnail": "/projects/zus.png",
     "description": "As part of 0Chain's updated Web3 strategy, we reworked its full MinIO-based storage core in Go, extended its compression levels and split data into terabyte-scale rather than gigabyte-scale blocks, delivering a complete, transparent backup and restore system."
   },
   {
@@ -416,11 +411,10 @@
       "Clients",
       "AI",
       "Payments",
-      "Fintech",
       "Security"
     ],
     "year": 2022,
-    "thumbnail": "/assets/projects/yuzpay.png",
+    "thumbnail": "/projects/yuzpay.png",
     "description": "Around FacePay, which lets shoppers pay at the till with their face, we built a P2P and B2B payment system: a payment gateway, bank processing, business and client cabinets, SMS, tax receipts, MyGov data and offline ID checks with the Regula SDK. It passed the Humo and Uzcard audits and PCI DSS, and holds a Central Bank license."
   },
   {
@@ -429,11 +423,10 @@
     "category": [
       "Clients",
       "Trading",
-      "Blockchain",
-      "Fintech"
+      "Blockchain"
     ],
     "year": 2023,
-    "thumbnail": "/assets/projects/truedex.png",
+    "thumbnail": "/projects/truedex.png",
     "description": "TrueDEX is a private, order-book trading platform with its data center in New York and its traders in Moscow, built natively on newer protocols such as MProto and gRPC. We delivered the trading dashboard and an open API for private spot-market trading."
   },
   {
@@ -445,7 +438,7 @@
       "Payments"
     ],
     "year": 2023,
-    "thumbnail": "/assets/projects/moodswings.png",
+    "thumbnail": "/projects/moodswings.png",
     "description": "For the Mood Swings fashion label, with its factory in Dubai and its shop in the EU, we built the B2B store on OpenCart CMS with our own UI/UX design and technical improvements. Every payment runs through a Dubai bank gateway, and the system passed a full EmiratTech audit."
   },
   {
@@ -458,7 +451,7 @@
       "Mobile"
     ],
     "year": 2024,
-    "thumbnail": "/assets/projects/rent-local.png",
+    "thumbnail": "/projects/rent-local.png",
     "description": "A peer-to-peer rental platform for tools and equipment: owners earn from items that would otherwise sit idle, and renters pay a fraction of the purchase price. Payments run through Stripe, every booking includes damage coverage, and rentals are managed in iOS and Android apps."
   },
   {
@@ -470,7 +463,7 @@
       "Government"
     ],
     "year": 2024,
-    "thumbnail": "/assets/projects/silkroad.png",
+    "thumbnail": "/projects/silkroad.png",
     "description": "Silk Stars Team in Tashkent was running into many internal problems with its Booking and Expedia partnerships. In 2011 we re-examined its setup and over a year built a new inventory system, fully launched in 2012. In its first phase for the Ministry of Tourism, it placed guests from Central Asian countries in hotels in Bukhara, Khorezm and Samarkand."
   },
   {
@@ -482,7 +475,7 @@
       "AI"
     ],
     "year": 2025,
-    "thumbnail": "/assets/projects/terminal-api.png",
+    "thumbnail": "/projects/terminal-api.png",
     "description": "A cloud HRMS where face-recognition terminals (Hikvision SDK) track working time and calculate payroll automatically, while two AI assistants answer 30+ kinds of HR and accounting questions in Uzbek, Russian or English. Used by 20+ organizations and 5,000+ employees."
   },
   {
@@ -491,11 +484,10 @@
     "category": [
       "Startups",
       "HR",
-      "Productivity",
-      "Security"
+      "Productivity"
     ],
     "year": 2026,
-    "thumbnail": "/assets/projects/pc-monitoring.png",
+    "thumbnail": "/projects/pc-monitoring.png",
     "description": "Attendance and work-time tracking for Windows PCs, built on Windows events instead of manual check-ins: daily app-usage reports with Excel export, screenshots every 15 seconds and remote control from the dashboard. Scales to 100,000 PCs, from $3 per computer a month."
   },
   {
@@ -506,7 +498,7 @@
       "Security"
     ],
     "year": 2026,
-    "thumbnail": "/assets/projects/vpn-tool.png",
+    "thumbnail": "/projects/vpn-tool.png",
     "description": "A private VPN for Windows, macOS and Android. Traffic is encrypted end to end through a private relay, every session is verified so only approved accounts stay connected, and there is nothing to configure and no admin rights needed — just sign in and press Start."
   },
   {
@@ -514,11 +506,11 @@
     "link": "https://bizdiler.com/",
     "category": [
       "Startups",
-      "Logistics",
-      "Analytics"
+      "Marketplace",
+      "Logistics"
     ],
     "year": 2026,
-    "thumbnail": "/assets/projects/bizdiler.png",
+    "thumbnail": "/projects/bizdiler.png",
     "description": "A B2B platform connecting brands imported into Uzbekistan with their local distributors: each brand issues licenses to its distributors and keeps fair, quality-controlled oversight of them, all communication runs in one workspace, and dealers' sales agents and couriers are tracked through SalesMap. More than 10 major brands signed annual contracts during the pilot."
   },
   {
@@ -530,7 +522,7 @@
       "Productivity"
     ],
     "year": 2026,
-    "thumbnail": "/assets/projects/desklink.png",
+    "thumbnail": "/projects/desklink.png",
     "description": "Remote desktop and support for Windows 10 and 11: enter a partner's ID to connect, with a real-time chat, monitor selection and file transfer during the session. The user approves every connection, sessions start in view-only mode with full control granted only on a separate request, and the screen streams directly between devices, with up to five viewers at once."
   }
 ]
