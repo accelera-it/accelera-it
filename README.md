@@ -43,7 +43,7 @@ site/
 ./upload.sh --delete    # also remove remote files no longer in site/
 ```
 
-Needs `lftp` (`brew install lftp`). Host, user, port, password and web root
+Needs `lftp` (`brew install lftp`); without it (e.g. Git Bash on Windows) the script re-runs itself in an `alpine` Docker container that has it. Host, user, port, password and web root
 are read from `docs/ftp.txt`; env vars `FTP_USER`, `FTP_HOST`, `FTP_PORT`,
 `FTP_PASS` and `REMOTE_DIR` override them. The
 `Dockerfile`, `.dockerignore` and `.DS_Store` files are never uploaded. Use

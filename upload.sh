@@ -38,10 +38,21 @@ for arg in "$@"; do
   esac
 done
 
-command -v lftp >/dev/null || { echo "lftp not found (brew install lftp)" >&2; exit 1; }
 for v in FTP_USER FTP_HOST FTP_PASS; do
   [ -n "${!v}" ] || { echo "$v is empty — check $CREDS" >&2; exit 1; }
 done
+
+# No lftp (e.g. Git Bash on Windows): re-run this script in an Alpine container.
+# Credentials pass through the environment; CRs are stripped in case of a CRLF checkout.
+if ! command -v lftp >/dev/null; then
+  command -v docker >/dev/null || { echo "lftp not found (brew install lftp), and no docker to fall back on" >&2; exit 1; }
+  echo "lftp not found — running in Docker (alpine + lftp)"
+  export FTP_USER FTP_HOST FTP_PORT FTP_PASS REMOTE_DIR
+  REPO=$(pwd -W 2>/dev/null || pwd)
+  MSYS_NO_PATHCONV=1 exec docker run --rm -i -v "$REPO:/repo" -w /repo \
+    -e FTP_USER -e FTP_HOST -e FTP_PORT -e FTP_PASS -e REMOTE_DIR \
+    alpine:3.20 sh -c 'apk add -q bash lftp ca-certificates && bash -c "$(tr -d "\r" < upload.sh)" upload.sh "$@"' sh "$@"
+fi
 
 echo "→ ${FTP_USER}@${FTP_HOST}:${FTP_PORT}${REMOTE_DIR} ${DRY:+(dry run)}"
 
