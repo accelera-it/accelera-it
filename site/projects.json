@@ -520,5 +520,17 @@
     "year": 2026,
     "thumbnail": "/assets/projects/bizdiler.png",
     "description": "A B2B platform connecting brands imported into Uzbekistan with their local distributors: each brand issues licenses to its distributors and keeps fair, quality-controlled oversight of them, all communication runs in one workspace, and dealers' sales agents and couriers are tracked through SalesMap. More than 10 major brands signed annual contracts during the pilot."
+  },
+  {
+    "name": "DeskLink",
+    "link": "https://desklink.uz/",
+    "category": [
+      "Startups",
+      "Security",
+      "Productivity"
+    ],
+    "year": 2026,
+    "thumbnail": "/assets/projects/desklink.png",
+    "description": "Remote desktop and support for Windows 10 and 11: enter a partner's ID to connect, with a real-time chat, monitor selection and file transfer during the session. The user approves every connection, sessions start in view-only mode with full control granted only on a separate request, and the screen streams directly between devices, with up to five viewers at once."
   }
 ]
