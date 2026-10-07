@@ -607,5 +607,17 @@
     "year": 2026,
     "thumbnail": "/projects/desklink.png",
     "description": "Remote desktop and support for Windows 10 and 11: enter a partner's ID to connect, with a real-time chat, monitor selection and file transfer during the session. The user approves every connection, sessions start in view-only mode with full control granted only on a separate request, and the screen streams directly between devices, with up to five viewers at once."
+  },
+  {
+    "id": "map2",
+    "name": "Map2",
+    "link": "https://map2.uz/",
+    "category": [
+      "Startups",
+      "Logistics"
+    ],
+    "year": 2026,
+    "thumbnail": "/projects/map2.png",
+    "description": "A map platform for Uzbekistan that businesses embed in their sites and apps: the whole country is covered, from cities down to villages, with every name in Uzbek in the Latin script. It runs on our own servers, so customers' lookups never go to third-party map services, and offers vector and raster maps with 3D buildings plus ready-made map images with a pin and an auto-detected address, for delivery, taxi, retail, real estate, tourism and government systems."
   }
 ]
