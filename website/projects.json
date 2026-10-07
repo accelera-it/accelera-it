@@ -597,7 +597,7 @@
   },
   {
     "id": "desklink",
-    "name": "DeskLink",
+    "name": "Remote Access",
     "link": "https://desklink.uz/",
     "category": [
       "Startups",
@@ -610,11 +610,12 @@
   },
   {
     "id": "map2",
-    "name": "Map2",
+    "name": "Free Maps",
     "link": "https://map2.uz/",
     "category": [
       "Startups",
-      "Logistics"
+      "Logistics",
+      "Maps"
     ],
     "year": 2026,
     "thumbnail": "/projects/map2.png",
