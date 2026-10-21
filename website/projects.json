@@ -146,7 +146,7 @@
   },
   {
     "id": "hid-omnikey",
-    "name": "HID OMNIKEY",
+    "name": "HID Omnikey",
     "link": "https://www.hidglobal.com/products/omnikey-3121",
     "category": [
       "Clients",
@@ -156,7 +156,7 @@
     ],
     "year": 2005,
     "thumbnail": "/projects/hid-omnikey.png",
-    "description": "HID Global makes OMNIKEY smart card readers for secure identity and access. For about ten golf and tennis complexes in the Netherlands, our large team fully reworked HID's C driver, added COM-port support, implemented the OMNIKEY 3121 USB driver and launched an open SOAP API, so members top up an offline card wallet with online payments, a large system for the 2010s."
+    "description": "For about ten golf and tennis complexes in the Netherlands, we reworked HID Global's C driver for Omnikey smart card readers, added COM-port support, implemented the Omnikey 3121 USB driver and built an open SOAP API, so members top up an offline card wallet with online payments."
   },
   {
     "id": "gov-uz",
@@ -619,6 +619,32 @@
     ],
     "year": 2026,
     "thumbnail": "/projects/map2.png",
-    "description": "A map platform for Uzbekistan that businesses embed in their sites and apps: the whole country is covered, from cities down to villages, with every name in Uzbek in the Latin script. It runs on our own servers, so customers' lookups never go to third-party map services, and offers vector and raster maps with 3D buildings plus ready-made map images with a pin and an auto-detected address, for delivery, taxi, retail, real estate, tourism and government systems."
+    "description": "A map platform for Uzbekistan that businesses embed in their sites and apps, covering the whole country down to villages with names in Uzbek Latin. It runs on our own servers, so lookups never reach third-party map services, and offers vector and raster maps with 3D buildings."
+  },
+  {
+    "id": "sqlhero",
+    "name": "PL/SQL Hero",
+    "link": "https://sqlhero.uz/",
+    "category": [
+      "Startups",
+      "Education",
+      "Database"
+    ],
+    "year": 2026,
+    "thumbnail": "/projects/sqlhero.png",
+    "description": "A hands-on course in Oracle SQL and PL/SQL, taught in Uzbek: 100 lessons across 10 levels and 10,000 practical exercises drawn from 100 business domains, with queries written and run in the browser against a real Oracle Database, so there is nothing to install. It takes learners from database fundamentals through PL/SQL, debugging, security and performance tuning to production-level skills."
+  },
+  {
+    "id": "spotlens",
+    "name": "Crypto SpotAI",
+    "link": "https://spotlens.cloud/",
+    "category": [
+      "Startups",
+      "Trading",
+      "AI"
+    ],
+    "year": 2026,
+    "thumbnail": "/projects/spotlens.png",
+    "description": "One fair price per crypto coin, taken across the largest spot exchanges with frozen books, outliers and mirror venues filtered out, refreshed every minute with the spread. An AI assistant drafts buy, sell or hold plans with entry, target and stop, net of fees. Spot only."
   }
 ]
