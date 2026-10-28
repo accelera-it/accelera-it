@@ -661,6 +661,6 @@
     ],
     "year": 2026,
     "thumbnail": "/projects/bank-antifraud.png",
-    "description": "An on-premise antifraud and mobile security platform for Uzbek banks and payment companies, shipped with the Central Bank's Regulation 35/14 as 19 mandatory rules that a bank can tighten but never switch off. On top of them each bank writes its own rules in a safe DSL, moving them from draft to shadow to active with backtests, and staffs its console with six least-privilege roles. A risk API returns allow, step-up, review or block within 200 ms, fed by Android and iOS SDKs with RASP and a web bot sensor, with every decision streamed to the bank's SIEM. All data stays in the bank's own two data centers."
+    "description": "On-premise antifraud for Uzbek banks, shipped with the Central Bank's Regulation 35/14 as 19 mandatory rules a bank can tighten but never switch off. Each bank adds its own rules, tested in shadow mode before going live, and splits console access across six roles. A risk API decides allow, step-up, review or block, fed by mobile SDKs with RASP and a web bot sensor."
   }
 ]
