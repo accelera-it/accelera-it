@@ -17,9 +17,8 @@ docker compose down
 
 Apache (`httpd:2.4-alpine`) with `.htaccess` enabled, so the redirects,
 headers and file blocks behave as in production. Each folder is mounted
-read-only, so edits show without a rebuild; Apache's `access_log` and
-`error_log` are written to `./logs/landing/` and `./logs/website/`
-(git-ignored). Both containers run on the `accelerait-net` bridge network. The
+read-only, so edits show without a rebuild; Apache logs go to
+`docker compose logs`. Both containers run on the `accelerait-net` bridge network. The
 HTTPS redirect skips `localhost`. `docker-compose.yml` is at the repo root and
 builds from each folder's `Dockerfile`, which (with `.dockerignore`) is kept
 out of the image and denied by `.htaccess` if uploaded.

@@ -24,7 +24,3 @@ docker-compose.override.yml
 
 # Tailwind build tooling, if the CDN is ever replaced (see README)
 node_modules/
-
-# Apache logs from the Docker container
-logs/*
-!logs/.gitkeep

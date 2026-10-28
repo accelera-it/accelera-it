@@ -7,7 +7,6 @@ services:
       - "8081:80"
     volumes:
       - ./landing:/usr/local/apache2/htdocs:ro
-      - ./logs/landing:/usr/local/apache2/logs
     networks:
       - accelerait-net
     restart: unless-stopped
@@ -25,7 +24,6 @@ services:
       - "8082:80"
     volumes:
       - ./website:/usr/local/apache2/htdocs:ro
-      - ./logs/website:/usr/local/apache2/logs
     networks:
       - accelerait-net
     restart: unless-stopped

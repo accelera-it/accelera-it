@@ -17,7 +17,7 @@ Run locally (Apache with `.htaccess` active, so redirects/headers/file blocks ma
 docker compose up -d --build   # from repo root → landing http://localhost:8081, website http://localhost:8082
 ```
 
-Each folder has an identical `Dockerfile` (`httpd:2.4-alpine`) that enables rewrite/headers/expires/deflate and `AllowOverride All`. `docker-compose.yml` is at the repo root with services `landing` and `website`; each bind-mounts its folder read-only (edits are live), writes Apache logs to `./logs/<service>/` (the Dockerfile redirects them from stdout, so `docker logs` is empty), and shares the healthcheck and the `accelerait-net` network. The `Dockerfile` is excluded from the image by `.dockerignore` and denied by `.htaccess`, since each folder is uploaded wholesale.
+Each folder has an identical `Dockerfile` (`httpd:2.4-alpine`) that enables rewrite/headers/expires/deflate and `AllowOverride All`. `docker-compose.yml` is at the repo root with services `landing` and `website`; each bind-mounts its folder read-only (edits are live), logs to stdout (`docker compose logs`), and shares the healthcheck and the `accelerait-net` network. The `Dockerfile` is excluded from the image by `.dockerignore` and denied by `.htaccess`, since each folder is uploaded wholesale.
 
 ## Architecture
 
