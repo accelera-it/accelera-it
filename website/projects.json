@@ -650,5 +650,17 @@
     "year": 2026,
     "thumbnail": "/projects/folk-tales.png",
     "description": "An offline Android TV app of folk tales for children: 988 tales from 107 countries, Uzbekistan first, retold in simple Uzbek with frightening parts softened. Each tale plays like a cartoon, with illustrated characters, a narrator and a voice for every hero, and film-style subtitles. No ads, no tracking, and a big-button layout a child can drive with the remote."
+  },
+  {
+    "id": "bank-antifraud",
+    "name": "Bank Antifraud",
+    "category": [
+      "Startups",
+      "Fintech",
+      "Security"
+    ],
+    "year": 2026,
+    "thumbnail": "/projects/bank-antifraud.png",
+    "description": "An on-premise antifraud and mobile security platform for Uzbek banks and payment companies, shipped with the Central Bank's Regulation 35/14 as 19 mandatory rules that a bank can tighten but never switch off. On top of them each bank writes its own rules in a safe DSL, moving them from draft to shadow to active with backtests, and staffs its console with six least-privilege roles. A risk API returns allow, step-up, review or block within 200 ms, fed by Android and iOS SDKs with RASP and a web bot sensor, with every decision streamed to the bank's SIEM. All data stays in the bank's own two data centers."
   }
 ]
