@@ -662,5 +662,17 @@
     "year": 2026,
     "thumbnail": "/projects/bank-antifraud.png",
     "description": "On-premise antifraud for Uzbek banks, shipped with the Central Bank's Regulation 35/14 as 19 mandatory rules a bank can tighten but never switch off. Each bank adds its own rules, tested in shadow mode before going live, and splits console access across six roles. A risk API decides allow, step-up, review or block, fed by mobile SDKs with RASP and a web bot sensor."
+  },
+  {
+    "id": "ultradb",
+    "name": "UltraDB Engine",
+    "category": [
+      "Startups",
+      "Database",
+      "Data & Analytics"
+    ],
+    "year": 2026,
+    "thumbnail": "/projects/ultradb.png",
+    "description": "A SQL database in Rust for air-gapped networks: transactions and analytics in one CPU-only engine, shipped as offline installers for Ubuntu and Windows Server. Commits are confirmed only once on disk, backups are AES-256 encrypted with point-in-time restore. In 10M-row tests it beats PostgreSQL 17 and MySQL 8.4 on bulk inserts and key lookups."
   }
 ]
