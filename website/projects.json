@@ -19,7 +19,7 @@
     "category": [
       "Clients",
       "Cloud",
-      "Productivity"
+      "Business Apps"
     ],
     "year": 2005,
     "thumbnail": "/projects/m365-admin.png",
@@ -31,9 +31,8 @@
     "link": "https://www.mobile.de/en",
     "category": [
       "Clients",
-      "Marketplace",
-      "Automotive",
-      "Data Engineering"
+      "E-commerce",
+      "Data & Analytics"
     ],
     "year": 2005,
     "thumbnail": "/projects/mobile-de.png",
@@ -46,7 +45,7 @@
     "category": [
       "Open-source",
       "Database",
-      "Data Engineering"
+      "Data & Analytics"
     ],
     "year": 2005,
     "thumbnail": "/projects/postgresql.png",
@@ -71,7 +70,7 @@
     "link": "https://www.payone.com/DE-en",
     "category": [
       "Clients",
-      "Payments",
+      "Open-source",
       "Fintech"
     ],
     "year": 2005,
@@ -84,8 +83,9 @@
     "link": "https://www.salesforce.com/sales/mapping-software/",
     "category": [
       "Clients",
-      "Cloud",
-      "Analytics"
+      "Maps",
+      "Business Apps",
+      "Cloud"
     ],
     "year": 2005,
     "thumbnail": "/projects/salesforce-maps.png",
@@ -97,9 +97,9 @@
     "link": "https://freecash.com/en",
     "category": [
       "Clients",
-      "Gaming",
-      "Blockchain",
-      "Payments"
+      "Crypto",
+      "Sports & Gaming",
+      "Fintech"
     ],
     "year": 2005,
     "thumbnail": "/projects/freecash.png",
@@ -111,7 +111,6 @@
     "link": "https://www.cmegroup.com/solutions/risk-management.html",
     "category": [
       "Clients",
-      "Trading",
       "Fintech",
       "Security"
     ],
@@ -126,7 +125,7 @@
     "category": [
       "Open-source",
       "Database",
-      "Analytics"
+      "Data & Analytics"
     ],
     "year": 2005,
     "thumbnail": "/projects/monetdb.png",
@@ -150,9 +149,9 @@
     "link": "https://www.hidglobal.com/products/omnikey-3121",
     "category": [
       "Clients",
-      "Security",
-      "Payments",
-      "Sports"
+      "Sports & Gaming",
+      "Fintech",
+      "Security"
     ],
     "year": 2005,
     "thumbnail": "/projects/hid-omnikey.png",
@@ -176,8 +175,8 @@
     "link": "https://www.seektable.com/",
     "category": [
       "Clients",
-      "Analytics",
-      "Data Engineering"
+      "Data & Analytics",
+      "Government"
     ],
     "year": 2006,
     "thumbnail": "/projects/seektable.png",
@@ -190,7 +189,7 @@
     "category": [
       "Clients",
       "Government",
-      "Education"
+      "Education & Science"
     ],
     "year": 2006,
     "thumbnail": "/projects/natlib.png",
@@ -202,9 +201,9 @@
     "link": "https://www.reaxys.com",
     "category": [
       "Clients",
-      "Science",
-      "Healthcare",
-      "Analytics"
+      "Education & Science",
+      "Data & Analytics",
+      "AI"
     ],
     "year": 2008,
     "thumbnail": "/projects/reaxys.png",
@@ -216,7 +215,6 @@
     "link": "https://www.smart.com.kh/",
     "category": [
       "Clients",
-      "Telecom",
       "HR"
     ],
     "year": 2008,
@@ -229,8 +227,8 @@
     "link": "https://uzex.uz/",
     "category": [
       "Clients",
-      "Trading",
       "Government",
+      "Fintech",
       "Logistics"
     ],
     "year": 2009,
@@ -243,7 +241,7 @@
     "link": "https://1c-dn.com/",
     "category": [
       "Clients",
-      "ERP",
+      "Business Apps",
       "Database",
       "Mobile"
     ],
@@ -257,8 +255,7 @@
     "link": "https://www.nuget.org/profiles/elyor0529",
     "category": [
       "Open-source",
-      "Database",
-      "Data Engineering"
+      "Database"
     ],
     "year": 2010,
     "thumbnail": "/projects/nuget.png",
@@ -271,8 +268,8 @@
     "category": [
       "Clients",
       "Open-source",
-      "Blockchain",
-      "Banking"
+      "Crypto",
+      "Fintech"
     ],
     "year": 2010,
     "thumbnail": "/projects/openbank.png",
@@ -284,8 +281,8 @@
     "link": "https://kwpmc.com/",
     "category": [
       "Clients",
-      "Real Estate",
-      "Hospitality"
+      "Hospitality",
+      "Business Apps"
     ],
     "year": 2010,
     "thumbnail": "/projects/kwpmc.png",
@@ -297,8 +294,7 @@
     "link": "https://www.mc-metallhandel.de/en/",
     "category": [
       "Clients",
-      "Analytics",
-      "Data Engineering"
+      "Data & Analytics"
     ],
     "year": 2010,
     "thumbnail": "/projects/mc-metallhandel.png",
@@ -311,7 +307,7 @@
     "category": [
       "Clients",
       "HR",
-      "Productivity"
+      "Business Apps"
     ],
     "year": 2011,
     "thumbnail": "/projects/screenshotmonitor.png",
@@ -323,7 +319,7 @@
     "link": "https://loglig.com/logineng",
     "category": [
       "Clients",
-      "Sports",
+      "Sports & Gaming",
       "Mobile"
     ],
     "year": 2012,
@@ -337,7 +333,7 @@
     "category": [
       "Clients",
       "E-commerce",
-      "Data Engineering"
+      "Data & Analytics"
     ],
     "year": 2013,
     "thumbnail": "/projects/easydatafeed.png",
@@ -350,7 +346,7 @@
     "category": [
       "Open-source",
       "Clients",
-      "ERP"
+      "Business Apps"
     ],
     "year": 2015,
     "thumbnail": "/projects/mixerp.png",
@@ -377,7 +373,7 @@
     "category": [
       "Clients",
       "HR",
-      "Data Engineering"
+      "Data & Analytics"
     ],
     "year": 2017,
     "thumbnail": "/projects/dsn-tools.png",
@@ -390,8 +386,7 @@
     "category": [
       "Clients",
       "Security",
-      "Government",
-      "Banking"
+      "Government"
     ],
     "year": 2017,
     "thumbnail": "/projects/keycloak.png",
@@ -403,8 +398,8 @@
     "link": "https://ping.exchange/",
     "category": [
       "Clients",
-      "Trading",
-      "Blockchain"
+      "Crypto",
+      "Security"
     ],
     "year": 2018,
     "thumbnail": "/projects/ping-exchange.png",
@@ -417,7 +412,7 @@
     "category": [
       "Clients",
       "Logistics",
-      "Payments"
+      "Fintech"
     ],
     "year": 2019,
     "thumbnail": "/projects/energy-trucking.png",
@@ -430,8 +425,7 @@
     "category": [
       "Clients",
       "Logistics",
-      "Mobile",
-      "Cloud"
+      "Mobile"
     ],
     "year": 2020,
     "thumbnail": "/projects/quickmanage.png",
@@ -443,9 +437,8 @@
     "link": "https://csmarketcap.com/",
     "category": [
       "Clients",
-      "Gaming",
-      "Analytics",
-      "Trading"
+      "Sports & Gaming",
+      "Data & Analytics"
     ],
     "year": 2020,
     "thumbnail": "/projects/csmarketcap.png",
@@ -457,7 +450,7 @@
     "link": "https://zus.network/",
     "category": [
       "Clients",
-      "Blockchain",
+      "Crypto",
       "Cloud"
     ],
     "year": 2021,
@@ -470,8 +463,8 @@
     "link": "https://yuzpay.uz/",
     "category": [
       "Clients",
+      "Fintech",
       "AI",
-      "Payments",
       "Security"
     ],
     "year": 2022,
@@ -484,8 +477,8 @@
     "link": "https://falconspace.ru/",
     "category": [
       "Clients",
-      "Government",
-      "Productivity"
+      "Business Apps",
+      "Government"
     ],
     "year": 2022,
     "thumbnail": "/projects/falconspace.png",
@@ -497,8 +490,8 @@
     "link": "https://truedex.io/",
     "category": [
       "Clients",
-      "Trading",
-      "Blockchain"
+      "Crypto",
+      "Fintech"
     ],
     "year": 2023,
     "thumbnail": "/projects/truedex.png",
@@ -510,8 +503,7 @@
     "link": "https://themoodswings.eu/",
     "category": [
       "Clients",
-      "E-commerce",
-      "Payments"
+      "E-commerce"
     ],
     "year": 2023,
     "thumbnail": "/projects/moodswings.png",
@@ -523,8 +515,7 @@
     "link": "https://ricksocial.com",
     "category": [
       "Startups",
-      "Marketplace",
-      "Payments",
+      "E-commerce",
       "Mobile"
     ],
     "year": 2024,
@@ -563,8 +554,7 @@
     "link": "https://pcmonitor.app",
     "category": [
       "Startups",
-      "HR",
-      "Productivity"
+      "HR"
     ],
     "year": 2026,
     "thumbnail": "/projects/pc-monitoring.png",
@@ -576,7 +566,8 @@
     "link": "https://darkzone.uz",
     "category": [
       "Startups",
-      "Security"
+      "Security",
+      "Mobile"
     ],
     "year": 2026,
     "thumbnail": "/projects/vpn-tool.png",
@@ -588,8 +579,10 @@
     "link": "https://bizdiler.com/",
     "category": [
       "Startups",
-      "Marketplace",
-      "Logistics"
+      "E-commerce",
+      "Logistics",
+      "Maps",
+      "AI"
     ],
     "year": 2026,
     "thumbnail": "/projects/bizdiler.png",
@@ -602,7 +595,7 @@
     "category": [
       "Startups",
       "Security",
-      "Productivity"
+      "Business Apps"
     ],
     "year": 2026,
     "thumbnail": "/projects/desklink.png",
@@ -614,8 +607,8 @@
     "link": "https://map2.uz/",
     "category": [
       "Startups",
-      "Logistics",
-      "Maps"
+      "Maps",
+      "Logistics"
     ],
     "year": 2026,
     "thumbnail": "/projects/map2.png",
@@ -627,7 +620,7 @@
     "link": "https://sqlhero.uz/",
     "category": [
       "Startups",
-      "Education",
+      "Education & Science",
       "Database"
     ],
     "year": 2026,
@@ -640,7 +633,7 @@
     "link": "https://spotlens.cloud/",
     "category": [
       "Startups",
-      "Trading",
+      "Crypto",
       "AI"
     ],
     "year": 2026,
