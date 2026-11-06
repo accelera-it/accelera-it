@@ -510,6 +510,19 @@
     "description": "For the Mood Swings fashion label, with its factory in Dubai and its shop in the EU, we built the B2B store on OpenCart CMS with our own UI/UX design and technical improvements. Every payment runs through a Dubai bank gateway, and the system passed a full EmiratTech audit."
   },
   {
+    "id": "energy-logistics",
+    "name": "Energy Logistics",
+    "link": "http://www.energylogistics-management.com/",
+    "category": [
+      "Clients",
+      "Logistics",
+      "Marketplace"
+    ],
+    "year": 2023,
+    "thumbnail": "/projects/energy-logistics.png",
+    "description": "For Energy Logistics Management, a 24/7 US freight brokerage, we built its website and USPS load board: a .NET worker turns USPS auction bid e-mails into live loads, and an Angular cabinet behind Keycloak SSO shows dispatchers every bid with its countdown, built for 5,000 dispatchers at once."
+  },
+  {
     "id": "rent-local",
     "name": "RickSocial Rental",
     "link": "https://ricksocial.com",
@@ -546,19 +559,6 @@
     "year": 2025,
     "thumbnail": "/projects/terminal-api.png",
     "description": "A cloud HRMS where face-recognition terminals (Hikvision SDK) track working time and calculate payroll automatically, while two AI assistants answer 30+ kinds of HR and accounting questions in Uzbek, Russian or English. Used by 20+ organizations and 5,000+ employees."
-  },
-  {
-    "id": "energy-logistics",
-    "name": "Energy Logistics",
-    "link": "http://www.energylogistics-management.com/",
-    "category": [
-      "Clients",
-      "Logistics",
-      "Marketplace"
-    ],
-    "year": 2025,
-    "thumbnail": "/projects/energy-logistics.png",
-    "description": "Energy Logistics Management is a 24/7 freight brokerage with offices in Orlando, FL and Naperville, IL. It connects shippers with 1,000+ carriers, Energy Trucking among them, for Dry Van, Reefer, Flatbed and Sprinter loads across the US, with load booking for both sides."
   },
   {
     "id": "pc-monitoring",
