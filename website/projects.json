@@ -314,6 +314,19 @@
     "description": "Screenshot Monitor tracks employee activity and time against tasks, like the desktop apps of Upwork, Toptal, Crossover and Hubstaff, but as a standalone service. It was a leading platform during the pandemic lockdowns; we built version 1, later expanded as scrin.io."
   },
   {
+    "id": "silkroad",
+    "name": "Silk Stars",
+    "link": "https://silkroadhotel.uz/en-gb/",
+    "category": [
+      "Clients",
+      "Hospitality",
+      "Government"
+    ],
+    "year": 2011,
+    "thumbnail": "/projects/silkroad.png",
+    "description": "Silk Stars in Tashkent was struggling with its Booking.com and Expedia partnerships. In 2011 we reviewed its setup and over the following year built a new inventory system, fully launched in 2012. In its first phase, for the Ministry of Tourism, it placed guests from Central Asian countries in hotels in Bukhara, Khorezm and Samarkand."
+  },
+  {
     "id": "loglig",
     "name": "Loglig Basketball",
     "link": "https://loglig.com/logineng",
@@ -534,19 +547,6 @@
     "year": 2024,
     "thumbnail": "/projects/rent-local.png",
     "description": "A peer-to-peer rental platform for tools and equipment: owners earn from items that would otherwise sit idle, and renters pay a fraction of the purchase price. Payments run through Stripe, every booking includes damage coverage, and rentals are managed in iOS and Android apps."
-  },
-  {
-    "id": "silkroad",
-    "name": "Silk Stars",
-    "link": "https://silkroadhotel.uz/en-gb/",
-    "category": [
-      "Clients",
-      "Hospitality",
-      "Government"
-    ],
-    "year": 2024,
-    "thumbnail": "/projects/silkroad.png",
-    "description": "Silk Stars in Tashkent was struggling with its Booking.com and Expedia partnerships. In 2011 we reviewed its setup and over the following year built a new inventory system, fully launched in 2012. In its first phase, for the Ministry of Tourism, it placed guests from Central Asian countries in hotels in Bukhara, Khorezm and Samarkand."
   },
   {
     "id": "terminal-api",
