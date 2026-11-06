@@ -533,7 +533,7 @@
     ],
     "year": 2023,
     "thumbnail": "/projects/energy-logistics.png",
-    "description": "For Energy Logistics Management, a 24/7 US freight brokerage, we built its website and USPS load board: a .NET service turns USPS auction bid e-mails into live loads, and an Angular portal with Keycloak single sign-on shows dispatchers every bid with its countdown, built for 5,000 dispatchers at once."
+    "description": "For Energy Logistics Management, a 24/7 US freight brokerage, we built the USPS load board: a .NET service turns USPS auction bid e-mails into live loads, and dispatchers see every bid with its countdown. We also delivered its TMS integrations and administer its GoDaddy hosting and domain."
   },
   {
     "id": "rent-local",
@@ -559,6 +559,19 @@
     "year": 2025,
     "thumbnail": "/projects/terminal-api.png",
     "description": "A cloud HRMS where face-recognition terminals (Hikvision SDK) track working time and calculate payroll automatically, while two AI assistants answer 30+ kinds of HR and accounting questions in Uzbek, Russian or English. Used by 20+ organizations and 5,000+ employees."
+  },
+  {
+    "id": "gl-group",
+    "name": "GL Group",
+    "link": "https://grupogl.com.mx/",
+    "category": [
+      "Clients",
+      "Logistics",
+      "Cloud"
+    ],
+    "year": 2025,
+    "thumbnail": "/projects/gl-group.png",
+    "description": "GL Group is a customs brokerage, logistics and cross-border consulting company in Laredo, Texas and Nuevo Laredo, Mexico, with warehousing, freight and Foreign Trade Zone services. We migrated its company and staff mailboxes and integrated load boards into its freight operations."
   },
   {
     "id": "pc-monitoring",
