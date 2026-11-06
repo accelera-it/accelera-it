@@ -14,7 +14,7 @@
   },
   {
     "id": "m365-admin",
-    "name": "Office365 Backoffice",
+    "name": "Microsoft 365 Back Office",
     "link": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-administration",
     "category": [
       "Clients",
@@ -75,7 +75,7 @@
     ],
     "year": 2005,
     "thumbnail": "/projects/payone.png",
-    "description": "PAYONE is a European payment provider for online, in-store and omnichannel payments. Thanks to bs-payone, our open-source .NET client for its merchant interface, Microsoft quickly signed a contract and integrated PAYONE for all of its payments across the EU."
+    "description": "PAYONE is a European payment provider for online, in-store and omnichannel payments. We built bs-payone, an open-source .NET client for its merchant interface, which helped Microsoft move quickly to a contract and integrate PAYONE for all of its payments across the EU."
   },
   {
     "id": "salesforce-maps",
@@ -103,7 +103,7 @@
     ],
     "year": 2005,
     "thumbnail": "/projects/freecash.png",
-    "description": "Freecash is a rewards platform trusted by 80M+ users. We implemented its full blockchain layer, from the wallet system to payments in around ten crypto tokens, and handed everything over running behind a VPN with strict, transparent traffic controls."
+    "description": "Freecash is a rewards platform trusted by 80M+ users. We implemented its entire blockchain layer, from the wallet system to payments in around ten crypto tokens, and handed it over running behind a VPN with strict, transparent traffic controls."
   },
   {
     "id": "cme-risk",
@@ -116,7 +116,7 @@
     ],
     "year": 2005,
     "thumbnail": "/projects/cme-risk.png",
-    "description": "In CME Group's risk management module, we integrated Clearing House and Clicker services into SPAN/margin trading systems, then reworked them to prevent phishing. The core is written in C++ and driven from Java, with regional SFTP sync keeping CSV data current."
+    "description": "For CME Group's risk management module, we integrated Clearing House and Clicker services into its SPAN and margin trading systems, then hardened them against phishing. The core is written in C++ and driven from Java, with regional SFTP sync keeping CSV data current."
   },
   {
     "id": "monetdb",
@@ -129,7 +129,7 @@
     ],
     "year": 2005,
     "thumbnail": "/projects/monetdb.png",
-    "description": "We are official GitHub contributors to MonetDB, the open-source column-store database built for high-performance analytics with standard SQL. Around 2015 we created a database management tool for administering MonetDB servers, and have maintained it ever since."
+    "description": "We are official GitHub contributors to MonetDB, the open-source column-store database for high-performance analytics with standard SQL. Around 2015 we built a management tool for administering MonetDB servers, and we have maintained it ever since."
   },
   {
     "id": "eppli",
@@ -180,7 +180,7 @@
     ],
     "year": 2006,
     "thumbnail": "/projects/seektable.png",
-    "description": "Together with the NReco team behind SeekTable, we built petabyte-scale big data analysis with a live-chart system, then reworked the OLAP cube on in-memory key/value storage to deliver CMS reporting for French foreign affairs and closed audit organizations."
+    "description": "Together with the NReco team behind SeekTable, we built petabyte-scale data analysis with live charts, then rebuilt its OLAP cube on in-memory key-value storage to deliver CMS reporting for French foreign-affairs bodies and closed audit organizations."
   },
   {
     "id": "natlib",
@@ -247,7 +247,7 @@
     ],
     "year": 2010,
     "thumbnail": "/projects/1c.png",
-    "description": "We analyzed the 1C system in the data center that serves 50,000+ organizations across Uzbekistan, optimized its high-load database and web service layer, and introduced a new load-balanced API on top of it. On that API we launched a mobile and tablet cabinet for its users."
+    "description": "We analyzed the 1C system in the data center that serves 50,000+ organizations across Uzbekistan, optimized its high-load database and web-service layer, and added a load-balanced API on top. On that API we launched a mobile and tablet portal for its users."
   },
   {
     "id": "nuget",
@@ -273,7 +273,7 @@
     ],
     "year": 2010,
     "thumbnail": "/projects/openbank.png",
-    "description": "After studying BTCPay Server, our team members fluent in Ripple (XRP) helped bring Stellar (XLM) into the Open Bank Project. Following negotiations with its tech team in Frankfurt, Germany, we rolled out our own crypto module for banks on the platform."
+    "description": "After studying BTCPay Server, our team members experienced with Ripple (XRP) helped bring Stellar (XLM) into the Open Bank Project. Following talks with its tech team in Frankfurt, Germany, we rolled out our own crypto module for banks on the platform."
   },
   {
     "id": "kwpmc",
@@ -286,7 +286,7 @@
     ],
     "year": 2010,
     "thumbnail": "/projects/kwpmc.png",
-    "description": "Through VirtuWorks, we studied the capabilities of BirchStreet Systems at Trump Tower New York and developed an improved platform for KW Property Management & Consulting, relaunched at Trump Tower and about ten top-rated hotels around it with a full inventory system."
+    "description": "Through VirtuWorks, we assessed the BirchStreet Systems setup at Trump Tower New York and built an improved platform with full inventory management for KW Property Management & Consulting, rolled out at Trump Tower and about ten top-rated hotels nearby."
   },
   {
     "id": "mc-metallhandel",
@@ -311,7 +311,7 @@
     ],
     "year": 2011,
     "thumbnail": "/projects/screenshotmonitor.png",
-    "description": "Screenshot Monitor tracks employee activity and time against tasks, much like the desktop apps of Upwork, Toptal, Crossover and Hubstaff, but as a standalone service. It was a top platform during the pandemic lockdowns; we built version 1, later expanded as scrin.io."
+    "description": "Screenshot Monitor tracks employee activity and time against tasks, like the desktop apps of Upwork, Toptal, Crossover and Hubstaff, but as a standalone service. It was a leading platform during the pandemic lockdowns; we built version 1, later expanded as scrin.io."
   },
   {
     "id": "loglig",
@@ -337,7 +337,7 @@
     ],
     "year": 2013,
     "thumbnail": "/projects/easydatafeed.png",
-    "description": "For Easy Data Feed, we pulled product and order data from 50+ leading e-commerce platforms onto a single server, sorted and normalized it through SFTP and CSV feeds, and loaded it into one central system — giving the business a working foundation for its sales."
+    "description": "For Easy Data Feed, we pulled product and order data from 50+ leading e-commerce platforms onto a single server, normalized it through SFTP and CSV feeds and loaded it into one central system, which became the foundation of the company's sales operation."
   },
   {
     "id": "mixerp",
@@ -364,7 +364,7 @@
     ],
     "year": 2015,
     "thumbnail": "/projects/findface.png",
-    "description": "FindFace Cluster is NtechLab's face-recognition platform. In Uzbekistan we built separate high-capacity APIs connecting it to Interior Ministry (MVD) cameras, the GSI API, airport cameras, railway stations, and bus and metro systems."
+    "description": "FindFace Cluster is NtechLab's face-recognition platform. In Uzbekistan we built dedicated high-capacity APIs connecting it to Interior Ministry (MVD) cameras, the GSI API, and camera networks at airports, railway stations, and bus and metro systems."
   },
   {
     "id": "dsn-tools",
@@ -390,7 +390,7 @@
     ],
     "year": 2017,
     "thumbnail": "/projects/keycloak.png",
-    "description": "Since 2017, through our company DOTNET.UZ, we have advised on and deployed Keycloak for organizations from government bodies to banks on an outsourcing basis — recommended because MyID has known limitations and is not a pure single sign-on (SSO) system."
+    "description": "Since 2017, through our company DOTNET.UZ, we have advised on and deployed Keycloak on an outsourcing basis for organizations from government bodies to banks, giving them full single sign-on (SSO) where MyID, with its known limitations, falls short."
   },
   {
     "id": "ping-exchange",
@@ -429,7 +429,7 @@
     ],
     "year": 2020,
     "thumbnail": "/projects/quickmanage.png",
-    "description": "QuickManage is an all-in-one transport management system for fleet, document and expense management. We helped build the first version of its customer cabinet and mobile app, and moved the project forward on the infrastructure side."
+    "description": "QuickManage is an all-in-one transport management system for fleet, document and expense management. We helped build the first version of its customer portal and mobile app, and strengthened the project's infrastructure."
   },
   {
     "id": "csmarketcap",
@@ -455,7 +455,7 @@
     ],
     "year": 2021,
     "thumbnail": "/projects/zus.png",
-    "description": "As part of 0Chain's updated Web3 strategy, we reworked its full MinIO-based storage core in Go, extended its compression levels and split data into terabyte-scale rather than gigabyte-scale blocks, delivering a complete, transparent backup and restore system."
+    "description": "As part of 0Chain's updated Web3 strategy, we reworked its MinIO-based storage core in Go, added higher compression levels and moved from gigabyte-scale to terabyte-scale blocks, delivering a complete, transparent backup and restore system."
   },
   {
     "id": "yuzpay",
@@ -469,7 +469,7 @@
     ],
     "year": 2022,
     "thumbnail": "/projects/yuzpay.png",
-    "description": "Around FacePay, which lets shoppers pay at the till with their face, we built a P2P and B2B payment system: a payment gateway, bank processing, business and client cabinets, SMS, tax receipts, MyGov data and offline ID checks with the Regula SDK. It passed the Humo and Uzcard audits and PCI DSS, and holds a Central Bank license."
+    "description": "Around FacePay, which lets shoppers pay at the till with their face, we built a P2P and B2B payment system: a payment gateway, bank processing, business and customer portals, SMS, tax receipts, MyGov data and offline ID checks with the Regula SDK. It passed the Humo and Uzcard audits and PCI DSS, and holds a Central Bank license."
   },
   {
     "id": "falconspace",
@@ -482,7 +482,7 @@
     ],
     "year": 2022,
     "thumbnail": "/projects/falconspace.png",
-    "description": "Falcon Space is a low-code platform on .NET Core and SQL Server for business web apps with personal accounts. On it we built a CRM-focused CMS, rolled out to 200+ government organizations in Moscow and launched together with more than 20 teams, making it a large-scale system."
+    "description": "Falcon Space is a low-code platform on .NET Core and SQL Server for business web apps with personal accounts. On it we built a CRM-focused CMS, rolled out to 200+ government organizations in Moscow together with more than 20 teams."
   },
   {
     "id": "truedex",
@@ -520,7 +520,7 @@
     ],
     "year": 2023,
     "thumbnail": "/projects/energy-logistics.png",
-    "description": "For Energy Logistics Management, a 24/7 US freight brokerage, we built its website and USPS load board: a .NET worker turns USPS auction bid e-mails into live loads, and an Angular cabinet behind Keycloak SSO shows dispatchers every bid with its countdown, built for 5,000 dispatchers at once."
+    "description": "For Energy Logistics Management, a 24/7 US freight brokerage, we built its website and USPS load board: a .NET service turns USPS auction bid e-mails into live loads, and an Angular portal with Keycloak single sign-on shows dispatchers every bid with its countdown, built for 5,000 dispatchers at once."
   },
   {
     "id": "rent-local",
@@ -546,7 +546,7 @@
     ],
     "year": 2024,
     "thumbnail": "/projects/silkroad.png",
-    "description": "Silk Stars Team in Tashkent was running into many internal problems with its Booking and Expedia partnerships. In 2011 we re-examined its setup and over a year built a new inventory system, fully launched in 2012. In its first phase for the Ministry of Tourism, it placed guests from Central Asian countries in hotels in Bukhara, Khorezm and Samarkand."
+    "description": "Silk Stars in Tashkent was struggling with its Booking.com and Expedia partnerships. In 2011 we reviewed its setup and over the following year built a new inventory system, fully launched in 2012. In its first phase, for the Ministry of Tourism, it placed guests from Central Asian countries in hotels in Bukhara, Khorezm and Samarkand."
   },
   {
     "id": "terminal-api",
@@ -637,7 +637,7 @@
     ],
     "year": 2026,
     "thumbnail": "/projects/sqlhero.png",
-    "description": "A hands-on course in Oracle SQL and PL/SQL, taught in Uzbek: 100 lessons across 10 levels and 10,000 practical exercises drawn from 100 business domains, with queries written and run in the browser against a real Oracle Database, so there is nothing to install. It takes learners from database fundamentals through PL/SQL, debugging, security and performance tuning to production-level skills."
+    "description": "A hands-on Oracle SQL and PL/SQL course in Uzbek: 100 lessons across 10 levels and 10,000 practical exercises from 100 business domains, with queries run in the browser against a real Oracle Database, so there is nothing to install. It takes learners from database fundamentals through PL/SQL, debugging, security and performance tuning to production-level skills."
   },
   {
     "id": "spotlens",
