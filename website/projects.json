@@ -137,11 +137,12 @@
     "link": "https://www.eppli.com/en/jewelry/",
     "category": [
       "Clients",
-      "E-commerce"
+      "E-commerce",
+      "Business Apps"
     ],
     "year": 2005,
     "thumbnail": "/projects/eppli.png",
-    "description": "Eppli is a sworn auction house, jeweler and pawnbroker in Germany with over 40 years of experience. Its platform covers online and judicial auctions, an online shop for jewelry, watches, art and coins, and certificates of authenticity from its own expert center."
+    "description": "Eppli is a sworn auction house, jeweler and pawnbroker in Germany with over 40 years of experience, running online and judicial auctions and a shop for jewelry, watches, art and coins. We built the back office and CRM system behind its platform."
   },
   {
     "id": "hid-omnikey",
@@ -412,11 +413,12 @@
     "category": [
       "Clients",
       "Crypto",
-      "Security"
+      "Security",
+      "Fintech"
     ],
     "year": 2018,
     "thumbnail": "/projects/ping-exchange.png",
-    "description": "Ping is a hybrid crypto exchange that combines blockchain with a uniquely secure login through CorePass, which manages each user's identity and access. It was the first exchange to offer Core Coin (XCB) and Core Token (CTN), with trading, markets and a help center."
+    "description": "Ping is a hybrid crypto exchange with a uniquely secure login through CorePass, and the first exchange to offer Core Coin (XCB) and Core Token (CTN). We built its spot crypto trading and a blockchain explorer for browsing transactions."
   },
   {
     "id": "energy-trucking",
@@ -451,11 +453,12 @@
     "category": [
       "Clients",
       "Sports & Gaming",
-      "Data & Analytics"
+      "Data & Analytics",
+      "E-commerce"
     ],
     "year": 2020,
     "thumbnail": "/projects/csmarketcap.png",
-    "description": "CSMarketCap tracks CS2 skin prices across 20+ marketplaces in real time, so traders can compare offers and see market capitalization, trending and falling skins. It adds a trade-up calculator, an inventory checker and live analytics for the whole in-game economy."
+    "description": "CSMarketCap tracks CS2 skin prices across 20+ marketplaces in real time, with market capitalization, trending and falling skins, a trade-up calculator and an inventory checker. We built its marketplace for weapon skins from Steam games."
   },
   {
     "id": "zus",
